@@ -1,0 +1,16 @@
+
+
+.heading--large {
+    font-size: 3rem;
+}
+
+.heading--small {
+    font-size: 1.5rem;
+}
+.heading--primary {
+    @apply text-blue-500;
+}
+
+.heading--secondary {
+    @apply text-gray-500;
+}

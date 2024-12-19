@@ -1,0 +1,7 @@
+.avatar {
+    @apply inline-block rounded-full overflow-hidden bg-gray-200;
+}
+
+.avatar img {
+    @apply w-full h-full object-cover;
+}
