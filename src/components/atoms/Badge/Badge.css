@@ -1,5 +1,11 @@
+.badge-base {
+    @apply inline-block px-2 py-1 text-xs font-semibold rounded-full;
+}
 
+.badge-primary {
+    @apply bg-primary text-white;
+}
 
-.badge {
-    @apply inline-block px-3 py-1 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full;
+.badge-secondary {
+    @apply bg-secondary text-white;
 }

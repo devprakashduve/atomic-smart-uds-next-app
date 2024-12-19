@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Badge.module.css';
 import { BadgeProps } from './BadgeProps.interface';
+import './Badge.css';
 
+const Badge: React.FC<BadgeProps> = ({ text, variant = 'primary' }) => {
+    const badgeClass = variant === 'primary' ? 'badge-primary' : 'badge-secondary';
 
-
-const Badge: React.FC<BadgeProps> = ({ text, color = 'blue' }) => {
     return (
-        <span className={styles.badge} style={{ backgroundColor: color }}>
+        <span className={`badge-base ${badgeClass}`}>
             {text}
         </span>
     );

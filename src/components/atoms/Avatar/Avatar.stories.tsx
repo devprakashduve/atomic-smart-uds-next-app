@@ -1,18 +1,20 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import Avatar, { AvatarProps } from './Avatar';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Avatar from './index';
+import { AvatarProps } from './AvatarProps.interface';
 
 export default {
     title: 'Atoms/Avatar',
     component: Avatar,
-} as Meta;
+} as ComponentMeta<typeof Avatar>;
 
-const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
+const Template: ComponentStory<typeof Avatar> = (args: AvatarProps) => <Avatar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    src: 'https://via.placeholder.com/150',
-    alt: 'Default Avatar',
+    src: 'https://via.placeholder.com/50',
+    alt: 'Avatar',
+    size: 50,
 };
 
 export const WithInitials = Template.bind({});

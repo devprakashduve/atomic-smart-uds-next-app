@@ -1,0 +1,4 @@
+/* Paragraph.css */
+.paragraph {
+    @apply text-base text-gray-700 leading-relaxed;
+}
