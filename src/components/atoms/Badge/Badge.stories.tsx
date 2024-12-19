@@ -1,27 +1,28 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import Badge, { BadgeProps } from './Badge';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Badge from './index';
+import { BadgeProps } from './BadgeProps.interface';
 
 export default {
     title: 'Atoms/Badge',
     component: Badge,
-} as Meta;
+} as ComponentMeta<typeof Badge>;
 
-const Template: Story<BadgeProps> = (args) => <Badge {...args} />;
+const Template: ComponentStory<typeof Badge> = (args: BadgeProps) => <Badge {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    label: 'Default Badge',
+    text: 'Default Badge',
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
-    label: 'Primary Badge',
+    text: 'Primary Badge',
     variant: 'primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-    label: 'Secondary Badge',
+    text: 'Secondary Badge',
     variant: 'secondary',
 };

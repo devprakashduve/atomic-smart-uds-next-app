@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof RadioButton> = (args: RadioButtonProps) =>
 export const Default = Template.bind({});
 Default.args = {
     checked: false,
-    onChange: (e) => console.log(e.target.checked),
+    onChange: (e: { target: { checked: any; }; }) => console.log(e.target.checked),
     label: 'Radio Button Label',
     name: 'radio-group',
 };
