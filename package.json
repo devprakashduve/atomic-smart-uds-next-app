@@ -12,14 +12,13 @@
   },
   "dependencies": {
     "@storybook/addon-links": "^8.4.7",
-    "@storybook/react-webpack5": "^8.4.7",
     "ajv": "^8.17.1",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.2",
+    "@chromatic-com/storybook": "^3.2.3",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-mdx-gfm": "^8.4.7",
@@ -31,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/storybook__react": "^5.2.1",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "eslint-plugin-storybook": "^0.11.1",

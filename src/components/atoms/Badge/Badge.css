@@ -3,9 +3,9 @@
 }
 
 .badge-primary {
-    @apply bg-primary text-white;
+    @apply text-4xl font-normal;
 }
 
 .badge-secondary {
-    @apply bg-secondary text-white;
+    @apply  text-5xl font-extrabold;
 }
