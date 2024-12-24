@@ -1,0 +1,50 @@
+/* Tooltip Container */
+.tooltip-container {
+  @apply relative inline-block;
+}
+
+/* Tooltip Target (Icon or text to hover over) */
+.tooltip-target {
+  @apply cursor-pointer;
+}
+
+/* Tooltip Content */
+.tooltip-content {
+  @apply absolute rounded-md p-2 text-xs text-white shadow-lg;
+  @apply opacity-0 transition-opacity duration-300 ease-in-out;
+  visibility: hidden;
+}
+
+/* Tooltip Positioning */
+.tooltip-content.top {
+  @apply bottom-full left-1/2 mb-2 -translate-x-1/2 transform;
+}
+
+.tooltip-content.right {
+  @apply left-full top-1/2 ml-2 -translate-y-1/2 transform;
+}
+
+.tooltip-content.bottom {
+  @apply left-1/2 top-full mt-2 -translate-x-1/2 transform;
+}
+
+.tooltip-content.left {
+  @apply right-full top-1/2 mr-2 -translate-y-1/2 transform;
+}
+
+/* Tooltip Colors */
+.black {
+  @apply bg-black;
+}
+
+.white {
+  @apply bg-white text-black;
+}
+
+.blue {
+  @apply bg-blue-500;
+}
+
+.red {
+  @apply bg-red-500;
+}

@@ -1,0 +1,14 @@
+/* File Uploader Container */
+.file-uploader {
+  @apply space-y-4;
+}
+
+/* Input Style */
+.file-uploader input {
+  @apply w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-600;
+}
+
+/* Error Message */
+.file-uploader p {
+  @apply text-sm text-red-600;
+}

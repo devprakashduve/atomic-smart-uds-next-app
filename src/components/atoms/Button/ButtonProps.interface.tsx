@@ -1,6 +1,8 @@
 export interface ButtonProps {
-    label: string;
-    onClick: () => void;
-    disabled?: boolean;
-    variant?: 'btn-primary' | 'btn-secondary';
+  label: string;
+  children: any;
+  onClick: () => void;
+  disabled?: boolean;
+  variant?: 'btn-primary' | 'btn-secondary';
+  className?: string;
 }

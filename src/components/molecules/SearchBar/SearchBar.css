@@ -1,0 +1,14 @@
+/* Container */
+.search-bar-container {
+  @apply flex w-full max-w-md items-center gap-2 rounded-lg border border-gray-300 bg-white p-2;
+}
+
+/* Input */
+.search-bar-input {
+  @apply flex-1 border-none px-4 py-2 text-gray-700 outline-none;
+}
+
+/* Button */
+.search-bar-button {
+  @apply rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600;
+}

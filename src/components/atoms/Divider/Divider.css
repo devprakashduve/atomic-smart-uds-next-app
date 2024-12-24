@@ -1,0 +1,47 @@
+/* Divider Component Styles */
+
+/* Base styles for Divider */
+.divider {
+  @apply border-solid;
+}
+
+/* Horizontal Divider */
+.divider-horizontal {
+  @apply w-full;
+}
+
+/* Vertical Divider */
+.divider-vertical {
+  @apply h-full;
+}
+
+/* Divider Thickness Variants */
+.divider-thin {
+  @apply border-t-2;
+}
+
+.divider-medium {
+  @apply border-t-4;
+}
+
+.divider-thick {
+  @apply border-t-8;
+}
+
+/* Divider Color Variants (uses Tailwind color classes) */
+.border-gray {
+  @apply border-gray-300;
+}
+
+.border-blue {
+  @apply border-blue-500;
+}
+
+.border-red {
+  @apply border-red-500;
+}
+
+/* Additional styling for vertical dividers */
+.divider-vertical {
+  @apply border-l-4;
+}

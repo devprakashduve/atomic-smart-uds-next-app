@@ -1,0 +1,36 @@
+/* Base Switch Container */
+.switch-container {
+  @apply relative inline-flex h-6 w-12 items-center justify-between rounded-full transition-all duration-200 ease-in-out;
+}
+
+/* Switch Thumb (Circle inside the switch) */
+.switch-thumb {
+  @apply absolute h-4 w-4 rounded-full bg-white transition-all duration-200 ease-in-out;
+}
+
+/* Switch Track (Background of the switch) */
+.switch-track {
+  @apply absolute h-full w-full rounded-full transition-all duration-200 ease-in-out;
+}
+
+/* Optional Color Variations */
+.bg-blue {
+  @apply bg-blue-500;
+}
+
+.bg-green {
+  @apply bg-green-500;
+}
+
+.bg-red {
+  @apply bg-red-500;
+}
+
+/* Disabled State */
+.cursor-not-allowed {
+  @apply cursor-not-allowed;
+}
+
+.opacity-50 {
+  @apply opacity-50;
+}

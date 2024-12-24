@@ -4,14 +4,16 @@ import Spinner from './index';
 import { SpinnerProps } from './SpinnerProps.interface';
 
 export default {
-    title: 'Atoms/Spinner',
-    component: Spinner,
+  title: 'Atoms/Spinner',
+  component: Spinner,
 } as ComponentMeta<typeof Spinner>;
 
-const Template: ComponentStory<typeof Spinner> = (args: SpinnerProps) => <Spinner {...args} />;
+const Template: ComponentStory<typeof Spinner> = (args: SpinnerProps) => (
+  <Spinner {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
-    size: 24,
-    color: 'currentColor',
+  size: 24,
+  color: 'currentColor',
 };

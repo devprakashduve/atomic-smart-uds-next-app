@@ -5,29 +5,30 @@ import Badge from './index';
 import { BadgeProps } from './BadgeProps.interface';
 
 export default {
-    title: 'Atoms/Badge',
-    component: Badge,
+  title: 'Atoms/Badge',
+  component: Badge,
 } as Meta<typeof Badge>;
 
-const Template: StoryFn<typeof Badge> = (args: BadgeProps) => <Badge {...args} />;
+const Template: StoryFn<typeof Badge> = (args: BadgeProps) => (
+  <Badge {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
-    children: <span>&#10753;</span>,
-   
+  children: <span>&#10753;</span>,
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
-    children: <span>&#10753;</span>,
-    variant: 'badge-primary',
-    customColor:"green"
+  children: <span>&#10753;</span>,
+  variant: 'badge-primary',
+  customColor: 'green',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-    children: <span>&#10753;</span>,
-    variant: 'badge-secondary',
-    customColor:"red",
-    scale:"5"
+  children: <span>&#10753;</span>,
+  variant: 'badge-secondary',
+  customColor: 'red',
+  scale: '5',
 };
