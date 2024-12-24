@@ -1,11 +1,18 @@
 import React from 'react';
-import styles from './Avatar.module.css';
-import { AvatarProps } from './AvatarProps.interface';
 
-const Avatar: React.FC<AvatarProps> = ({ src, alt, size = 50 }) => {
+import { AvatarProps } from './AvatarProps.interface';
+import './../../../app/globals.css';
+import './Avatar.css';
+
+const Avatar: React.FC<AvatarProps> = ({
+  src,
+  alt,
+  size = 50,
+  className = '',
+}) => {
   return (
     <img
-      className={styles.avatar}
+      className={'avatar ' + className}
       src={src}
       alt={alt}
       width={size}

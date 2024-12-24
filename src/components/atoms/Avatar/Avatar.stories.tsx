@@ -15,7 +15,7 @@ const Template: StoryFn<typeof Avatar> = (args: AvatarProps) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  src: 'https://via.placeholder.com/50',
+  src: 'https://via.placeholder.com/150',
   alt: 'Avatar',
   size: 50,
 };
@@ -24,4 +24,5 @@ export const WithInitials = Template.bind({});
 WithInitials.args = {
   initials: 'JD',
   alt: 'Avatar with Initials',
+  src: 'https://via.placeholder.com/250',
 };

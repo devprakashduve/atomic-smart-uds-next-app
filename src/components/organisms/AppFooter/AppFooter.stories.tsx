@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import AppFooter from '.';
 import { AppFooterProps } from './AppFooterProps.interface';
+import AppFooter from '.';
 
 export default {
   title: 'Organisms/AppFooter',
