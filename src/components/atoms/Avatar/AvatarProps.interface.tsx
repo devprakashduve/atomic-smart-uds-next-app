@@ -6,4 +6,5 @@ export interface AvatarProps {
   size?: number;
 
   initials?: string;
+  className?: string;
 }

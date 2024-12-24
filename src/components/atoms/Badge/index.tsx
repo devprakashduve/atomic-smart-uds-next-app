@@ -1,5 +1,6 @@
 import React from 'react';
 import { BadgeProps } from './BadgeProps.interface';
+import './../../../app/globals.css';
 import './Badge.css';
 
 const Badge: React.FC<BadgeProps> = ({
