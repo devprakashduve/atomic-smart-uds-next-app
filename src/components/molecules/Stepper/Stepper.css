@@ -1,0 +1,35 @@
+/* Stepper Container */
+.stepper-container {
+  @apply flex w-full items-center justify-between;
+}
+
+/* Step */
+.step {
+  @apply relative flex cursor-pointer flex-col items-center text-center;
+}
+
+.step-icon {
+  @apply flex h-10 w-10 items-center justify-center rounded-full border-2 transition-all duration-300;
+}
+
+.step-label {
+  @apply mt-2 text-sm font-medium text-gray-700;
+}
+
+/* Step Connector */
+.step-connector {
+  @apply absolute left-full top-5 h-1 w-6 bg-gray-300 transition-all;
+}
+
+/* Step States */
+.current-step .step-icon {
+  @apply border-blue-500 bg-blue-500 text-white;
+}
+
+.completed-step .step-icon {
+  @apply border-green-500 bg-green-500 text-white;
+}
+
+.inactive-step .step-icon {
+  @apply border-gray-300 bg-white text-gray-500;
+}

@@ -1,4 +1,6 @@
 export interface BadgeProps {
-    text: string;
-    variant?: 'primary' | 'secondary';
+  children: React.ReactNode;
+  variant?: string;
+  customColor?: string;
+  scale?: string;
 }

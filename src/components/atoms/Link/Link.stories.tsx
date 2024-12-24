@@ -4,15 +4,17 @@ import Link from './index';
 import { LinkProps } from './LinkProps.interface';
 
 export default {
-    title: 'Atoms/Link',
-    component: Link,
+  title: 'Atoms/Link',
+  component: Link,
 } as ComponentMeta<typeof Link>;
 
-const Template: ComponentStory<typeof Link> = (args: LinkProps) => <Link {...args} />;
+const Template: ComponentStory<typeof Link> = (args: LinkProps) => (
+  <Link {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
-    href: '#',
-    text: 'Link Text',
-    target: '_self',
+  href: '#',
+  text: 'Link Text',
+  target: '_self',
 };

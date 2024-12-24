@@ -1,0 +1,36 @@
+/* Base Slider Styles */
+.slider-container {
+  @apply flex w-full flex-col items-center;
+}
+
+.slider-thumb {
+  @apply h-2 w-full appearance-none rounded-full;
+  background-color: #d1d5db; /* Default gray background */
+  transition: background-color 0.2s;
+}
+
+.slider-thumb:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+.slider-thumb:disabled {
+  @apply cursor-not-allowed bg-gray-300;
+}
+
+/* Slider Value Display */
+.slider-value {
+  @apply mt-2 text-lg font-medium text-gray-700;
+}
+
+/* Optional color variations */
+.bg-blue {
+  @apply bg-blue-500;
+}
+
+.bg-green {
+  @apply bg-green-500;
+}
+
+.bg-red {
+  @apply bg-red-500;
+}

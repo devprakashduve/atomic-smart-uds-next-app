@@ -1,0 +1,16 @@
+/* Video Container */
+.video-container {
+  @apply relative h-auto w-full;
+}
+
+/* Video Element */
+.video-element {
+  @apply h-auto w-full rounded-md shadow-lg;
+}
+
+/* Responsive Utility */
+@media (max-width: 768px) {
+  .video-element {
+    @apply h-full w-full;
+  }
+}

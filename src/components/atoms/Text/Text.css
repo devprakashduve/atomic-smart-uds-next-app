@@ -1,0 +1,64 @@
+/* Base Text Styling */
+.text {
+  @apply text-base font-normal;
+}
+
+/* Text Types */
+.normal {
+  @apply text-normal;
+}
+
+.heading {
+  @apply text-2xl font-bold;
+}
+
+.subheading {
+  @apply text-xl font-semibold;
+}
+
+/* Text Sizes */
+.small {
+  @apply text-sm;
+}
+
+.medium {
+  @apply text-base;
+}
+
+.large {
+  @apply text-lg;
+}
+
+/* Text Colors */
+.black {
+  @apply text-black;
+}
+
+.white {
+  @apply text-white;
+}
+
+.gray {
+  @apply text-gray-700;
+}
+
+.blue {
+  @apply text-blue-500;
+}
+
+.red {
+  @apply text-red-500;
+}
+
+/* Text Weights */
+.light {
+  @apply font-light;
+}
+
+.normal {
+  @apply font-normal;
+}
+
+.bold {
+  @apply font-bold;
+}

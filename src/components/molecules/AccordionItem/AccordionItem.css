@@ -1,0 +1,27 @@
+/* Accordion Item */
+.accordion-item {
+  @apply mb-4;
+}
+
+/* Accordion Header */
+.accordion-header {
+  @apply flex cursor-pointer items-center justify-between rounded-md bg-blue-500 px-4 py-2 text-white;
+}
+
+.accordion-title {
+  @apply text-lg font-semibold;
+}
+
+/* Accordion Icon */
+.accordion-icon {
+  @apply text-xl transition-transform;
+}
+
+.accordion-icon.open {
+  @apply rotate-45 transform;
+}
+
+/* Accordion Content */
+.accordion-content {
+  @apply rounded-md bg-gray-100 p-4;
+}

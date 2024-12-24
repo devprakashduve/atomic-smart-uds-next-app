@@ -1,5 +1,9 @@
 export interface AvatarProps {
-    src: string;
-    alt: string;
-    size?: number;
+  src?: string;
+
+  alt?: string;
+
+  size?: number;
+
+  initials?: string;
 }
