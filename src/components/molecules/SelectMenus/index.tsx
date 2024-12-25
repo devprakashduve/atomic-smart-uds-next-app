@@ -11,7 +11,7 @@ import {
 import { ChevronUpDownIcon } from '@heroicons/react/16/solid';
 import { CheckIcon } from '@heroicons/react/20/solid';
 import './../../../app/globals.css';
-import Avatar from '../../atoms/Avatar';
+import Avatar from '../../Atoms/Avatar';
 
 const people = [
   {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonGroupProps } from './ButtonGroupProps.interface';
 import './ButtonGroup.css';
-import Button from '@/components/atoms/Button';
+import Button from '@/Components/Atoms/Button';
 
 const ButtonGroup: React.FC<ButtonGroupProps> = ({ buttons }) => {
   return (

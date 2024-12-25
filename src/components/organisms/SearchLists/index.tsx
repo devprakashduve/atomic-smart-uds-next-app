@@ -1,4 +1,4 @@
-import Avatar from '@/components/atoms/Avatar';
+import Avatar from '@/Components/Atoms/Avatar';
 import './../../../app/globals.css';
 const people = [
   {

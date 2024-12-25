@@ -3,11 +3,11 @@
 import { useState } from 'react';
 
 import './../../../app/globals.css';
-import InputField from '@/components/molecules/InputGroup/InputField';
-import PhoneNumberField from '@/components/molecules/InputGroup/PhoneNumberField';
-import TextareaField from '@/components/molecules/InputGroup/TextareaField';
-import AgreementField from '@/components/molecules/InputGroup/AgreementField';
-import SubmitButton from '@/components/atoms/ButtonGroup/SubmitButton';
+import InputField from '@/Components/Molecules/InputGroup/InputField';
+import PhoneNumberField from '@/Components/Molecules/InputGroup/PhoneNumberField';
+import TextareaField from '@/Components/Molecules/InputGroup/TextareaField';
+import AgreementField from '@/Components/Molecules/InputGroup/AgreementField';
+import SubmitButton from '@/Components/Atoms/ButtonGroup/SubmitButton';
 
 // Header Component
 const ContactHeader = () => (
