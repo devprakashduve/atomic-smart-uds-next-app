@@ -4,7 +4,7 @@ import Video from './index';
 import { VideoProps } from './VideoProps.interface';
 
 export default {
-  title: 'Atoms/Video',
+ title: 'Components/Atoms/Video',
   component: Video,
 } as Meta;
 

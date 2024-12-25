@@ -4,7 +4,7 @@ import Slider from './index';
 import { SliderProps } from './SliderProps.interface';
 
 export default {
-  title: 'Atoms/Slider',
+ title: 'Components/Atoms/Slider',
   component: Slider,
 } as Meta;
 

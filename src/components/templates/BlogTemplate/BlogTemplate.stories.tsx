@@ -4,7 +4,7 @@ import BlogTemplate from '.';
 import { BlogTemplateProps } from './BlogTemplateProps.interface';
 
 export default {
-  title: 'Templates/BlogTemplate',
+  title: 'Components/Templates/BlogTemplate',
   component: BlogTemplate,
 } as Meta;
 

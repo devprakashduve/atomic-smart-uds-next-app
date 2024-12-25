@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import NotFoundPage from '.';
 
 export default {
-  title: 'Pages/NotFoundPage',
+  title: 'Components/Pages/NotFoundPage',
   component: NotFoundPage,
 } as Meta;
 

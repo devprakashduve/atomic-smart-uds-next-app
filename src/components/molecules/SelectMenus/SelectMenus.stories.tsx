@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import SelectMenus from '.';
 
 export default {
-  title: 'Molecules/SelectMenus',
+  title: 'Components/Molecules/SelectMenus',
   component: SelectMenus,
 } as Meta;
 

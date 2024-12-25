@@ -4,7 +4,7 @@ import HeroSection from '.';
 import { HeroSectionProps } from './HeroSectionProps.interface';
 
 export default {
-  title: 'Organisms/HeroSection',
+  title: 'Components/Organisms/HeroSection',
   component: HeroSection,
 } as Meta;
 

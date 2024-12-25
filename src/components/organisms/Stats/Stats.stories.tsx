@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Stats from '.';
 
 export default {
-  title: 'Organisms/Stats',
+  title: 'Components/Organisms/Stats',
   component: Stats,
 } as Meta;
 

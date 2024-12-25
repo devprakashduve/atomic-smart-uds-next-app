@@ -4,7 +4,7 @@ import Tooltip from './index';
 import { TooltipProps } from './TooltipProps.interface';
 
 export default {
-  title: 'Atoms/Tooltip',
+ title: 'Components/Atoms/Tooltip',
   component: Tooltip,
 } as Meta;
 

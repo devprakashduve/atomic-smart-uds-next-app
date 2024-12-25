@@ -4,7 +4,7 @@ import Rating from '.';
 import { RatingProps } from './RatingProps.interface';
 
 export default {
-  title: 'Molecules/Rating',
+  title: 'Components/Molecules/Rating',
   component: Rating,
 } as Meta;
 

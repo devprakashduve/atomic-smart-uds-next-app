@@ -4,7 +4,7 @@ import ReviewSection from '.';
 import { ReviewSectionProps } from './ReviewSectionProps.interface';
 
 export default {
-  title: 'Organisms/ReviewSection',
+  title: 'Components/Organisms/ReviewSection',
   component: ReviewSection,
 } as Meta;
 

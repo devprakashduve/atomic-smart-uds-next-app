@@ -4,7 +4,7 @@ import ProductQuickviews from '.';
 import './../../../app/globals.css';
 
 export default {
-  title: 'Molecules/ProductQuickviews',
+  title: 'Components/Molecules/ProductQuickviews',
   component: ProductQuickviews,
 } as Meta;
 

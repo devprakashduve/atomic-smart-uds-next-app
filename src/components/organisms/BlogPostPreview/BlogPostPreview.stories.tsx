@@ -4,7 +4,7 @@ import BlogPostPreview from '.';
 import { BlogPostPreviewProps } from './BlogPostPreviewProps.interface';
 
 export default {
-  title: 'Organisms/BlogPostPreview',
+  title: 'Components/Organisms/BlogPostPreview',
   component: BlogPostPreview,
 } as Meta;
 

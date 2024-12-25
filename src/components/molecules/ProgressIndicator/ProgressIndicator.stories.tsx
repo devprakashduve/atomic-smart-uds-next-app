@@ -4,7 +4,7 @@ import ProgressIndicator from '.';
 import { ProgressIndicatorProps } from './ProgressIndicatorProps.interface';
 
 export default {
-  title: 'Molecules/ProgressIndicator',
+  title: 'Components/Molecules/ProgressIndicator',
   component: ProgressIndicator,
 } as Meta;
 

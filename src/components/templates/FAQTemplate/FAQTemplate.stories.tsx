@@ -4,7 +4,7 @@ import FAQTemplate from '.';
 import { FAQTemplateProps } from './FAQTemplateProps.interface';
 
 export default {
-  title: 'Templates/FAQTemplate',
+  title: 'Components/Templates/FAQTemplate',
   component: FAQTemplate,
 } as Meta;
 

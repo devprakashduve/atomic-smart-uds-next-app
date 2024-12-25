@@ -4,7 +4,7 @@ import ShoppingCart from '.';
 import { ShoppingCartProps } from './ShoppingCartProps.interface';
 
 export default {
-  title: 'Organisms/ShoppingCart',
+  title: 'Components/Organisms/ShoppingCart',
   component: ShoppingCart,
 } as Meta;
 

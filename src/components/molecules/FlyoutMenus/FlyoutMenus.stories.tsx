@@ -4,7 +4,7 @@ import FlyoutMenus from '.';
 import { FlyoutMenuProps } from './FlyoutMenu.interface';
 
 export default {
-  title: 'Molecules/FlyoutMenus',
+  title: 'Components/Molecules/FlyoutMenus',
   component: FlyoutMenus,
 } as Meta;
 

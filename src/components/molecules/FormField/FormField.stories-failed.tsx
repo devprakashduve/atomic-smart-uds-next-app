@@ -4,7 +4,7 @@ import FileUploader from '.';
 import { FileUploaderProps } from './FormFieldProps.interface';
 
 export default {
-  title: 'Molecules/FileUploader',
+  title: 'Components/Molecules/FileUploader',
   component: FileUploader,
 } as Meta;
 

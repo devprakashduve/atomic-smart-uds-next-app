@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import ProductOverviews from '.';
 
 export default {
-  title: 'Organisms/ProductOverviews',
+  title: 'Components/Organisms/ProductOverviews',
   component: ProductOverviews,
 } as Meta;
 

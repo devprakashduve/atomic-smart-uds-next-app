@@ -4,7 +4,7 @@ import Icon from './index';
 import { IconProps } from './IconProps.interface';
 
 export default {
-  title: 'Atoms/Icon',
+ title: 'Components/Atoms/Icon',
   component: Icon,
 } as Meta<typeof Icon>;
 

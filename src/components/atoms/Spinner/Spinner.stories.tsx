@@ -4,7 +4,7 @@ import Spinner from './index';
 import { SpinnerProps } from './SpinnerProps.interface';
 
 export default {
-  title: 'Atoms/Spinner',
+ title: 'Components/Atoms/Spinner',
   component: Spinner,
 } as ComponentMeta<typeof Spinner>;
 

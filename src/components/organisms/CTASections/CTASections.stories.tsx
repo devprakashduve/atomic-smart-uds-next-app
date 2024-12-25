@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import CTASections from '.';
 
 export default {
-  title: 'Organisms/CTASections',
+  title: 'Components/Organisms/CTASections',
   component: CTASections,
 } as Meta;
 

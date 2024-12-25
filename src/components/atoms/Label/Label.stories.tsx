@@ -4,7 +4,7 @@ import Label from './index';
 import { LabelProps } from './LabelProps.interface';
 
 export default {
-  title: 'Atoms/Label',
+ title: 'Components/Atoms/Label',
   component: Label,
 } as ComponentMeta<typeof Label>;
 

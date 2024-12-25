@@ -4,7 +4,7 @@ import AuthenticationTemplate from '.';
 import { AuthenticationTemplateProps } from './AuthenticationTemplateProps.interface';
 
 export default {
-  title: 'Templates/AuthenticationTemplate',
+  title: 'Components/Templates/AuthenticationTemplate',
   component: AuthenticationTemplate,
 } as Meta;
 

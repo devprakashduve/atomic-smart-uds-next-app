@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import ContactPage from '.';
 
 export default {
-  title: 'Pages/ContactPage',
+  title: 'Components/Pages/ContactPage',
   component: ContactPage,
 } as Meta;
 

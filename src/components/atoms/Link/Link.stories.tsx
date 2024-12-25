@@ -4,7 +4,7 @@ import Link from './index';
 import { LinkProps } from './LinkProps.interface';
 
 export default {
-  title: 'Atoms/Link',
+ title: 'Components/Atoms/Link',
   component: Link,
 } as ComponentMeta<typeof Link>;
 

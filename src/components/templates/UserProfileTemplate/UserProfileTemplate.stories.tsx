@@ -4,7 +4,7 @@ import UserProfileTemplate from '.';
 import { UserProfileTemplateProps } from './UserProfileTemplateProps.interface';
 
 export default {
-  title: 'Templates/UserProfileTemplate',
+  title: 'Components/Templates/UserProfileTemplate',
   component: UserProfileTemplate,
 } as Meta;
 

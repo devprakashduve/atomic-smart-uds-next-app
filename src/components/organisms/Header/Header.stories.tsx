@@ -4,7 +4,7 @@ import Header from '.';
 import { HeaderProps } from './Header.interface';
 
 export default {
-  title: 'Organisms/Header',
+  title: 'Components/Organisms/Header',
   component: Header,
 } as Meta;
 

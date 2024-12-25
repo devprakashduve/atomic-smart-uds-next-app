@@ -4,7 +4,7 @@ import Tag from './index';
 import { TagProps } from './TagProps.interface';
 
 export default {
-  title: 'Atoms/Tag',
+ title: 'Components/Atoms/Tag',
   component: Tag,
 } as Meta;
 

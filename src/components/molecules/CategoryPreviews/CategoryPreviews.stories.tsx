@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import CategoryPreviews from '.';
 
 export default {
-  title: 'Molecules/CategoryPreviews',
+  title: 'Components/Molecules/CategoryPreviews',
   component: CategoryPreviews,
 } as Meta;
 

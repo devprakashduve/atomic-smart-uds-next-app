@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import ModalDialogs from '.';
 
 export default {
-  title: 'Molecules/ModalDialogs',
+  title: 'Components/Molecules/ModalDialogs',
   component: ModalDialogs,
 } as Meta;
 

@@ -5,7 +5,7 @@ import Badge from './index';
 import { BadgeProps } from './BadgeProps.interface';
 
 export default {
-  title: 'Atoms/Badge',
+ title: 'Components/Atoms/Badge',
   component: Badge,
 } as Meta<typeof Badge>;
 

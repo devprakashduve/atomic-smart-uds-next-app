@@ -4,7 +4,7 @@ import Breadcrumbs from '.';
 import { BreadcrumbProps } from './BreadcrumbProps.interface';
 
 export default {
-  title: 'Molecules/Breadcrumbs',
+  title: 'Components/Molecules/Breadcrumbs',
   component: Breadcrumbs,
 } as Meta;
 

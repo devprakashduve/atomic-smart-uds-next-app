@@ -4,7 +4,7 @@ import ProductDetailsTemplate from '.';
 import { ProductDetailsTemplateProps } from './ProductDetailsTemplateProps.interface';
 
 export default {
-  title: 'Templates/ProductDetailsTemplate',
+  title: 'Components/Templates/ProductDetailsTemplate',
   component: ProductDetailsTemplate,
 } as Meta;
 

@@ -24,7 +24,7 @@ const columns: { key: keyof User; header: string }[] = [
 ];
 
 export default {
-  title: 'Molecules/Table',
+  title: 'Components/Molecules/Table',
   component: Table,
 } as Meta;
 

@@ -4,7 +4,7 @@ import SidebarMenu from '.';
 import { SidebarMenuProps } from './SidebarMenuProps.interface';
 
 export default {
-  title: 'Molecules/SidebarMenu',
+  title: 'Components/Molecules/SidebarMenu',
   component: SidebarMenu,
 } as Meta;
 

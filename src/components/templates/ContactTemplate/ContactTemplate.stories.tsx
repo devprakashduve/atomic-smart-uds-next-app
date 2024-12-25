@@ -4,7 +4,7 @@ import ContactTemplate from '.';
 import { ContactTemplateProps } from './ContactTemplateProps.interface';
 
 export default {
-  title: 'Templates/ContactTemplate',
+  title: 'Components/Templates/ContactTemplate',
   component: ContactTemplate,
 } as Meta;
 

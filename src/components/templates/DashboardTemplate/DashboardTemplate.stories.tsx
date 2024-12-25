@@ -4,7 +4,7 @@ import DashboardTemplate from '.';
 import { DashboardTemplateProps } from './DashboardTemplateProps.interface';
 
 export default {
-  title: 'Templates/DashboardTemplate',
+  title: 'Components/Templates/DashboardTemplate',
   component: DashboardTemplate,
 } as Meta;
 

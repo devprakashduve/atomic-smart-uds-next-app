@@ -4,7 +4,7 @@ import { AppFooterProps } from './AppFooterProps.interface';
 import AppFooter from '.';
 
 export default {
-  title: 'Organisms/AppFooter',
+  title: 'Components/Organisms/AppFooter',
   component: AppFooter,
 } as Meta;
 
