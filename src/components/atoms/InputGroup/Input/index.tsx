@@ -9,16 +9,16 @@ const Input: React.FC<InputProps> = ({
   onChange,
   placeholder = '',
   disabled = false,
-  type = 'text',
-  label = 'Input',
-  id = 'input',
-  name = 'input',
-  className,
+  type,
+  label,
+  id,
+  name,
+  customClassNames,
 }) => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState('');
 
-  const inputClass = classNames(...className);
+  const inputClass = classNames(customClassNames,'');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
@@ -73,12 +73,12 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <div className="m-4">
-      <label
+      {label && <label
         className="mb-2 block text-sm font-bold text-gray-700"
-        htmlFor={id}
+        htmlFor={name}
       >
         {label}
-      </label>
+      </label>}
       <input
         type={type}
         id={id}

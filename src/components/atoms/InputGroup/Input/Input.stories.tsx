@@ -20,6 +20,7 @@ Default.args = {
   value: '',
   disabled: false,
   type: 'text',
+  label: 'Default Input',
 };
 
 export const WithValue = Template.bind({});
@@ -30,6 +31,7 @@ WithValue.args = {
   value: 'Sample text',
   disabled: false,
   type: 'text',
+  label: 'Input with Value',
 };
 
 export const Disabled = Template.bind({});
@@ -40,6 +42,7 @@ Disabled.args = {
   value: '',
   disabled: true,
   type: 'text',
+  label: 'Disabled Input',
 };
 
 export const Password = Template.bind({});
@@ -50,6 +53,7 @@ Password.args = {
   value: '',
   disabled: false,
   type: 'password',
+  label: 'Password Input',
 };
 
 export const Number = Template.bind({});
@@ -60,6 +64,7 @@ Number.args = {
   value: '',
   disabled: false,
   type: 'number',
+  label: 'Number Input',
 };
 
 export const Email = Template.bind({});
@@ -70,6 +75,7 @@ Email.args = {
   value: '',
   disabled: false,
   type: 'email',
+  label: 'Email Input',
 };
 
 export const Tel = Template.bind({});
@@ -80,4 +86,5 @@ Tel.args = {
   value: '',
   disabled: false,
   type: 'tel',
+  label: 'Telephone Input',
 };
