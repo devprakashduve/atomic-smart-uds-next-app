@@ -1,11 +1,11 @@
-/* .badge-base {
-    @apply inline-block px-2 py-1 text-xs font-semibold rounded-full;
+.badge-base {
+  @apply inline-block rounded-full px-2 py-1 text-xs font-semibold;
 }
 
 .badge-primary {
-    @apply text-4xl font-normal;
+  @apply text-4xl font-normal;
 }
 
 .badge-secondary {
-    @apply  text-5xl font-extrabold;
-} */
+  @apply text-5xl font-extrabold;
+}

@@ -3,21 +3,17 @@ import React from 'react';
 import { AvatarProps } from './AvatarProps.interface';
 import './../../../app/globals.css';
 import './Avatar.css';
+import { classNames } from '@/Components/utilities/componentsMethods';
 
 const Avatar: React.FC<AvatarProps> = ({
   src,
   alt,
   size = 50,
-  className = '',
+  customClassNames,
 }) => {
+  const classes = classNames('avatar', customClassNames);
   return (
-    <img
-      className={'avatar ' + className}
-      src={src}
-      alt={alt}
-      width={size}
-      height={size}
-    />
+    <img className={classes} src={src} alt={alt} width={size} height={size} />
   );
 };
 

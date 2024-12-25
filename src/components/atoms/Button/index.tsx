@@ -2,28 +2,25 @@ import React from 'react';
 import { ButtonProps } from './ButtonProps.interface';
 import './../../../app/globals.css';
 import './Button.css';
+import { classNames } from '@/Components/utilities/componentsMethods';
 
 const Button: React.FC<ButtonProps> = ({
-  label,
   onClick,
   disabled = false,
-  variant = 'primary',
-  className,
+  variant,
+  className = '',
   children,
 }) => {
-  // const buttonClass = variant === 'primary' ? 'btn-primary' : 'btn-secondary';
+  const buttonClass = classNames(...className, variant);
 
   return (
-    <span>
-      <label>{label}</label>
-      <button
-        onClick={onClick}
-        disabled={disabled}
-        className={`btn-base ${className} ${variant} ${disabled ? 'btn-disabled' : ''}`}
-      >
-        {children}
-      </button>
-    </span>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`btn ${buttonClass} ${disabled ? 'btn-disabled' : ''}`}
+    >
+      {children}
+    </button>
   );
 };
 

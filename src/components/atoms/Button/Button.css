@@ -1,15 +1,43 @@
-.btn-base {
-  @apply transform rounded-full px-4 py-2 font-bold shadow-lg transition-transform duration-300;
+.btn::first-letter {
+  text-transform: uppercase;
+}
+.btn {
+  @apply inline-flex items-center px-4 py-2 text-sm font-semibold;
+}
+.btn-simple {
+  @apply rounded bg-blue-500 text-white hover:bg-blue-700;
 }
 
-.btn-primary {
-  @apply bg-primary text-white hover:scale-105 active:scale-95;
+.btn-pill {
+  @apply rounded-full bg-blue-500 text-white hover:bg-blue-700;
+}
+.btn-pill-outline {
+  @apply rounded-full border border-blue-500 bg-transparent text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white;
 }
 
-.btn-secondary {
-  @apply bg-secondary text-white hover:bg-secondary-dark active:bg-secondary-dark;
+.btn-outline {
+  @apply rounded border border-blue-500 bg-transparent text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white;
+}
+
+.btn-bordered {
+  @apply rounded border border-blue-700 bg-blue-500 text-white hover:bg-blue-700;
+}
+
+.btn-three-d {
+  @apply rounded border border-blue-700 bg-blue-500 text-white shadow-md hover:bg-blue-700;
+}
+
+.btn-elevated {
+  @apply rounded border border-gray-400 bg-white text-gray-800 shadow hover:bg-gray-100;
+}
+
+.btn-group {
+  @apply rounded border border-blue-700 bg-blue-500 text-white shadow-lg hover:bg-blue-700;
+}
+.btn-icon {
+  @apply inline-flex items-center rounded bg-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-400;
 }
 
 .btn-disabled {
-  @apply cursor-not-allowed opacity-50;
+  @apply cursor-not-allowed rounded bg-blue-500 text-white opacity-50;
 }

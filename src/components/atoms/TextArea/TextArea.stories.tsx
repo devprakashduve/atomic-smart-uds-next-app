@@ -4,7 +4,7 @@ import TextArea from './index';
 import { TextAreaProps } from './TextAreaProps.interface';
 
 export default {
- title: 'Components/Atoms/TextArea',
+  title: 'Components/Atoms/TextArea',
   component: TextArea,
 } as ComponentMeta<typeof TextArea>;
 

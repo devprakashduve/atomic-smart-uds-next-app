@@ -2,20 +2,18 @@ import React from 'react';
 import { BadgeProps } from './BadgeProps.interface';
 import './../../../app/globals.css';
 import './Badge.css';
+import { classNames } from '@/Components/utilities/componentsMethods';
 
 const Badge: React.FC<BadgeProps> = ({
-  customColor = 'black',
-  scale = '3',
+  customColor,
+  scale,
   children,
-  variant = 'primary',
+  variant,
 }) => {
-  const badgeClass = variant;
+  const badgeClass = classNames('badge-base', variant);
 
   return (
-    <span
-      className={`badge-base ${badgeClass} `}
-      style={{ color: customColor }}
-    >
+    <span className={badgeClass} style={{ color: customColor }}>
       {children}
     </span>
   );

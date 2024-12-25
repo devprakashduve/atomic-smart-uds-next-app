@@ -4,7 +4,7 @@ import RadioButton from './index';
 import { RadioButtonProps } from './RadioButtonProps.interface';
 
 export default {
- title: 'Components/Atoms/RadioButton',
+  title: 'Components/Atoms/RadioButton',
   component: RadioButton,
 } as ComponentMeta<typeof RadioButton>;
 

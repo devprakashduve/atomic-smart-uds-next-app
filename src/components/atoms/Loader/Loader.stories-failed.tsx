@@ -5,7 +5,7 @@ import { LoaderProps } from './LoaderProps.interface';
 import Loader from '.';
 
 export default {
- title: 'Components/Atoms/Loader',
+  title: 'Components/Atoms/Loader',
   component: Loader,
 } as Meta;
 

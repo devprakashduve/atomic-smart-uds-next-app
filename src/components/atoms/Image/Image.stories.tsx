@@ -4,7 +4,7 @@ import Image from './index';
 import { ImageProps } from './ImageProps.interface';
 
 export default {
- title: 'Components/Atoms/Image',
+  title: 'Components/Atoms/Image',
   component: Image,
 } as ComponentMeta<typeof Image>;
 

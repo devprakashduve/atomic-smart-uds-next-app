@@ -4,7 +4,7 @@ import ProgressBar from './index';
 import { ProgressBarProps } from './ProgressBarProps.interface';
 
 export default {
- title: 'Components/Atoms/ProgressBar',
+  title: 'Components/Atoms/ProgressBar',
   component: ProgressBar,
 } as Meta;
 

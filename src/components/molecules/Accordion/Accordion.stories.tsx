@@ -4,7 +4,7 @@ import Accordion from '.';
 import { AccordionProps } from './AccordionProps.interface';
 
 export default {
- title: 'Components/Molecules/Accordion',
+  title: 'Components/Molecules/Accordion',
   component: Accordion,
 } as Meta;
 

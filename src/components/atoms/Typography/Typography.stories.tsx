@@ -4,7 +4,7 @@ import Typography from './index';
 import { TypographyProps } from './TypographyProps.interface';
 
 export default {
- title: 'Components/Atoms/Typography',
+  title: 'Components/Atoms/Typography',
   component: Typography,
 } as Meta;
 

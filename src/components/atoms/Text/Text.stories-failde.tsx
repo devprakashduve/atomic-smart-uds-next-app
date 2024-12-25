@@ -5,7 +5,7 @@ import { TextProps } from './TextProps.interface';
 import Text from '.';
 
 export default {
- title: 'Components/Atoms/Text',
+  title: 'Components/Atoms/Text',
   component: Text,
 } as Meta;
 

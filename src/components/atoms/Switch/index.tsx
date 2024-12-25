@@ -18,7 +18,7 @@ const Switch: React.FC<SwitchProps> = ({
   return (
     <div
       onClick={handleChange}
-      className={`bg-red-600 switch-container ${disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} ${color}`}
+      className={`switch-container bg-red-600 ${disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} ${color}`}
     >
       <div
         className={`switch-thumb ${checked ? 'translate-x-6' : 'translate-x-1'} ${disabled ? 'bg-red-400' : 'bg-green-500'}`}

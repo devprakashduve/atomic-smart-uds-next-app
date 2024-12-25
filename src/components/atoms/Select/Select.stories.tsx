@@ -4,7 +4,7 @@ import Select from './index';
 import { SelectProps } from './SelectProps.interface';
 
 export default {
- title: 'Components/Atoms/Select',
+  title: 'Components/Atoms/Select',
   component: Select,
 } as ComponentMeta<typeof Select>;
 

@@ -5,7 +5,7 @@ import Badge from './index';
 import { BadgeProps } from './BadgeProps.interface';
 
 export default {
- title: 'Components/Atoms/Badge',
+  title: 'Components/Atoms/Badge',
   component: Badge,
 } as Meta<typeof Badge>;
 
@@ -16,6 +16,9 @@ const Template: StoryFn<typeof Badge> = (args: BadgeProps) => (
 export const Default = Template.bind({});
 Default.args = {
   children: <span>&#10753;</span>,
+  variant: 'badge-primary',
+  customColor: 'purple',
+  scale: '3',
 };
 
 export const Primary = Template.bind({});
@@ -23,6 +26,7 @@ Primary.args = {
   children: <span>&#10753;</span>,
   variant: 'badge-primary',
   customColor: 'green',
+  scale: '3',
 };
 
 export const Secondary = Template.bind({});

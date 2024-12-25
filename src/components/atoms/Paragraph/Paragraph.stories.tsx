@@ -4,7 +4,7 @@ import Paragraph from '.';
 import { ParagraphProps } from './ParagraphProps.interface';
 
 export default {
- title: 'Components/Atoms/Paragraph',
+  title: 'Components/Atoms/Paragraph',
   component: Paragraph,
 } as Meta;
 

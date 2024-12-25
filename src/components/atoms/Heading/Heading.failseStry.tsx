@@ -4,7 +4,7 @@ import { HeadingProps } from './HeadingProps.interface';
 import Heading from '.';
 
 export default {
- title: 'Components/Atoms/Heading',
+  title: 'Components/Atoms/Heading',
   component: Heading,
 } as Meta;
 
