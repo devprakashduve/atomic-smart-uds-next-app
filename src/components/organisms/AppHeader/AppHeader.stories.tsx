@@ -4,7 +4,7 @@ import AppHeader from '.';
 import { AppHeaderProps } from './AppHeaderProps.interface';
 
 export default {
-  title: 'Organisms/AppHeader',
+  title: 'Components/Organisms/AppHeader',
   component: AppHeader,
 } as Meta;
 

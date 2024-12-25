@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import HeaderSections from '.';
 
 export default {
-  title: 'Organisms/HeaderSections',
+  title: 'Components/Organisms/HeaderSections',
   component: HeaderSections,
 } as Meta;
 

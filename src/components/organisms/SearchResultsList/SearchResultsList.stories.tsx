@@ -4,7 +4,7 @@ import SearchResultList from '.';
 import { SearchResultListProps } from './SearchResultsListProps.interface';
 
 export default {
-  title: 'Organisms/SearchResultList',
+  title: 'Components/Organisms/SearchResultList',
   component: SearchResultList,
 } as Meta;
 

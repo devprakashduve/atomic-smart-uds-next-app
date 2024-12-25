@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import NavBar from '.';
 import { NavBarProps } from './NavbarProps.interface';
 export default {
-  title: 'Organisms/NavBar',
+  title: 'Components/Organisms/NavBar',
   component: NavBar,
 } as Meta;
 

@@ -4,7 +4,7 @@ import Card from '.';
 import { CardProps } from './CardProps.interface';
 
 export default {
-  title: 'Molecules/Card',
+  title: 'Components/Molecules/Card',
   component: Card,
 } as Meta;
 

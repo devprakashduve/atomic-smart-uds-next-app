@@ -4,7 +4,7 @@ import VideoGallery from '.';
 import { VideoGalleryProps } from './VideoGalleryProps.interface';
 
 export default {
-  title: 'Organisms/VideoGallery',
+  title: 'Components/Organisms/VideoGallery',
   component: VideoGallery,
 } as Meta;
 

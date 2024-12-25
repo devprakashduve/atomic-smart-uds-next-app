@@ -4,7 +4,7 @@ import ButtonGroup from '.';
 import { ButtonGroupProps } from './ButtonGroupProps.interface';
 
 export default {
-  title: 'Molecules/ButtonGroup',
+  title: 'Components/Molecules/ButtonGroup',
   component: ButtonGroup,
 } as Meta;
 

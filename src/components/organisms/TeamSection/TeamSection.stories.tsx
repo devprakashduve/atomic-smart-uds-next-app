@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import TeamSection from '.';
 
 export default {
-  title: 'Organisms/TeamSection',
+  title: 'Components/Organisms/TeamSection',
   component: TeamSection,
 } as Meta<typeof TeamSection>;
 

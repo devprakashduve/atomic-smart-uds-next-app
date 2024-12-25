@@ -5,7 +5,7 @@ import { MenuProps } from './MenuProps.interface';
 import { FaHome, FaUser, FaCog } from 'react-icons/fa';
 
 export default {
-  title: 'Molecules/Menu',
+  title: 'Components/Molecules/Menu',
   component: Menu,
 } as Meta;
 

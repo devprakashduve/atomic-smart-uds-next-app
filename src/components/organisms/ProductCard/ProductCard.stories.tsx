@@ -4,7 +4,7 @@ import ProductCard from '.';
 import { ProductCardProps } from './ProductCardProps.interface';
 
 export default {
-  title: 'Organisms/ProductCard',
+  title: 'Components/Organisms/ProductCard',
   component: ProductCard,
 } as Meta;
 

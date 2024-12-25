@@ -4,7 +4,7 @@ import Divider from './index';
 import { DividerProps } from './DividerProps.interface';
 
 export default {
-  title: 'Atoms/Divider',
+  title: 'Components/Atoms/Divider',
   component: Divider,
 } as Meta;
 

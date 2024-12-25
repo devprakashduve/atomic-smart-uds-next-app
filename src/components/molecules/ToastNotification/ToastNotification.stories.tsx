@@ -4,7 +4,7 @@ import ToastNotification from '.';
 import { ToastNotificationProps } from './ToastNotificationProps.interface';
 
 export default {
-  title: 'Molecules/ToastNotification',
+  title: 'Components/Molecules/ToastNotification',
   component: ToastNotification,
 } as Meta;
 

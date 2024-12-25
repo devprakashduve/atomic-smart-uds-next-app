@@ -4,7 +4,7 @@ import VideoPlayer from '.';
 import { VideoPlayerProps } from './VideoPlayerProps.interface';
 
 export default {
-  title: 'Molecules/VideoPlayer',
+  title: 'Components/Molecules/VideoPlayer',
   component: VideoPlayer,
 } as Meta;
 

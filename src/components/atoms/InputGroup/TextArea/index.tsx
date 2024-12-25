@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextAreaProps } from './TextAreaProps.interface';
+import './../../../../app/globals.css';
 import './TextArea.css';
 
 const TextArea: React.FC<TextAreaProps> = ({
@@ -14,7 +15,7 @@ const TextArea: React.FC<TextAreaProps> = ({
       onChange={onChange}
       placeholder={placeholder}
       disabled={disabled}
-      className={`textarea-base ${disabled ? 'textarea-disabled' : ''}`}
+      className={`textarea-base ${disabled ? 'textarea-disabled' : ''} `}
     />
   );
 };

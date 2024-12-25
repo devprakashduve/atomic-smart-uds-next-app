@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import GridsSection from '.';
 
 export default {
-  title: 'Organisms/GridsSection',
+  title: 'Components/Organisms/GridsSection',
   component: GridsSection,
 } as Meta<typeof GridsSection>;
 

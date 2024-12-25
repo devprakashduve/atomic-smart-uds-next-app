@@ -4,7 +4,7 @@ import Typography from './index';
 import { TypographyProps } from './TypographyProps.interface';
 
 export default {
-  title: 'Atoms/Typography',
+  title: 'Components/Atoms/Typography',
   component: Typography,
 } as Meta;
 
@@ -48,4 +48,23 @@ CaptionTypography.args = {
   weight: 'light',
   color: 'white',
   align: 'right',
+};
+export const OverlineTypography = Template.bind({});
+OverlineTypography.args = {
+  content: 'This is an overline',
+  variant: 'overline',
+  size: 'small',
+  weight: 'normal',
+  color: 'gray',
+  align: 'left',
+};
+
+export const ButtonTypography = Template.bind({});
+ButtonTypography.args = {
+  content: 'This is button text',
+  variant: 'button',
+  size: 'medium',
+  weight: 'bold',
+  color: 'blue',
+  align: 'center',
 };

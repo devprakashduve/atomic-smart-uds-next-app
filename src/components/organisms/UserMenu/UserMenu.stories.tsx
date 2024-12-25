@@ -4,7 +4,7 @@ import UserMenu from '.';
 import { UserMenuProps } from './UserMenuProps.interface';
 
 export default {
-  title: 'Organisms/UserMenu',
+  title: 'Components/Organisms/UserMenu',
   component: UserMenu,
 } as Meta;
 

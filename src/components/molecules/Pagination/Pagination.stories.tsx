@@ -4,7 +4,7 @@ import Pagination from '.';
 import { PaginationProps } from './PaginationProps.interface';
 
 export default {
-  title: 'Molecules/Pagination',
+  title: 'Components/Molecules/Pagination',
   component: Pagination,
 } as Meta;
 

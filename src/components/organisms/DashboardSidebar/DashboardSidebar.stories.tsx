@@ -4,7 +4,7 @@ import DashboardSideBar from '.';
 import { DashboardSideBarProps } from './DashboardSidebarProps.interface';
 
 export default {
-  title: 'Organisms/DashboardSideBar',
+  title: 'Components/Organisms/DashboardSideBar',
   component: DashboardSideBar,
 } as Meta;
 

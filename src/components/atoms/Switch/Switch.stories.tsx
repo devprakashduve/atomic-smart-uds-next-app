@@ -1,11 +1,10 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-
 import { SwitchProps } from './SwitchProps.interface';
 import Switch from '.';
 
 export default {
-  title: 'Atoms/Switch',
+  title: 'Components/Atoms/Switch',
   component: Switch,
 } as Meta;
 

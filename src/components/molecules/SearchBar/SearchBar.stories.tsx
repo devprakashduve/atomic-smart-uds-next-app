@@ -4,7 +4,7 @@ import SearchBar from '.';
 import { SearchBarProps } from './SearchBarProps.interface';
 
 export default {
-  title: 'Molecules/SearchBar',
+  title: 'Components/Molecules/SearchBar',
   component: SearchBar,
 } as Meta;
 

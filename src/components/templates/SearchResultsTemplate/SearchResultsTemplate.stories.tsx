@@ -4,7 +4,7 @@ import SearchResultsTemplate from '.';
 import { SearchResultsTemplateProps } from './SearchResultsTemplateProps.interface';
 
 export default {
-  title: 'Templates/SearchResultsTemplate',
+  title: 'Components/Templates/SearchResultsTemplate',
   component: SearchResultsTemplate,
 } as Meta;
 

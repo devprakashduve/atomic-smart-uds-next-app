@@ -1,14 +1,14 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import Link from './index';
 import { LinkProps } from './LinkProps.interface';
 
 export default {
-  title: 'Atoms/Link',
+  title: 'Components/Atoms/Link',
   component: Link,
-} as ComponentMeta<typeof Link>;
+} as Meta<typeof Link>;
 
-const Template: ComponentStory<typeof Link> = (args: LinkProps) => (
+const Template: StoryFn<typeof Link> = (args: LinkProps) => (
   <Link {...args} />
 );
 

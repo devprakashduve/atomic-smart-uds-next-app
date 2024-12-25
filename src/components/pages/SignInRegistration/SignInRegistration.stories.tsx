@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import SignInRegistration from '.';
 
 export default {
-  title: 'Pages/SignInRegistration',
+  title: 'Components/Pages/SignInRegistration',
   component: SignInRegistration,
 } as Meta;
 

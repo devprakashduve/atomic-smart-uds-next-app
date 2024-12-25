@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import BlogSections from '.';
 
 export default {
-  title: 'Organisms/BlogSections',
+  title: 'Components/Organisms/BlogSections',
   component: BlogSections,
 } as Meta;
 

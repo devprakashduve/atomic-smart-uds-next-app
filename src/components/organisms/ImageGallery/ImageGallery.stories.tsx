@@ -4,7 +4,7 @@ import ImageGallery from '.';
 import { ImageGalleryProps } from './ImageGalleryProps.interface';
 
 export default {
-  title: 'Organisms/ImageGallery',
+  title: 'Components/Organisms/ImageGallery',
   component: ImageGallery,
 } as Meta;
 

@@ -4,7 +4,7 @@ import Banners from '.';
 import { BannersProps } from './Banners.interface';
 
 export default {
-  title: 'Molecules/Banners',
+  title: 'Components/Molecules/Banners',
   component: Banners,
 } as Meta;
 

@@ -1,0 +1,7 @@
+.radio-label {
+    @apply flex items-center space-x-2 p-2;
+}
+
+.radio-input {
+    @apply  p-2 m-2;
+}

@@ -4,7 +4,7 @@ import FeatureSections from '.';
 import FeatureSectionsProps from './FeatureSections.interface';
 
 export default {
-  title: 'Organisms/FeatureSections',
+  title: 'Components/Organisms/FeatureSections',
   component: FeatureSections,
 } as Meta;
 

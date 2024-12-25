@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import FormLayouts from '.';
 
 export default {
-  title: 'Organisms/FormLayouts',
+  title: 'Components/Organisms/FormLayouts',
   component: FormLayouts,
 } as Meta;
 

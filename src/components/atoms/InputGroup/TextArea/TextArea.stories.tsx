@@ -1,14 +1,14 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import TextArea from './index';
 import { TextAreaProps } from './TextAreaProps.interface';
 
 export default {
-  title: 'Atoms/TextArea',
+  title: 'Components/Atoms/InputGroup/TextArea',
   component: TextArea,
-} as ComponentMeta<typeof TextArea>;
+} as Meta<typeof TextArea>;
 
-const Template: ComponentStory<typeof TextArea> = (args: TextAreaProps) => (
+const Template: StoryFn<typeof TextArea> = (args: TextAreaProps) => (
   <TextArea {...args} />
 );
 

@@ -4,7 +4,7 @@ import DataTable from '.';
 import { DataTableProps } from './DataTableProps.interface';
 
 export default {
-  title: 'Molecules/DataTable',
+  title: 'Components/Molecules/DataTable',
   component: DataTable,
 } as Meta;
 

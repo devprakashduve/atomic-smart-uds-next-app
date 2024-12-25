@@ -4,7 +4,7 @@ import Tabs from '.';
 import { TabsProps } from './TabsProps.interface';
 
 export default {
-  title: 'Molecules/Tabs',
+  title: 'Components/Molecules/Tabs',
   component: Tabs,
 } as Meta;
 

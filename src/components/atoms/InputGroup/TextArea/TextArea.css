@@ -1,0 +1,7 @@
+.textarea-base {
+  @apply rounded border w-full h-36 border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:to-blue-700;
+}
+
+.textarea-disabled {
+  @apply cursor-not-allowed opacity-50;
+}

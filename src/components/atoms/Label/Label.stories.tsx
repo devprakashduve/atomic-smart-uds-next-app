@@ -1,14 +1,14 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import Label from './index';
 import { LabelProps } from './LabelProps.interface';
 
 export default {
-  title: 'Atoms/Label',
+  title: 'Components/Atoms/Label',
   component: Label,
-} as ComponentMeta<typeof Label>;
+} as Meta<typeof Label>;
 
-const Template: ComponentStory<typeof Label> = (args: LabelProps) => (
+const Template: StoryFn<typeof Label> = (args: LabelProps) => (
   <Label {...args} />
 );
 

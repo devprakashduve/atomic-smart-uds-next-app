@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import PromoSections from '.';
 
 export default {
-  title: 'Organisms/PromoSections',
+  title: 'Components/Organisms/PromoSections',
   component: PromoSections,
 } as Meta;
 

@@ -5,7 +5,7 @@ import { UserProfileCardProps } from './UserProfileCardProps.interface';
 import UserProfileCard from '.';
 
 export default {
-  title: 'Molecules/UserProfileCard',
+  title: 'Components/Molecules/UserProfileCard',
   component: UserProfileCard,
 } as Meta;
 

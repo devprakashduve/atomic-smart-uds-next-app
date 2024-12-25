@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Navigation from '.';
 
 export default {
-  title: 'Organisms/Navigation',
+  title: 'Components/Organisms/Navigation',
   component: Navigation,
 } as Meta;
 

@@ -4,7 +4,7 @@ import AboutTemplate from '.';
 import { AboutTemplateProps } from './AboutTemplateProps.interface';
 
 export default {
-  title: 'Templates/AboutTemplate',
+  title: 'Components/Templates/AboutTemplate',
   component: AboutTemplate,
 } as Meta;
 
