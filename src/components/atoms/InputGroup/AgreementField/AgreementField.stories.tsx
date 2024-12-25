@@ -22,4 +22,5 @@ export const Checked = Template.bind({});
 Checked.args = {
   label: 'I agree to the terms and conditions',
   checked: true,
+  agreed: true,
 };
