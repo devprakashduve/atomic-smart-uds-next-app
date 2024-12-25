@@ -3,10 +3,10 @@
 import { useState } from 'react';
 
 import './../../../app/globals.css';
-import InputField from '@/components/atoms/InputGroup/InputField';
-import PhoneNumberField from '@/components/atoms/InputGroup/PhoneNumberField';
-import TextareaField from '@/components/atoms/InputGroup/TextareaField';
-import AgreementField from '@/components/atoms/InputGroup/AgreementField';
+import InputField from '@/components/molecules/InputGroup/InputField';
+import PhoneNumberField from '@/components/molecules/InputGroup/PhoneNumberField';
+import TextareaField from '@/components/molecules/InputGroup/TextareaField';
+import AgreementField from '@/components/molecules/InputGroup/AgreementField';
 import SubmitButton from '@/components/atoms/ButtonGroup/SubmitButton';
 
 // Header Component

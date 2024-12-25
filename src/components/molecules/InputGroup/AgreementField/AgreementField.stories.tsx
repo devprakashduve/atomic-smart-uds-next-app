@@ -4,7 +4,7 @@ import AgreementField from '.';
 import { AgreementFieldProps } from './AgreementField.interface';
 
 export default {
-  title: 'Components/Atoms/InputGroup/AgreementField',
+  title: 'Components/Molecules/InputGroup/AgreementField',
   component: AgreementField,
 } as Meta;
 

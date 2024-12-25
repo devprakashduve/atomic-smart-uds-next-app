@@ -1,5 +1,6 @@
 import React from 'react';
 import { SwitchProps } from './SwitchProps.interface';
+import './../../../app/globals.css';
 import './Switch.css';
 
 const Switch: React.FC<SwitchProps> = ({
@@ -17,13 +18,13 @@ const Switch: React.FC<SwitchProps> = ({
   return (
     <div
       onClick={handleChange}
-      className={`switch-container ${disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} ${color}`}
+      className={`bg-red-600 switch-container ${disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} ${color}`}
     >
       <div
-        className={`switch-thumb ${checked ? 'translate-x-6' : 'translate-x-1'} ${disabled ? 'bg-gray-300' : 'bg-white'}`}
+        className={`switch-thumb ${checked ? 'translate-x-6' : 'translate-x-1'} ${disabled ? 'bg-red-400' : 'bg-green-500'}`}
       />
       <div
-        className={`switch-track ${checked ? 'bg-${color}-500' : 'bg-gray-300'}`}
+        className={`switch-track ${checked ? 'bg-${color}-500' : 'bg-red-500'}`}
       ></div>
     </div>
   );
