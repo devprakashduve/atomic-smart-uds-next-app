@@ -49,3 +49,22 @@ CaptionTypography.args = {
   color: 'white',
   align: 'right',
 };
+export const OverlineTypography = Template.bind({});
+OverlineTypography.args = {
+  content: 'This is an overline',
+  variant: 'overline',
+  size: 'small',
+  weight: 'normal',
+  color: 'gray',
+  align: 'left',
+};
+
+export const ButtonTypography = Template.bind({});
+ButtonTypography.args = {
+  content: 'This is button text',
+  variant: 'button',
+  size: 'medium',
+  weight: 'bold',
+  color: 'blue',
+  align: 'center',
+};

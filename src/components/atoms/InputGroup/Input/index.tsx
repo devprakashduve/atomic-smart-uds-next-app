@@ -3,6 +3,7 @@ import { InputProps } from './InputProps.interface';
 import './../../../../app/globals.css';
 import './Input.css';
 import { classNames } from '@/Components/utilities/componentsMethods';
+import Label from '../../Label';
 
 const Input: React.FC<InputProps> = ({
   value: initialValue,
@@ -73,12 +74,7 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <div className="m-4">
-      {label && <label
-        className="mb-2 block text-sm font-bold text-gray-700"
-        htmlFor={name}
-      >
-        {label}
-      </label>}
+      {label && <Label text={label} htmlFor={name} />}
       <input
         type={type}
         id={id}

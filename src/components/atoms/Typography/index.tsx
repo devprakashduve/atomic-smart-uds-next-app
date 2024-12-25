@@ -1,6 +1,8 @@
 import React from 'react';
-import './Typography.css';
+
 import { TypographyProps } from './TypographyProps.interface';
+import './../../../app/globals.css';
+import './Typography.css';
 
 const Typography: React.FC<TypographyProps> = ({
   content,
@@ -20,3 +22,37 @@ const Typography: React.FC<TypographyProps> = ({
 };
 
 export default Typography;
+
+export const typographyVariants = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  body: 'body',
+  caption: 'caption',
+};
+
+export const typographySizes = {
+  small: 'small',
+  medium: 'medium',
+  large: 'large',
+};
+
+export const typographyWeights = {
+  light: 'light',
+  normal: 'normal',
+  bold: 'bold',
+};
+
+export const typographyColors = {
+  black: 'black',
+  white: 'white',
+  gray: 'gray',
+  red: 'red',
+  blue: 'blue',
+};
+
+export const typographyAlignments = {
+  left: 'left',
+  center: 'center',
+  right: 'right',
+};

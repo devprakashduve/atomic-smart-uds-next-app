@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { LoaderProps } from './LoaderProps.interface';
+import './../../../app/globals.css';
 import './Loader.css';
 
 const Loader: React.FC<LoaderProps> = ({

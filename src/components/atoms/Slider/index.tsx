@@ -1,6 +1,9 @@
 import React from 'react';
+import './../../../app/globals.css';
 import './Slider.css';
 import { SliderProps } from './SliderProps.interface';
+
+
 
 const Slider: React.FC<SliderProps> = ({
   min,
@@ -8,11 +11,14 @@ const Slider: React.FC<SliderProps> = ({
   value,
   step = 1,
   onChange,
+  setStep,
   color = 'blue',
   disabled = false,
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(Number(event.target.value));
+    const newValue = Number(event.target.value);
+    onChange(newValue);
+    setStep(newValue); // Update step based on the new value
   };
 
   return (

@@ -24,17 +24,17 @@
 }
 
 /* Speed Variants */
-.loader-slow {
+/* .loader-slow {
   @apply animation-spin 2s linear infinite;
-}
+} */
 
-.loader-normal {
+/* .loader-normal {
   @apply animation-spin 1s linear infinite;
-}
+} */
 
-.loader-fast {
+/* .loader-fast {
   @apply animation-spin 0.5s linear infinite;
-}
+} */
 
 /* Custom Color */
 .text-blue {
