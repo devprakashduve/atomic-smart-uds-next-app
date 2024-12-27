@@ -1,31 +1,58 @@
-import React from 'react';
-// import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { StoryFn, Meta } from '@storybook/react';
-import Avatar from './index';
-import { AvatarProps } from './AvatarProps.interface';
+import Avatar from '.';
 
 export default {
   title: 'Components/Atoms/Avatar',
   component: Avatar,
-} as Meta<typeof Avatar>;
-
-const Template: StoryFn<typeof Avatar> = (args: AvatarProps) => (
-  <Avatar {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  src: 'https://via.placeholder.com/50',
-  alt: 'Avatar',
-  size: 150,
-  customClassNames: 'avatar',
 };
 
-export const WithInitials = Template.bind({});
-WithInitials.args = {
-  initials: 'JD',
-  alt: 'Avatar with Initials',
-  src: 'https://via.placeholder.com/50',
-  size: 200,
-  customClassNames: 'avatar',
+export const Default = {
+  args: {
+    src: '/images/avatar.jpg',
+    alt: 'Avatar',
+    size: 16,
+    width: 250,
+    height: 250,
+    customClassNames: '',
+    circle: false,
+    rounded: false,
+  },
+};
+
+export const RoundedAvatar = {
+  args: {
+    src: '/images/avatar.jpg',
+    alt: 'Avatar',
+    size: 16,
+    width: 250,
+    height: 250,
+    customClassNames: '',
+    circle: false,
+    rounded: true,
+  },
+};
+
+export const RoundedAvatarLg = {
+  args: {
+    src: '/images/avatar.jpg',
+    alt: 'Avatar',
+    size: 16,
+    width: 150,
+    height: 150,
+    customClassNames: 'rounded-lg',
+    circle: false,
+    rounded: true,
+  },
+};
+
+export const CircleAvatar = {
+  args: {
+    initials: 'JD',
+    alt: 'Avatar with Initials',
+    src: '/images/avatar.jpg',
+    size: 16,
+    width: 250,
+    height: 250,
+    customClassNames: '',
+    circle: false,
+  },
 };

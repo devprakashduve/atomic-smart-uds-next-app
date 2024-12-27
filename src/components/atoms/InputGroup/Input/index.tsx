@@ -19,7 +19,7 @@ const Input: React.FC<InputProps> = ({
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState('');
 
-  const inputClass = classNames(customClassNames,'');
+  const inputClass = classNames(customClassNames, '');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;

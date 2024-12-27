@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SelectProps } from './SelectProps.interface';
+import './../../../../app/globals.css';
 import './Select.css';
 
 const Select: React.FC<SelectProps> = ({

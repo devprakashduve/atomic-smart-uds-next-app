@@ -1,5 +1,3 @@
-
-
 export interface SliderProps {
   min: number;
   max: number;

@@ -1,21 +1,16 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import RadioButton from './index';
-import { RadioButtonProps } from './RadioButtonProps.interface';
+import RadioButton from '.';
 
 export default {
-  title: 'Components/Atoms/RadioButton',
+  title: 'Components/Atoms/InputGroup/RadioButton',
   component: RadioButton,
-} as ComponentMeta<typeof RadioButton>;
+};
 
-const Template: ComponentStory<typeof RadioButton> = (
-  args: RadioButtonProps
-) => <RadioButton {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  checked: false,
-  onChange: (e: { target: { checked: any } }) => console.log(e.target.checked),
-  label: 'Radio Button Label',
-  name: 'radio-group',
+export const Default = {
+  args: {
+    checked: false,
+    onChange: (e: { target: { checked: any } }) =>
+      console.log(e.target.checked),
+    label: 'Radio Button Label',
+    name: 'radio-group',
+  },
 };
