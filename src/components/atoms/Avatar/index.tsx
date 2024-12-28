@@ -1,6 +1,6 @@
 import React from 'react';
 import { AvatarProps } from './AvatarProps.interface';
-import './../../../app/globals.css';
+
 import './Avatar.css';
 import { classNames } from '@/Components/utilities/componentsMethods';
 import Img from '../Img';
@@ -10,8 +10,8 @@ const Avatar: React.FC<AvatarProps> = ({
   alt,
   size = 16,
   customClassNames = '',
-  width,
-  height,
+  width = 105,
+  height = 105,
   circle = false,
   rounded = false,
 }) => {

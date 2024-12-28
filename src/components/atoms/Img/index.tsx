@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageProps } from './ImageProps.interface';
-import './../../../app/globals.css';
+
 import './Image.css';
 import Image from 'next/image';
 import { classNames } from '@/Components/utilities/componentsMethods';

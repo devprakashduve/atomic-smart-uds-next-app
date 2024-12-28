@@ -1,4 +1,3 @@
-import './../../../app/globals.css';
 import { BlogSectionsProps } from './ClogSections.interface';
 
 const posts: BlogSectionsProps[] = [

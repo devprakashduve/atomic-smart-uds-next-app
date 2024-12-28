@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-import './../../../app/globals.css';
 import InputField from '@/Components/Molecules/InputGroup/InputField';
 import PhoneNumberField from '@/Components/Molecules/InputGroup/PhoneNumberField';
 import TextareaField from '@/Components/Molecules/InputGroup/TextareaField';

@@ -4,7 +4,7 @@ import {
   FingerPrintIcon,
   LockClosedIcon,
 } from '@heroicons/react/24/outline';
-import './../../../app/globals.css';
+
 const features = [
   {
     name: 'Push to deploy',

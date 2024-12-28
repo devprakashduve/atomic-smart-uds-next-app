@@ -1,58 +1,32 @@
 import React from 'react';
-
 import { TypographyProps } from './TypographyProps.interface';
-import './../../../app/globals.css';
-import './Typography.css';
 
 const Typography: React.FC<TypographyProps> = ({
-  content,
-  variant = 'body',
-  size = 'medium',
-  weight = 'normal',
-  color = 'black',
-  align = 'left',
+  children,
+  variant,
+  size,
+  weight,
+  color,
+  align,
+  customClassNames = '',
 }) => {
-  return (
-    <div
-      className={`typography ${variant} ${size} ${weight} ${color} ${align}`}
-    >
-      {content}
-    </div>
-  );
+  const classNames = [
+    variant === 'heading' && 'text-4xl font-bold',
+    variant === 'subheading' && 'text-2xl font-medium',
+    variant === 'body' && 'text-base font-normal',
+    variant === 'caption' && 'text-sm font-light',
+    variant === 'overline' && 'text-xs uppercase font-light',
+    variant === 'button' && 'text-lg uppercase font-bold',
+    size && `text-${size}`,
+    weight && `font-${weight}`,
+    color && `text-${color}`,
+    align && `text-${align}`,
+    customClassNames,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  return <span className={classNames}>{children}</span>;
 };
 
 export default Typography;
-
-export const typographyVariants = {
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  body: 'body',
-  caption: 'caption',
-};
-
-export const typographySizes = {
-  small: 'small',
-  medium: 'medium',
-  large: 'large',
-};
-
-export const typographyWeights = {
-  light: 'light',
-  normal: 'normal',
-  bold: 'bold',
-};
-
-export const typographyColors = {
-  black: 'black',
-  white: 'white',
-  gray: 'gray',
-  red: 'red',
-  blue: 'blue',
-};
-
-export const typographyAlignments = {
-  left: 'left',
-  center: 'center',
-  right: 'right',
-};

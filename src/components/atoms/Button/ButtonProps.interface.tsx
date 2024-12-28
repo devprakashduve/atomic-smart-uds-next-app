@@ -3,5 +3,7 @@ export interface ButtonProps {
   onClick?: () => void;
   disabled: boolean;
   variant: string;
-  className?: string;
+
+  rounded?: boolean;
+  roundedFull?: boolean;
 }

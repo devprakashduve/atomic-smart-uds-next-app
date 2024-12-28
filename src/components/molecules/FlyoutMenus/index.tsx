@@ -1,5 +1,4 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
-import './../../../app/globals.css';
 
 import {
   ChevronDownIcon,

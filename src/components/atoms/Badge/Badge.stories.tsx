@@ -18,8 +18,8 @@ export const Default = {
 export const Primary = {
   args: {
     children: <span>&#10753;</span>,
-    variant: 'badge-primary',
-    customColor: 'green',
+    variant: 'text-primary',
+    customColor: '',
     scale: '3',
   },
 };
@@ -27,8 +27,8 @@ export const Primary = {
 export const Secondary = {
   args: {
     children: <span>&#10753;</span>,
-    variant: 'badge-secondary',
-    customColor: 'red',
+    variant: 'text-secondary',
+    customColor: '',
     scale: '5',
   },
 };

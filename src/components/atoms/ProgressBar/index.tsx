@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ProgressBarProps } from './ProgressBarProps.interface';
-import './../../../app/globals.css';
+
 import './ProgressBar.css';
 
 const ProgressBar: React.FC<ProgressBarProps> = ({

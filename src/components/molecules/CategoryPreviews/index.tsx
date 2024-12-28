@@ -1,4 +1,3 @@
-import './../../../app/globals.css';
 const callouts = [
   {
     name: 'Desk and Office',

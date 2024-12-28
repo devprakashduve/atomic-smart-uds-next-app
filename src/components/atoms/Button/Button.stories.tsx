@@ -19,11 +19,13 @@ export const Pill = {
     variant: 'btn-pill',
     disabled: false,
     children: 'Submit',
+    roundedFull: true,
   },
 };
 
 export const PillOutline = {
   args: {
+    roundedFull: true,
     variant: 'btn-pill-outline',
     disabled: false,
     children: (
@@ -43,6 +45,7 @@ export const PillOutline = {
 
 export const Outline = {
   args: {
+    rounded: true,
     variant: 'btn-outline',
     children: 'submit',
   },
@@ -50,6 +53,7 @@ export const Outline = {
 
 export const Bordered = {
   args: {
+    rounded: true,
     variant: 'btn-bordered',
     children: 'Submit',
   },
@@ -57,6 +61,7 @@ export const Bordered = {
 
 export const Disabled = {
   args: {
+    rounded: true,
     variant: 'btn-disabled',
     children: 'Submit',
   },
@@ -64,6 +69,7 @@ export const Disabled = {
 
 export const ThreeD = {
   args: {
+    rounded: true,
     variant: 'btn-three-d',
     children: 'Submit',
   },
@@ -71,6 +77,7 @@ export const ThreeD = {
 
 export const Elevated = {
   args: {
+    rounded: true,
     variant: 'btn-elevated',
     children: 'Submit',
   },

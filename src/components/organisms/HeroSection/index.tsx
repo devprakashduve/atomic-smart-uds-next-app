@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import './../../../app/globals.css';
+
 import { HeroSectionProps } from './HeroSectionProps.interface';
 
 const navigation = [

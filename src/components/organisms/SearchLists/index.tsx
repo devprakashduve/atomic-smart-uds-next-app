@@ -1,5 +1,5 @@
 import Avatar from '@/Components/Atoms/Avatar';
-import './../../../app/globals.css';
+
 const people = [
   {
     name: 'Leslie Alexander',
@@ -56,7 +56,14 @@ export default function Example() {
       {people.map((person) => (
         <li key={person.email} className="flex justify-between gap-x-6 py-5">
           <div className="flex min-w-0 gap-x-4">
-            <Avatar src={person.imageUrl} alt={'avatar-of-' + person.name} />
+            <Avatar
+              src={person.imageUrl}
+              alt={'avatar-of-' + person.name}
+              size={0}
+              initials={''}
+              width={0}
+              height={0}
+            />
             <div className="min-w-0 flex-auto">
               <p className="text-sm/6 font-semibold text-gray-900">
                 {person.name}

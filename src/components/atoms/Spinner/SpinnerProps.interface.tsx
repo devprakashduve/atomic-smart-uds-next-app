@@ -1,4 +1,7 @@
 export interface SpinnerProps {
-  size?: number;
   color?: string;
+  variant: 'css' | 'svg';
+  customLoader?: React.ReactNode;
+  width: number;
+  height: number;
 }

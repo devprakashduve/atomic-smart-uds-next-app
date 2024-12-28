@@ -1,4 +1,3 @@
-import './../../../app/globals.css';
 export default function GridSections() {
   return (
     <div className="bg-gray-50 py-24 sm:py-32">
