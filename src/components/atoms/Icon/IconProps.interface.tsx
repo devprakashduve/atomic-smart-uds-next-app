@@ -1,5 +1,5 @@
 export interface IconProps {
   name: string;
-  size?: number;
-  color?: string;
+  customClassNames?: string;
+  children?: React.ReactNode;
 }

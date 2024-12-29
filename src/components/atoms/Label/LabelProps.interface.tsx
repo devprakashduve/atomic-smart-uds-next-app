@@ -1,4 +1,5 @@
 export interface LabelProps {
-  text: string;
+  children: React.ReactNode;
   htmlFor: string;
+  customClassNames?: string;
 }
