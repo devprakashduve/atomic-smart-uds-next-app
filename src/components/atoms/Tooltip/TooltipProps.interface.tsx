@@ -3,5 +3,5 @@ interface TooltipProps {
   children: React.ReactNode;
   setBackground?: string;
   isBackground?: boolean;
-  isRounded?:boolean
+  isRounded?: boolean;
 }

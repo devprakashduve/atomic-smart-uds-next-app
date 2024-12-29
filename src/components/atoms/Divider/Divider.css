@@ -28,19 +28,6 @@
   @apply border-t-8;
 }
 
-/* Divider Color Variants (uses Tailwind color classes) */
-.border-gray {
-  @apply border-gray-300;
-}
-
-.border-blue {
-  @apply border-blue-500;
-}
-
-.border-red {
-  @apply border-red-500;
-}
-
 /* Additional styling for vertical dividers */
 .divider-vertical {
   @apply border-l-4;

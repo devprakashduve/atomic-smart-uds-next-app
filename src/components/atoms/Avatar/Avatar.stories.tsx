@@ -53,6 +53,6 @@ export const CircleAvatar = {
     width: 250,
     height: 250,
     customClassNames: '',
-    circle: false,
+    circle: true,
   },
 };

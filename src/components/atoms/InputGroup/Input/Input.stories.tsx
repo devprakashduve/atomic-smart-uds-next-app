@@ -3,6 +3,18 @@ import Input from '.';
 export default {
   title: 'Components/Atoms/InputGroup/Input',
   component: Input,
+  argTypes: {
+    value: { control: 'text' },
+    name: { control: 'text' },
+    onChange: { action: 'changed' },
+    placeholder: { control: 'text' },
+    disabled: { control: 'boolean' },
+    type: { control: 'select', options: ['text', 'password', 'number', 'email', 'tel'] },
+    label: { control: 'text' },
+    id: { control: 'text' },
+    customClassNames: { control: 'text' },
+    size: { control: 'select', options: ['sm', 'md', 'lg'] },
+  },
 };
 
 export const Default = {
@@ -14,6 +26,7 @@ export const Default = {
     disabled: false,
     type: 'text',
     label: 'Default Input',
+    onChange: (value:string) => console.log(value),
   },
 };
 
@@ -26,6 +39,7 @@ export const WithValue = {
     disabled: false,
     type: 'text',
     label: 'Input with Value',
+    onChange: (value:string) => console.log(value),
   },
 };
 
@@ -50,6 +64,7 @@ export const Password = {
     disabled: false,
     type: 'password',
     label: 'Password Input',
+    onChange: (value:string) => console.log(value),
   },
 };
 
@@ -62,6 +77,7 @@ export const Number = {
     disabled: false,
     type: 'number',
     label: 'Number Input',
+    onChange: (value:string) => console.log(value),
   },
 };
 
@@ -74,6 +90,7 @@ export const Email = {
     disabled: false,
     type: 'email',
     label: 'Email Input',
+    onChange: (value:string) => console.log(value),
   },
 };
 
@@ -86,5 +103,6 @@ export const Tel = {
     disabled: false,
     type: 'tel',
     label: 'Telephone Input',
+    onChange: (value:string) => console.log(value),
   },
 };

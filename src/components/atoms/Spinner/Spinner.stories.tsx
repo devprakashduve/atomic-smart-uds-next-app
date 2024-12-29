@@ -3,6 +3,57 @@ import Spinner from './index';
 export default {
   title: 'Components/Atoms/Spinner',
   component: Spinner,
+  argTypes: {
+    width: {
+      control: { type: 'number' },
+      description: 'Width of the spinner.',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: 50 },
+      },
+    },
+    height: {
+      control: { type: 'number' },
+      description: 'Height of the spinner.',
+      table: {
+        type: { summary: 'number' },
+        defaultValue: { summary: 50 },
+      },
+    },
+    customClassNames: {
+      control: { type: 'text' },
+      description: 'Custom class names to apply to the spinner.',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
+      },
+    },
+    variant: {
+      control: { type: 'select', options: ['css', 'svg'] },
+      description: 'Spinner variant to use.',
+      table: {
+        type: { summary: "'css' | 'svg'" },
+        defaultValue: { summary: 'css' },
+      },
+    },
+    colorTheme: {
+      control: { type: 'select', options: ['light', 'primary', 'dark'] },
+      description: 'Color theme for the spinner.',
+      table: {
+        type: { summary: "'light' | 'primary' | 'dark'" },
+        defaultValue: { summary: 'light' },
+      },
+    },
+    customLoader: {
+      control: false,
+      description:
+        'Custom loader element to render instead of the default spinner.',
+      table: {
+        type: { summary: 'ReactNode' },
+        defaultValue: { summary: 'undefined' },
+      },
+    },
+  },
 };
 
 export const WithCSSLight = {
@@ -14,6 +65,7 @@ export const WithCSSLight = {
     colorTheme: 'light',
   },
 };
+
 export const WithCSSPrimary = {
   args: {
     width: 50,
@@ -23,6 +75,7 @@ export const WithCSSPrimary = {
     colorTheme: 'primary',
   },
 };
+
 export const WithCSSDark = {
   args: {
     width: 50,
@@ -42,7 +95,7 @@ export const WithSVG = {
   },
 };
 
-export const customLoader = {
+export const CustomLoader = {
   args: {
     width: 96,
     height: 96,
@@ -69,7 +122,7 @@ export const customLoader = {
             type="rotate"
             attributeName="transform"
             calcMode="discrete"
-            dur="2"
+            dur="2s"
             values="360;324;288;252;216;180;144;108;72;36"
             repeatCount="indefinite"
           ></animateTransform>

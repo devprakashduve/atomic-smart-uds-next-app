@@ -5,11 +5,43 @@ export default {
   component: Checkbox,
 };
 
-export const Default = {
+export const Checked = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+  },
+};
+
+export const unChecked = {
   args: {
     checked: false,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) =>
-      console.log(e.target.checked),
-    label: 'Checkbox Label',
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+  },
+};
+
+export const SizeSM = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+    size: 'sm',
+  },
+};
+export const SizeMD = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+    size: 'md',
+  },
+};
+export const SizeLG = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+    size: 'lg',
   },
 };

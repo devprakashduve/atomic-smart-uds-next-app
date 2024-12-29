@@ -9,7 +9,6 @@ export const HorizontalThin = {
   args: {
     orientation: 'horizontal',
     thickness: 'thin',
-    color: 'gray',
   },
 };
 
@@ -17,14 +16,20 @@ export const HorizontalMedium = {
   args: {
     orientation: 'horizontal',
     thickness: 'medium',
-    color: 'blue',
   },
 };
 
-export const VerticalThick = {
+export const HorizontalThick = {
   args: {
     orientation: 'vertical',
     thickness: 'thick',
-    color: 'red',
+  },
+};
+
+export const HorizontalThickDark = {
+  args: {
+    orientation: 'vertical',
+    thickness: 'thick',
+    customClassNames: 'border-primary-dark',
   },
 };

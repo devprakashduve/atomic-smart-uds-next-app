@@ -15,14 +15,13 @@ export const DefaultTooltip = {
       </Button>
     ),
     content: 'This is a top tooltip',
-    
   },
 };
 export const Rounded = {
   args: {
     children: 'Hover me',
     content: 'This is a top tooltip',
-    isRounded:true
+    isRounded: true,
   },
 };
 
@@ -42,5 +41,3 @@ export const setBackground = {
     setBackground: 'bg-secondary-dark',
   },
 };
-
-

@@ -6,7 +6,7 @@ import { classNames } from '@/Components/utilities/componentsMethods';
 import Img from '../Img';
 
 const Avatar: React.FC<AvatarProps> = ({
-  src,
+  src = '/images/avatar.jpg',
   alt,
   size = 16,
   customClassNames = '',

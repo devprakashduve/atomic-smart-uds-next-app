@@ -1,11 +1,12 @@
 import React from 'react';
 import './Divider.css';
 import { DividerProps } from './DividerProps.interface';
+import { classNames } from '@/Components/utilities/componentsMethods';
 
 const Divider: React.FC<DividerProps> = ({
   orientation = 'horizontal',
-  color = 'gray',
   thickness = 'medium',
+  customClassNames,
 }) => {
   const orientationClasses = {
     horizontal: 'divider-horizontal',
@@ -18,11 +19,11 @@ const Divider: React.FC<DividerProps> = ({
     thick: 'divider-thick',
   };
 
-  return (
-    <div
-      className={`divider ${orientationClasses[orientation]} ${thicknessClasses[thickness]} border-${color}`}
-    />
+  const dividerClasses = classNames(
+    `divider ${orientationClasses[orientation]} ${thicknessClasses[thickness]} border-primary`,
+    customClassNames
   );
+  return <div className={dividerClasses} />;
 };
 
 export default Divider;
