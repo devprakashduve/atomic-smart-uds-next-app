@@ -1,7 +1,6 @@
-export interface TooltipProps {
-  children: React.ReactNode;
+interface TooltipProps {
   content: string;
-  placement?: 'top' | 'bottom' | 'left' | 'right';
-  background?: string;
+  children: React.ReactNode;
   customClassNames?: string;
+  background?: boolean;
 }

@@ -20,7 +20,6 @@ export const TopTooltip = {
   args: {
     children: 'Hover me',
     content: 'This is a top tooltip',
-    placement: 'top',
   },
 };
 
@@ -37,7 +36,6 @@ export const BottomTooltip = {
   args: {
     children: <Button variant={'btn-pill-outline'}>Touch Me</Button>,
     content: 'This is a bottom tooltip',
-    placement: 'bottom',
     background: true,
     customClassNames: 'border-secondary-dark',
   },
@@ -47,6 +45,5 @@ export const LeftTooltip = {
   args: {
     children: 'Hover me',
     content: 'This is a left tooltip',
-    placement: 'left',
   },
 };
