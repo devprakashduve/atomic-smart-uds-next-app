@@ -2,42 +2,42 @@
   text-transform: uppercase;
 }
 .btn {
-  @apply inline-flex items-center px-4 py-2 text-sm font-semibold;
+  @apply inline-flex items-center p-3 px-4 font-semibold;
 }
 .btn-simple {
-  @apply rounded bg-blue-500 text-white hover:bg-blue-700;
+  @apply bg-primary text-white hover:bg-primary-dark;
 }
 
 .btn-pill {
-  @apply rounded-full bg-blue-500 text-white hover:bg-blue-700;
+  @apply bg-primary text-white hover:bg-primary-dark;
 }
 .btn-pill-outline {
-  @apply rounded-full border border-blue-500 bg-transparent text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white;
+  @apply border border-primary bg-transparent text-primary-dark hover:border-transparent hover:bg-primary hover:text-white;
 }
 
 .btn-outline {
-  @apply rounded border border-blue-500 bg-transparent text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white;
+  @apply border border-primary bg-transparent text-primary-dark hover:border-transparent hover:bg-primary hover:text-white;
 }
 
 .btn-bordered {
-  @apply rounded border border-blue-700 bg-blue-500 text-white hover:bg-blue-700;
+  @apply border border-primary-dark bg-primary text-white hover:bg-primary-dark;
 }
 
 .btn-three-d {
-  @apply rounded border border-blue-700 bg-blue-500 text-white shadow-md hover:bg-blue-700;
+  @apply border border-primary-dark bg-primary text-white shadow-md hover:bg-primary-dark;
 }
 
 .btn-elevated {
-  @apply rounded border border-gray-400 bg-white text-gray-800 shadow hover:bg-gray-100;
+  @apply border border-gray-400 bg-white text-gray-800 shadow hover:bg-secondary;
 }
 
 .btn-group {
-  @apply rounded border border-blue-700 bg-blue-500 text-white shadow-lg hover:bg-blue-700;
+  @apply border border-primary-dark bg-primary text-white shadow-lg hover:bg-primary-dark;
 }
 .btn-icon {
-  @apply inline-flex items-center rounded bg-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-400;
+  @apply inline-flex items-center bg-secondary-light px-4 py-2 text-gray-800 hover:bg-secondary-dark;
 }
 
 .btn-disabled {
-  @apply cursor-not-allowed rounded bg-blue-500 text-white opacity-50;
+  @apply cursor-not-allowed bg-primary text-white opacity-50;
 }

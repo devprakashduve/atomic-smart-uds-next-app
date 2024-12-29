@@ -8,7 +8,6 @@ import {
   DialogTitle,
 } from '@headlessui/react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
-import './../../../app/globals.css';
 
 export default function ModalDialogs() {
   const [open, setOpen] = useState(true);

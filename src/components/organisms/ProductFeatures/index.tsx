@@ -1,4 +1,3 @@
-import './../../../app/globals.css';
 const features = [
   { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
   {

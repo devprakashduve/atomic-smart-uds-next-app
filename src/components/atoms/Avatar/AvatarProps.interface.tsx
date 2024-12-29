@@ -3,5 +3,9 @@ export interface AvatarProps {
   alt: string;
   size: number;
   initials: string;
+  width: number;
+  height: number;
   customClassNames?: string;
+  circle?: boolean;
+  rounded?: boolean;
 }

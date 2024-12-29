@@ -1,4 +1,3 @@
-import './../../../app/globals.css';
 const products = [
   {
     id: 1,

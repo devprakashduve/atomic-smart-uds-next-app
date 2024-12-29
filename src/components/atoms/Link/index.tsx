@@ -1,6 +1,6 @@
 import React from 'react';
 import { LinkProps } from './LinkProps.interface';
-import './../../../app/globals.css';
+
 import './Link.css';
 
 const Link: React.FC<LinkProps> = ({ href, text, target = '_self' }) => {

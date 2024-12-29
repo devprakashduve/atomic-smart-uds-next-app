@@ -26,7 +26,6 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from '@heroicons/react/20/solid';
-import './../../../app/globals.css';
 
 const products = [
   {

@@ -1,19 +1,36 @@
 import React from 'react';
-
 import { AvatarProps } from './AvatarProps.interface';
-import './../../../app/globals.css';
+
 import './Avatar.css';
 import { classNames } from '@/Components/utilities/componentsMethods';
+import Img from '../Img';
 
 const Avatar: React.FC<AvatarProps> = ({
-  src,
+  src = '/images/avatar.jpg',
   alt,
-  size = 50,
-  customClassNames,
+  size = 16,
+  customClassNames = '',
+  width = 105,
+  height = 105,
+  circle = false,
+  rounded = false,
 }) => {
-  const classes = classNames('avatar', customClassNames);
+  const containerClasses = classNames(
+    `w-${size} h-${size}`,
+    `overflow-hidden ${rounded ? 'rounded' : ''} ${circle ? 'rounded-full' : ''} ${customClassNames}`
+  );
+  const imgClasses = classNames('w-full h-full object-cover', '');
+
   return (
-    <img className={classes} src={src} alt={alt} width={size} height={size} />
+    <div className={containerClasses}>
+      <Img
+        customClassNames={imgClasses}
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+      />
+    </div>
   );
 };
 

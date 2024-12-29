@@ -1,35 +1,55 @@
-import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import { SwitchProps } from './SwitchProps.interface';
 import Switch from '.';
 
 export default {
   title: 'Components/Atoms/Switch',
   component: Switch,
-} as Meta;
-
-const Template: StoryFn<SwitchProps> = (args) => <Switch {...args} />;
-
-export const DefaultSwitch = Template.bind({});
-DefaultSwitch.args = {
-  checked: false,
-  onChange: (checked) => console.log(checked),
-  color: 'blue',
-  disabled: false,
 };
 
-export const CheckedSwitch = Template.bind({});
-CheckedSwitch.args = {
-  checked: true,
-  onChange: (checked) => console.log(checked),
-  color: 'green',
-  disabled: false,
+export const DefaultSwitch = {
+  args: {
+    checked: false,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+    textForOn: 'On',
+    textForOff: 'Off',
+  },
 };
 
-export const DisabledSwitch = Template.bind({});
-DisabledSwitch.args = {
-  checked: false,
-  onChange: (checked) => console.log(checked),
-  color: 'red',
-  disabled: true,
+export const CheckedSwitch = {
+  args: {
+    checked: true,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+  },
+};
+
+export const withoutIcon = {
+  args: {
+    checked: true,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+    disableIcons: true,
+    textForOn: 'On',
+    textForOff: 'Off',
+  },
+};
+
+export const NoBackground = {
+  args: {
+    checked: true,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+    disableIcons: false,
+    textForOn: 'On',
+    textForOff: 'Off',
+    noBackground: true,
+  },
+};
+
+export const DisabledSwitch = {
+  args: {
+    checked: false,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: true,
+  },
 };

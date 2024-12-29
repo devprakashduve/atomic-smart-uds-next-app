@@ -1,24 +1,30 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
 import Paragraph from '.';
-import { ParagraphProps } from './ParagraphProps.interface';
 
 export default {
   title: 'Components/Atoms/Paragraph',
   component: Paragraph,
-} as Meta;
-
-const Template: Story<ParagraphProps> = (
-  args: React.JSX.IntrinsicAttributes & ParagraphProps
-) => <Paragraph {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  children: 'This is a paragraph.',
 };
 
-export const CustomStyle = Template.bind({});
-CustomStyle.args = {
-  children: 'This is a custom styled paragraph.',
-  style: { color: 'blue', fontSize: '18px' },
+export const Thin = {
+  args: {
+    children: 'This is a paragraph.',
+    customClassNames: 'font-light',
+    thin: true,
+  },
+};
+
+export const Normal = {
+  args: {
+    children: 'This is a paragraph.',
+    customClassNames: 'font-light',
+    normal: true,
+  },
+};
+
+export const Bold = {
+  args: {
+    children: 'This is a custom styled paragraph.',
+    customClassNames: 'font-dark',
+    bold: true,
+  },
 };

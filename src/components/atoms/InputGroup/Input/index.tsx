@@ -15,11 +15,27 @@ const Input: React.FC<InputProps> = ({
   id,
   name,
   customClassNames,
+  size
 }) => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState('');
 
-  const inputClass = classNames(customClassNames,'');
+  let boxSize="h-10"
+switch (size) {
+  case 'lg':
+    boxSize = 'h-14';
+    break;
+  case 'md':
+    boxSize = 'h-12';
+    break;
+  case 'sm':
+    boxSize = 'h-10';
+    break;
+  default:
+    boxSize = 'h-10';
+    break;
+}
+  const inputClass = classNames(customClassNames, boxSize);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
@@ -68,7 +84,7 @@ const Input: React.FC<InputProps> = ({
     setError(errorMessage);
 
     if (onChange) {
-      onChange(e);
+      onChange(e.target.value);
     }
   };
 

@@ -1,5 +1,5 @@
 .input-base {
-  @apply mb-2 w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow;
+  @apply mb-2 w-full cursor-auto appearance-none rounded border px-3 py-2 leading-tight  shadow;
 }
 
 .input-disabled {

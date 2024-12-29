@@ -10,7 +10,7 @@ import {
 } from '@headlessui/react';
 import { ChevronUpDownIcon } from '@heroicons/react/16/solid';
 import { CheckIcon } from '@heroicons/react/20/solid';
-import './../../../app/globals.css';
+
 import Avatar from '../../Atoms/Avatar';
 
 const people = [
@@ -102,7 +102,14 @@ export default function SelectMenus() {
                 className="data-focus:bg-indigo-600 data-focus:text-white data-focus:outline-hidden group relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900"
               >
                 <div className="flex items-center">
-                  <Avatar src={person.avatar} size={20} />
+                  <Avatar
+                    src={person.avatar}
+                    size={20}
+                    alt={''}
+                    initials={''}
+                    width={0}
+                    height={0}
+                  />
                   <span className="group-data-selected:font-semibold ml-3 block truncate font-normal">
                     {person.name}
                   </span>

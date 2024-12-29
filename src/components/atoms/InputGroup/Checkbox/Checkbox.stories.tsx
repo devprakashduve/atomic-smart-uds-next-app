@@ -1,20 +1,47 @@
-import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import Checkbox from './index';
-import { CheckboxProps } from './CheckboxProps.interface';
+import Checkbox from '.';
 
 export default {
   title: 'Components/Atoms/InputGroup/Checkbox',
   component: Checkbox,
-} as Meta<typeof Checkbox>;
+};
 
-const Template: StoryFn<typeof Checkbox> = (args: CheckboxProps) => (
-  <Checkbox {...args} />
-);
+export const Checked = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+  },
+};
 
-export const Default = Template.bind({});
-Default.args = {
-  checked: false,
-  onChange: (e) => console.log(e.target.checked),
-  label: 'Checkbox Label',
+export const unChecked = {
+  args: {
+    checked: false,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+  },
+};
+
+export const SizeSM = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+    size: 'sm',
+  },
+};
+export const SizeMD = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+    size: 'md',
+  },
+};
+export const SizeLG = {
+  args: {
+    checked: true,
+    toggleChecked: (value: boolean) => console.log(value),
+    label: 'Dummy Label',
+    size: 'lg',
+  },
 };

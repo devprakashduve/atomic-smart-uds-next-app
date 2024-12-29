@@ -1,4 +1,3 @@
-import './../../../app/globals.css';
 export default function PromoSections() {
   return (
     <div className="relative overflow-hidden bg-white">

@@ -1,4 +1,3 @@
-import './../../../app/globals.css';
 const people = [
   {
     name: 'Leslie Alexander',

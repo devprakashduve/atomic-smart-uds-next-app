@@ -1,5 +1,4 @@
 import { XMarkIcon } from '@heroicons/react/20/solid';
-import './../../../app/globals.css';
 
 export default function Banner() {
   return (
