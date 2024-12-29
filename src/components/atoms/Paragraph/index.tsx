@@ -7,7 +7,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
   children,
   customClassNames,
   thin,
-  normal,
+  normal=true,
   bold,
 }) => {
   const paraClass = classNames(

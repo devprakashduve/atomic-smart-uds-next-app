@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonProps } from './ButtonProps.interface';
-import './Button.css';
 import { classNames } from '@/Components/utilities/componentsMethods';
+import './Button.css';
 
 const Button: React.FC<ButtonProps> = ({
   onClick,

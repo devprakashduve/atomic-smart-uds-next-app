@@ -2,7 +2,7 @@
   text-transform: uppercase;
 }
 .btn {
-  @apply inline-flex items-center px-4 py-2 text-sm font-semibold;
+  @apply inline-flex items-center p-3 px-4 font-semibold;
 }
 .btn-simple {
   @apply bg-primary text-white hover:bg-primary-dark;

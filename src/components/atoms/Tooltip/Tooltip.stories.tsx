@@ -1,5 +1,6 @@
 import Tooltip from '.';
 import Button from '../Button';
+import Paragraph from '../Paragraph';
 
 export default {
   title: 'Components/Atoms/Tooltip',
@@ -14,36 +15,32 @@ export const DefaultTooltip = {
       </Button>
     ),
     content: 'This is a top tooltip',
+    
   },
 };
-export const TopTooltip = {
+export const Rounded = {
   args: {
     children: 'Hover me',
     content: 'This is a top tooltip',
+    isRounded:true
   },
 };
 
-export const RightTooltip = {
+export const Background = {
   args: {
-    children: 'Hover me',
+    children: <Button variant={'btn-simple'}>Touch Me</Button>,
     content: 'This is a right tooltip',
-    placement: 'right',
-    background: true,
+    isBackground: true,
   },
 };
 
-export const BottomTooltip = {
+export const setBackground = {
   args: {
-    children: <Button variant={'btn-pill-outline'}>Touch Me</Button>,
+    children: <Button variant={'btn-pill-outline'}>touch Me</Button>,
     content: 'This is a bottom tooltip',
-    background: true,
-    customClassNames: 'border-secondary-dark',
+    isBackground: true,
+    setBackground: 'bg-secondary-dark',
   },
 };
 
-export const LeftTooltip = {
-  args: {
-    children: 'Hover me',
-    content: 'This is a left tooltip',
-  },
-};
+
