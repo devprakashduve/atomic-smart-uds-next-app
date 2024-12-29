@@ -5,15 +5,26 @@ export default {
   component: Paragraph,
 };
 
-export const Default = {
+export const Thin = {
   args: {
     children: 'This is a paragraph.',
+    customClassNames: 'font-light',
+    thin: true,
   },
 };
 
-export const CustomStyle = {
+export const Normal = {
+  args: {
+    children: 'This is a paragraph.',
+    customClassNames: 'font-light',
+    normal: true,
+  },
+};
+
+export const Bold = {
   args: {
     children: 'This is a custom styled paragraph.',
-    style: { color: 'blue', fontSize: '18px' },
+    customClassNames: 'font-dark',
+    bold: true,
   },
 };

@@ -7,7 +7,6 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   disabled = false,
   variant,
-
   children,
   rounded = false,
   roundedFull = false,

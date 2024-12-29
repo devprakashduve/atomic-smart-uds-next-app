@@ -15,11 +15,11 @@ const Switch = (props: SwitchProps) => {
   const switchClass = classNames(
     !noBackground
       ? enabled
-        ? 'bg-primary-dark'
-        : 'bg-primary'
+        ? 'bg-primary'
+        : 'bg-primary-light'
       : enabled
-        ? 'border border-primary-dark'
-        : 'border border-primary'
+        ? 'border border-primary'
+        : 'border border-primary-light'
   );
   return (
     <label className="flex cursor-pointer items-center">
@@ -40,7 +40,7 @@ const Switch = (props: SwitchProps) => {
 
         {/* Dot with Check Mark */}
         <div
-          className={`absolute left-2 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary-light shadow transition-all ${
+          className={`absolute left-2 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary-dark shadow transition-all ${
             enabled ? 'translate-x-full' : ''
           }`}
         >

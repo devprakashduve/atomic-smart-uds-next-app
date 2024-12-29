@@ -1,38 +1,52 @@
 import Tooltip from '.';
+import Button from '../Button';
 
 export default {
   title: 'Components/Atoms/Tooltip',
   component: Tooltip,
 };
 
+export const DefaultTooltip = {
+  args: {
+    children: (
+      <Button disabled={false} variant={'btn-pill-outline'}>
+        Touch Me
+      </Button>
+    ),
+    content: 'This is a top tooltip',
+  },
+};
 export const TopTooltip = {
   args: {
-    text: 'This is a top tooltip',
-    position: 'top',
-    color: 'black',
+    children: 'Hover me',
+    content: 'This is a top tooltip',
+    placement: 'top',
   },
 };
 
 export const RightTooltip = {
   args: {
-    text: 'This is a right tooltip',
-    position: 'right',
-    color: 'blue',
+    children: 'Hover me',
+    content: 'This is a right tooltip',
+    placement: 'right',
+    background: true,
   },
 };
 
 export const BottomTooltip = {
   args: {
-    text: 'This is a bottom tooltip',
-    position: 'bottom',
-    color: 'red',
+    children: <Button variant={'btn-pill-outline'}>Touch Me</Button>,
+    content: 'This is a bottom tooltip',
+    placement: 'bottom',
+    background: true,
+    customClassNames: 'border-secondary-dark',
   },
 };
 
 export const LeftTooltip = {
   args: {
-    text: 'This is a left tooltip',
-    position: 'left',
-    color: 'white',
+    children: 'Hover me',
+    content: 'This is a left tooltip',
+    placement: 'left',
   },
 };

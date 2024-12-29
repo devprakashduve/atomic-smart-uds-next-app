@@ -1,5 +1,8 @@
 export interface ParagraphProps {
   text: string;
   children?: React.ReactNode;
-  className?: string;
+  customClassNames?: string;
+  thin?: boolean;
+  normal?: boolean;
+  bold?: boolean;
 }

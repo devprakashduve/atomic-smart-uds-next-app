@@ -8,6 +8,8 @@ const Spinner: React.FC<SpinnerProps> = ({
   height = 48,
   variant,
   customLoader,
+  customClassNames,
+  colorTheme,
 }) => {
   const spinnerClass = classNames(
     'spinner',
@@ -20,7 +22,9 @@ const Spinner: React.FC<SpinnerProps> = ({
   if (variant === 'css') {
     return (
       <div className={spinnerClass}>
-        <div className="spinner-circle"></div>
+        <div
+          className={`spinner-circle spinner-${colorTheme} ${customClassNames}`}
+        ></div>
       </div>
     );
   }

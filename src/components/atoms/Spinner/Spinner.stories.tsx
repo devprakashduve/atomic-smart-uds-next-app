@@ -5,12 +5,31 @@ export default {
   component: Spinner,
 };
 
-export const WithCSS = {
+export const WithCSSLight = {
   args: {
     width: 50,
     height: 50,
-    color: 'currentColor',
+    customClassNames: '',
     variant: 'css',
+    colorTheme: 'light',
+  },
+};
+export const WithCSSPrimary = {
+  args: {
+    width: 50,
+    height: 50,
+    customClassNames: '',
+    variant: 'css',
+    colorTheme: 'primary',
+  },
+};
+export const WithCSSDark = {
+  args: {
+    width: 50,
+    height: 50,
+    customClassNames: '',
+    variant: 'css',
+    colorTheme: 'dark',
   },
 };
 
@@ -18,7 +37,7 @@ export const WithSVG = {
   args: {
     width: 96,
     height: 96,
-    color: 'currentColor',
+    customClassNames: '',
     variant: 'svg',
   },
 };
@@ -27,7 +46,7 @@ export const customLoader = {
   args: {
     width: 96,
     height: 96,
-    color: 'currentColor',
+    customClassNames: '',
     variant: 'svg',
     customLoader: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">

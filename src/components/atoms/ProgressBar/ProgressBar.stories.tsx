@@ -9,7 +9,7 @@ export const BasicProgressBar = {
   args: {
     value: 50,
     max: 100,
-    color: 'blue',
+    color: 'primary-dark',
     height: '4px',
     striped: false,
   },
@@ -19,7 +19,7 @@ export const StripedProgressBar = {
   args: {
     value: 70,
     max: 100,
-    color: 'green',
+    color: 'primary-dark',
     height: '6px',
     striped: true,
   },
@@ -27,9 +27,9 @@ export const StripedProgressBar = {
 
 export const FullProgressBar = {
   args: {
-    value: 100,
+    value: 80,
     max: 100,
-    color: 'red',
+    color: 'primary-dark',
     height: '8px',
     striped: false,
   },

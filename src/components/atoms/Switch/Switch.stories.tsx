@@ -42,7 +42,7 @@ export const NoBackground = {
     disableIcons: false,
     textForOn: 'On',
     textForOff: 'Off',
-    noBackground:true
+    noBackground: true,
   },
 };
 
