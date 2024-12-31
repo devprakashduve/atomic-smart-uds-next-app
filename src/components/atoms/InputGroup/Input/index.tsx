@@ -55,7 +55,7 @@ const Input: React.FC<InputProps> = ({
       break;
   }
   const inputClass = classNames(
-    'w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-primary-dark pl-3 pr-10 py-2 transition duration-300 ease focus:outline-none shadow-sm',
+    'w-full bg-transparent placeholder:text-letter-light text-letter text-sm border border-line-light hover:border-line focus:border-line-dark pl-3 pr-10 py-2 transition duration-300 ease focus:outline-none shadow-sm',
     customClassNames,
     boxSize,
     error && 'border border-error',
@@ -114,7 +114,7 @@ const Input: React.FC<InputProps> = ({
       <div className="relative mt-4 w-full">
         {label && (
           <Label
-            customClassNames="block mb-2 text-sm text-slate-600"
+            customClassNames="block mb-2 text-sm text-letter"
             htmlFor={name}
           >
             {label}
@@ -124,6 +124,7 @@ const Input: React.FC<InputProps> = ({
 
         <div className="relative">
           <input
+            title={name}
             type={type}
             id={id}
             name={name}

@@ -1,6 +1,6 @@
 /* Base Slider Styles */
 .slider-container {
-  @apply flex w-full flex-col items-center;
+  @apply flex w-full flex-col items-center shadow-sm focus:outline-none;
 }
 
 .slider-thumb {

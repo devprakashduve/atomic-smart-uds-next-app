@@ -12,4 +12,5 @@ export interface InputProps {
   isRequired?: boolean;
   rounded?: boolean;
   roundedFull?: boolean;
+  title?: string;
 }

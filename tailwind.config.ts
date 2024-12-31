@@ -1,5 +1,37 @@
 import type { Config } from 'tailwindcss';
 
+const theme_1 = {
+  primary: {
+    light: '#B9FBC0',
+    DEFAULT: '#34D399',
+    dark: '#059669',
+  },
+  secondary: {
+    light: '#FFD6E8',
+    DEFAULT: '#FB7185',
+    dark: '#9F1239',
+  },
+  accent: {
+    light: '#FFEDD5',
+    DEFAULT: '#F97316',
+    dark: '#C2410C',
+  },
+  line: {
+    light: '#e2e8f0', //slate-200
+    DEFAULT: '#cbd5e1', // slate-300
+    dark: '#94a3b8', // slate-400
+  },
+  letter: {
+    light: '#94a3b8', // slate-400
+    DEFAULT: '#334155', //slate-700
+    dark: '#0f172a', // slate-700
+  },
+  neutral: '#E5E7EB',
+  info: '#38BDF8',
+  success: '#22C55E',
+  warning: '#FACC15',
+  error: '#EF4444',
+};
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,35 +41,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: {
-          light: '#B9FBC0',
-          DEFAULT: '#34D399',
-          dark: '#059669',
-        },
-        secondary: {
-          light: '#FFD6E8',
-          DEFAULT: '#FB7185',
-          dark: '#9F1239',
-        },
-        accent: {
-          light: '#FFEDD5',
-          DEFAULT: '#F97316',
-          dark: '#C2410C',
-        },
-        font: {
-          light: '#F3F4F6',
-          DEFAULT: '#1F2937',
-          dark: '#111827',
-        },
-        neutral: '#E5E7EB',
-        info: '#38BDF8',
-        success: '#22C55E',
-        warning: '#FACC15',
-        error: '#EF4444',
-        
+      colors: theme_1,
+      zIndex: {
+        auto: 'auto', // Add a custom `z-auto` class
+        '-9': '-9',  // Add a custom `z-[-9]` class
       },
-      
       spacing: {
         '128': '32rem',
         '144': '36rem',

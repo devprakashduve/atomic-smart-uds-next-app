@@ -3,4 +3,6 @@ export interface CheckboxProps {
   toggleChecked: (e: boolean) => void;
   label: string;
   size?: string;
+  title?: string;
+  name: string;
 }

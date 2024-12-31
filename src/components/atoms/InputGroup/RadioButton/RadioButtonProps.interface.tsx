@@ -4,4 +4,5 @@ export interface RadioButtonProps {
   label: string;
   name: string;
   size?: 'sm' | 'md' | 'lg';
+  title?: string;
 }
