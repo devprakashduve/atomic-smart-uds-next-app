@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { InputProps } from './InputProps.interface';
 import './../../../../app/globals.css';
 import './Input.css';
@@ -20,9 +20,13 @@ const Input: React.FC<InputProps> = ({
   isRequired,
   rounded,
   roundedFull,
+  showIcon = false,
+  customIconSVG,
 }) => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState('');
+  const [iconName, setIconName] = useState('');
+  const [inputType, setInputType] = useState(type);
 
   let boxSize = 'h-10';
   switch (size) {
@@ -39,26 +43,27 @@ const Input: React.FC<InputProps> = ({
       boxSize = 'h-10';
       break;
   }
-  let iconName = '';
-  switch (type) {
-    case 'password':
-      iconName = 'openEye';
-      break;
-    case 'email':
-      iconName = 'envelop';
-      break;
-    case 'tel':
-      iconName = 'phone';
-      break;
-    default:
-      iconName = '';
-      break;
-  }
+
+  useEffect(() => {
+    switch (inputType) {
+      case 'password':
+        setIconName('openEye');
+        break;
+      case 'email':
+        setIconName('envelop');
+        break;
+      case 'tel':
+        setIconName('phone');
+        break;
+      default:
+        break;
+    }
+  }, [inputType]);
   const inputClass = classNames(
     'w-full bg-transparent placeholder:text-letter-light text-letter text-sm border border-line-light hover:border-line focus:border-line-dark pl-3 pr-10 py-2 transition duration-300 ease focus:outline-none shadow-sm',
     customClassNames,
     boxSize,
-    error && 'border border-error',
+    error && 'border border-error hover:border-error focus:border-error',
     rounded && 'rounded',
     roundedFull && 'rounded-full'
   );
@@ -125,7 +130,7 @@ const Input: React.FC<InputProps> = ({
         <div className="relative">
           <input
             title={name}
-            type={type}
+            type={inputType}
             id={id}
             name={name}
             value={value}
@@ -135,9 +140,25 @@ const Input: React.FC<InputProps> = ({
             className={`${inputClass} ${disabled ? 'input-disabled' : ''} ${error ? 'input-error' : ''}`}
             required={isRequired}
           />
-          <Icon name={iconName} />
+
+          {showIcon && (
+            <span
+              onClick={() => {
+                if (type === 'password') {
+                  setIconName(iconName === 'openEye' ? 'closeEye' : 'openEye');
+                  setInputType(inputType === 'password' ? 'text' : 'password');
+                }
+              }}
+            >
+              {customIconSVG ? (
+                <Icon name={''}>{customIconSVG}</Icon>
+              ) : (
+                <Icon name={iconName} />
+              )}
+            </span>
+          )}
         </div>
-        {error && <p className="text-xs text-error">{error}</p>}
+        {error && <p className="text-error">{error}</p>}
       </div>
     </>
   );

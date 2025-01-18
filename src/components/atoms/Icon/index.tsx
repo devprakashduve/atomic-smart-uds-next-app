@@ -75,15 +75,18 @@ const Icon: React.FC<IconProps> = ({
     case 'phone':
       children = (
         <svg
-          className="h-6"
-          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
           width="24"
           height="24"
-          fill="currentColor"
-          viewBox="0 0 24 24"
+          fill="none"
+          className="h-6"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
         >
-          <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
         </svg>
       );
       break;
@@ -147,7 +150,7 @@ const Icon: React.FC<IconProps> = ({
       );
       break;
     default:
-      children = '';
+      children = children;
       break;
   }
   const iconClass = classNames(

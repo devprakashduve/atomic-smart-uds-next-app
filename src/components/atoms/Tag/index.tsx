@@ -23,7 +23,8 @@ const Tag: React.FC<TagProps> = ({
       {label}
       {removable && (
         <button
-          className="tag-remove ml-2 text-xs text-gray-600 hover:text-gray-800"
+          type="button"
+          className="tag-remove text-btn-dark hover:text-btn-dark"
           onClick={handleRemove}
         >
           &times;

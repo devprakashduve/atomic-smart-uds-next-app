@@ -28,6 +28,7 @@ export default {
         defaultValue: { summary: 'undefined' },
       },
     },
+    showCounter: { control: { type: 'boolean' } },
   },
 };
 
@@ -35,6 +36,7 @@ export const DefaultStepper = {
   args: {
     steps: 4,
     value: 2,
+    showCounter: true,
   },
 };
 
@@ -42,12 +44,22 @@ export const TwoSteps = {
   args: {
     steps: 2,
     value: 1,
+    showCounter: true,
   },
 };
 
 export const FiveSteps = {
   args: {
     steps: 5,
+    value: 1,
+    showCounter: true,
+  },
+};
+
+export const WithoutCounter = {
+  args: {
+    steps: 5,
     value: 3,
+    showCounter: false,
   },
 };

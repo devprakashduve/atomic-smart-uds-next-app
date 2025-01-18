@@ -26,6 +26,11 @@ const theme_1 = {
     DEFAULT: '#334155', //slate-700
     dark: '#0f172a', // slate-700
   },
+  btn: {
+    light: '#e2e8f0', //slate-200
+    DEFAULT: '#cbd5e1', // slate-300
+    dark: '#94a3b8', // slate-400
+  },
   neutral: '#E5E7EB',
   info: '#38BDF8',
   success: '#22C55E',
@@ -44,7 +49,7 @@ export default {
       colors: theme_1,
       zIndex: {
         auto: 'auto', // Add a custom `z-auto` class
-        '-9': '-9',  // Add a custom `z-[-9]` class
+        '-9': '-9', // Add a custom `z-[-9]` class
       },
       spacing: {
         '128': '32rem',

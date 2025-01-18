@@ -1,10 +1,12 @@
+import React from 'react';
+
 export interface InputProps {
   value: string;
   name: string;
   onChange: (e: string) => void;
   placeholder?: string;
   disabled?: boolean;
-  type: 'text' | 'password' | 'number' | 'email' | 'tel';
+  type: string;
   label?: string;
   id?: string;
   customClassNames?: string;
@@ -13,4 +15,6 @@ export interface InputProps {
   rounded?: boolean;
   roundedFull?: boolean;
   title?: string;
+  showIcon?: boolean;
+  customIconSVG?: React.ReactNode;
 }
