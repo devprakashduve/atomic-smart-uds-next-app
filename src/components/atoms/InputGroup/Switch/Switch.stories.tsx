@@ -1,7 +1,7 @@
 import Switch from '.';
 
 export default {
-  title: 'Components/Atoms/Switch',
+  title: 'Components/Atoms/InputGroup/Switch',
   component: Switch,
 };
 

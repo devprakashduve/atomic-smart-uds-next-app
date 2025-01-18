@@ -1,4 +1,4 @@
-import Slider from './index';
+import Slider from '.';
 
 export default {
   title: 'Components/Atoms/InputGroup/Slider',
@@ -11,7 +11,7 @@ export const BasicSlider = {
     max: 100,
     value: 50,
     onChange: (value: any) => console.log(value),
-    color: 'blue',
+
     disabled: false,
   },
 };
@@ -36,5 +36,18 @@ export const CustomStepSlider = {
     onChange: (value: any) => console.log(value),
     color: 'blue',
     disabled: false,
+  },
+};
+
+export const CustomHeight = {
+  args: {
+    min: 0,
+    max: 100,
+    value: 25,
+    step: 5,
+    onChange: (value: any) => console.log(value),
+    color: 'blue',
+    disabled: false,
+    customClassNames: 'h4',
   },
 };

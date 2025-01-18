@@ -5,7 +5,7 @@ import { useState } from 'react';
 import InputField from '@/Components/Molecules/InputGroup/InputField';
 import PhoneNumberField from '@/Components/Molecules/InputGroup/PhoneNumberField';
 import TextareaField from '@/Components/Molecules/InputGroup/TextareaField';
-import AgreementField from '@/Components/Molecules/InputGroup/AgreementField';
+// import AgreementField from '@/Components/Atoms/InputGroup/AgreementField';
 import SubmitButton from '@/Components/Atoms/ButtonGroup/SubmitButton';
 
 // Header Component
@@ -60,7 +60,7 @@ export default function ContactPage() {
           />
           <PhoneNumberField />
           <TextareaField id="message" name="message" label="Message" />
-          <AgreementField agreed={agreed} setAgreed={setAgreed} />
+          {/* <AgreementField agreed={agreed} setAgreed={setAgreed} /> */}
         </div>
         <SubmitButton />
       </form>

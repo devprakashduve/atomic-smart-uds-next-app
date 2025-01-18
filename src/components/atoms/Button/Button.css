@@ -1,43 +1,26 @@
 .btn::first-letter {
   text-transform: uppercase;
 }
+
 .btn {
-  @apply inline-flex items-center p-3 px-4 font-semibold;
+  @apply inline-flex border border-transparent text-center text-sm shadow-sm transition-all hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
 }
-.btn-simple {
-  @apply bg-primary text-white hover:bg-primary-dark;
+.btn-default {
+  @apply bg-btn-dark text-btn-light hover:border-btn-dark hover:bg-btn-light hover:text-btn-dark;
 }
 
-.btn-pill {
-  @apply bg-primary text-white hover:bg-primary-dark;
-}
 .btn-pill-outline {
-  @apply border border-primary bg-transparent text-primary-dark hover:border-transparent hover:bg-primary hover:text-white;
+  @apply border border-btn-dark bg-transparent text-btn-dark hover:border-transparent;
 }
 
 .btn-outline {
-  @apply border border-primary bg-transparent text-primary-dark hover:border-transparent hover:bg-primary hover:text-white;
-}
-
-.btn-bordered {
-  @apply border border-primary-dark bg-primary text-white hover:bg-primary-dark;
-}
-
-.btn-three-d {
-  @apply border border-primary-dark bg-primary text-white shadow-md hover:bg-primary-dark;
-}
-
-.btn-elevated {
-  @apply border border-gray-400 bg-white text-gray-800 shadow hover:bg-secondary;
-}
-
-.btn-group {
-  @apply border border-primary-dark bg-primary text-white shadow-lg hover:bg-primary-dark;
-}
-.btn-icon {
-  @apply inline-flex items-center bg-secondary-light px-4 py-2 text-gray-800 hover:bg-secondary-dark;
+  @apply border border-btn-dark bg-transparent hover:border-transparent;
 }
 
 .btn-disabled {
-  @apply cursor-not-allowed bg-primary text-white opacity-50;
+  @apply cursor-not-allowed bg-btn-dark text-btn-light opacity-50;
+}
+
+.btn-link {
+  @apply bg-transparent text-btn-dark shadow-none transition-all hover:border-transparent hover:bg-transparent hover:text-btn hover:shadow-none focus:shadow-none active:shadow-none;
 }

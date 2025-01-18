@@ -1,6 +1,8 @@
 export interface RadioButtonProps {
-  checked: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  initialChecked: boolean;
+  onChange?: (value: boolean) => void;
   label: string;
   name: string;
+  size?: 'sm' | 'md' | 'lg';
+  title?: string;
 }

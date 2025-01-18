@@ -6,6 +6,8 @@ const Checkbox = ({
   label,
   toggleChecked,
   size = 'md',
+  title,
+  name,
 }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(checked);
   let boxSize = 'h-4 w-4';
@@ -21,23 +23,25 @@ const Checkbox = ({
       boxSize = 'h-4 w-4';
       break;
   }
-
+  let setTitle = name;
+  title && (setTitle = title);
   return (
     <>
       <div className="inline-flex items-center">
         <label className="relative flex cursor-pointer items-center">
           <input
+            title={setTitle}
             type="checkbox"
             checked={isChecked}
             onChange={() => {
               setIsChecked(!isChecked);
               toggleChecked(!isChecked);
             }}
-            className={`peer cursor-pointer appearance-none rounded border border-gray-300 shadow transition-all checked:bg-primary-dark hover:shadow-md ${boxSize}`}
+            className={`peer cursor-pointer appearance-none rounded border border-line-light shadow transition-all checked:bg-line-dark hover:shadow-md ${boxSize}`}
           />
-          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-white opacity-0 peer-checked:opacity-100">
+          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-letter-light opacity-0 peer-checked:opacity-100">
             <svg
-              className={`${boxSize} text-gray-800 dark:text-white`}
+              className={`${boxSize} text-letter-light dark:text-white`}
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -57,7 +61,7 @@ const Checkbox = ({
         </label>
         <label
           htmlFor="react-checkbox"
-          className="ml-2 text-lg font-medium text-gray-900"
+          className="ml-2 text-lg font-medium text-letter"
         >
           {label}
         </label>

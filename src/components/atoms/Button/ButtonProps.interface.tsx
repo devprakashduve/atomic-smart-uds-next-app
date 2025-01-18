@@ -5,4 +5,7 @@ export interface ButtonProps {
   variant: string;
   rounded?: boolean;
   roundedFull?: boolean;
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  isLink?: boolean;
+  customClassNames?: string;
 }

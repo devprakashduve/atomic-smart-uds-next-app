@@ -2,14 +2,17 @@ import React from 'react';
 import { LabelProps } from './LabelProps.interface';
 
 import './Label.css';
+import { classNames } from '@/Components/utilities/componentsMethods';
 
-const Label: React.FC<LabelProps> = ({ text, htmlFor }) => {
+const Label: React.FC<LabelProps> = ({
+  children,
+  htmlFor,
+  customClassNames,
+}) => {
+  const labelClass = classNames(`label-base block`, customClassNames);
   return (
-    <label
-      htmlFor={htmlFor}
-      className="label-base mb-2 block text-sm font-bold text-gray-700"
-    >
-      {text}
+    <label htmlFor={htmlFor} className={labelClass}>
+      {children}
     </label>
   );
 };

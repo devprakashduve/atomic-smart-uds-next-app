@@ -10,9 +10,36 @@ const Button: React.FC<ButtonProps> = ({
   children,
   rounded = false,
   roundedFull = false,
+  size = 'md',
+  isLink = false,
+  customClassNames,
 }) => {
-  const buttonClass = classNames(variant);
-
+  let btnSize = '';
+  switch (size) {
+    case 'xs':
+      btnSize = `py-1 px-2.5 text-sm `;
+      break;
+    case 'sm':
+      btnSize = `py-1.5 px-3 text-sm  `;
+      break;
+    case 'md':
+      btnSize = `py-2 px-4  text-sm  `;
+      break;
+    case 'lg':
+      btnSize = `py-2.5 px-5 text-base `;
+      break;
+    case 'xl':
+      btnSize = `py-3.5 px-6 text-base  `;
+      break;
+    default:
+      btnSize = `py-2 px-4  text-sm`;
+      break;
+  }
+  const buttonClass = classNames(
+    variant,
+    isLink ? 'btn-link' : btnSize,
+    customClassNames
+  );
   return (
     <button
       onClick={onClick}

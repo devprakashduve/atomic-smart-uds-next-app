@@ -10,12 +10,12 @@ export default function Tooltip({
 }: TooltipProps) {
   const tooltipClasses = classNames(
     'p-2 text-center text-xs ',
-    `${isBackground ? 'bg-primary text-white' : 'border border-primary text-primary'}`,
+    `${isBackground ? 'bg-btn-dark text-btn-light' : 'border border-btn-dark text-btn-dark'}`,
     setBackground,
     ` ${isRounded ? 'rounded' : ''}`
   );
   const tipClasses = classNames(
-    'clip-bottom h-5 w-4 bg-primary',
+    'clip-bottom h-5 w-4 bg-btn-dark text-btn-light ',
     setBackground
   );
   return (

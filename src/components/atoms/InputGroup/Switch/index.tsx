@@ -15,11 +15,11 @@ const Switch = (props: SwitchProps) => {
   const switchClass = classNames(
     !noBackground
       ? enabled
-        ? 'bg-primary'
-        : 'bg-primary-light'
+        ? 'bg-line-light'
+        : 'bg-line-light'
       : enabled
-        ? 'border border-primary'
-        : 'border border-primary-light'
+        ? 'border border-border'
+        : 'border border-border-light'
   );
   return (
     <label className="flex cursor-pointer items-center">
@@ -40,14 +40,14 @@ const Switch = (props: SwitchProps) => {
 
         {/* Dot with Check Mark */}
         <div
-          className={`absolute left-2 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary-dark shadow transition-all ${
+          className={`absolute left-2 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-line-dark shadow transition-all ${
             enabled ? 'translate-x-full' : ''
           }`}
         >
           {!disableIcons &&
             (enabled ? (
               <svg
-                className="h-6 w-6 text-gray-800 dark:text-white"
+                className="h-6 w-6 text-letter-dark dark:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -65,7 +65,7 @@ const Switch = (props: SwitchProps) => {
               </svg>
             ) : (
               <svg
-                className="h-6 w-6 text-gray-800 dark:text-white"
+                className="h-6 w-6 text-letter-dark dark:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -85,9 +85,7 @@ const Switch = (props: SwitchProps) => {
         </div>
       </div>
       {/* Label */}
-      <span className="ml-3 text-gray-700">
-        {enabled ? textForOn : textForOff}
-      </span>
+      <span className="ml-3">{enabled ? textForOn : textForOff}</span>
     </label>
   );
 };

@@ -7,7 +7,7 @@ export default {
 
 export const Default = {
   args: {
-    text: 'Label Text',
+    children: 'Label Text',
     htmlFor: 'input-id',
   },
 };

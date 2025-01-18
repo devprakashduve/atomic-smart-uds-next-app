@@ -23,7 +23,7 @@ const Loader: React.FC<LoaderProps> = ({
 
   return (
     <div
-      className={`loader ${sizeClasses[size]} ${speedClasses[speed]} ${color ? `text-${color}` : ''}`}
+      className={`loader ${sizeClasses[size]} ${speedClasses[speed]} ${color ? `text-${'red'}` : ''}`}
     >
       <div className="loader-circle"></div>
     </div>
