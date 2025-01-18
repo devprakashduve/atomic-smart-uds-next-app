@@ -38,3 +38,16 @@ export const CustomStepSlider = {
     disabled: false,
   },
 };
+
+export const CustomHeight = {
+  args: {
+    min: 0,
+    max: 100,
+    value: 25,
+    step: 5,
+    onChange: (value: any) => console.log(value),
+    color: 'blue',
+    disabled: false,
+    customClassNames: 'h4',
+  },
+};

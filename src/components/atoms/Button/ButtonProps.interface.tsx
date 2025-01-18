@@ -7,4 +7,5 @@ export interface ButtonProps {
   roundedFull?: boolean;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   isLink?: boolean;
+  customClassNames?: string;
 }

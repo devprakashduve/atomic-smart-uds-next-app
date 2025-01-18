@@ -12,6 +12,7 @@ const Button: React.FC<ButtonProps> = ({
   roundedFull = false,
   size = 'md',
   isLink = false,
+  customClassNames,
 }) => {
   let btnSize = '';
   switch (size) {
@@ -34,8 +35,11 @@ const Button: React.FC<ButtonProps> = ({
       btnSize = `py-2 px-4  text-sm`;
       break;
   }
-  const buttonClass = classNames(variant, isLink ? 'btn-link' : btnSize);
-
+  const buttonClass = classNames(
+    variant,
+    isLink ? 'btn-link' : btnSize,
+    customClassNames
+  );
   return (
     <button
       onClick={onClick}

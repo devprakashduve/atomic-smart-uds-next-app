@@ -5,18 +5,51 @@ export default {
   component: Switch,
 };
 
-export const Default = {
+export const DefaultSwitch = {
   args: {
-    label: 'I agree to the terms and conditions',
     checked: false,
-    name: 'switch',
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+    textForOn: 'On',
+    textForOff: 'Off',
   },
 };
 
-export const Checked = {
+export const CheckedSwitch = {
   args: {
-    label: 'I agree to the terms and conditions',
     checked: true,
-    name: 'switch',
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+  },
+};
+
+export const withoutIcon = {
+  args: {
+    checked: true,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+    disableIcons: true,
+    textForOn: 'On',
+    textForOff: 'Off',
+  },
+};
+
+export const NoBackground = {
+  args: {
+    checked: true,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: false,
+    disableIcons: false,
+    textForOn: 'On',
+    textForOff: 'Off',
+    noBackground: true,
+  },
+};
+
+export const DisabledSwitch = {
+  args: {
+    checked: false,
+    onChange: (checked: boolean) => console.log(checked),
+    disabled: true,
   },
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SliderProps } from './SliderProps.interface';
-import './../../../../app/globals.css';
 import './Slider.css';
+import { classNames } from '@/Components/utilities/componentsMethods';
 
 const Slider: React.FC<SliderProps> = ({
   min,
@@ -10,8 +10,8 @@ const Slider: React.FC<SliderProps> = ({
   step = 1,
   onChange,
   setStep,
-  color,
   disabled = false,
+  customClassNames = 'h-2',
 }) => {
   const [value, setValue] = useState(initialValue);
 
@@ -21,6 +21,8 @@ const Slider: React.FC<SliderProps> = ({
     onChange(newValue);
     setStep(newValue); // Update step based on the new value
   };
+
+  const sliderClass = classNames(customClassNames);
 
   return (
     <div className="slider-container">
@@ -32,7 +34,7 @@ const Slider: React.FC<SliderProps> = ({
         value={value}
         step={step}
         onChange={handleChange}
-        className={`slider-thumb ${disabled ? 'slider-disabled' : ''} bg-${color}`}
+        className={`slider-thumb ${disabled ? 'slider-disabled' : ''} ${sliderClass}`}
         disabled={disabled}
       />
       <div className="slider-value">{value}</div>

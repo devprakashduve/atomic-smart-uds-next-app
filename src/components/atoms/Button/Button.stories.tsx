@@ -6,9 +6,16 @@ export default {
   component: Button,
 };
 
+export const Default = {
+  args: {
+    variant: 'btn-default',
+    disabled: false,
+    children: 'Submit',
+  },
+};
 export const Simple = {
   args: {
-    variant: 'btn-simple',
+    variant: 'btn-simple btn-default',
     disabled: false,
     children: 'Submit',
   },
@@ -16,7 +23,7 @@ export const Simple = {
 
 export const Pill = {
   args: {
-    variant: 'btn-pill',
+    variant: 'btn-pill btn-default',
     disabled: false,
     children: 'Submit',
     roundedFull: true,
@@ -26,7 +33,7 @@ export const Pill = {
 export const PillOutline = {
   args: {
     roundedFull: true,
-    variant: 'btn-pill-outline',
+    variant: 'btn-pill-outline btn-default',
     disabled: false,
     children: (
       <>
@@ -46,7 +53,7 @@ export const PillOutline = {
 export const Outline = {
   args: {
     rounded: true,
-    variant: 'btn-outline',
+    variant: 'btn-outline btn-default',
     children: 'submit',
   },
 };
@@ -54,7 +61,7 @@ export const Outline = {
 export const Bordered = {
   args: {
     rounded: true,
-    variant: 'btn-bordered',
+    variant: 'btn-bordered btn-default',
     children: 'Submit',
   },
 };
@@ -62,7 +69,7 @@ export const Bordered = {
 export const Disabled = {
   args: {
     rounded: true,
-    variant: 'btn-disabled',
+    variant: 'btn-disabled btn-default',
     children: 'Submit',
   },
 };
@@ -70,7 +77,7 @@ export const Disabled = {
 export const ThreeD = {
   args: {
     rounded: true,
-    variant: 'btn-three-d',
+    variant: 'btn-three-d btn-default',
     children: 'Submit',
   },
 };
@@ -78,21 +85,21 @@ export const ThreeD = {
 export const Elevated = {
   args: {
     rounded: true,
-    variant: 'btn-elevated',
+    variant: 'btn-elevated btn-default',
     children: 'Submit',
   },
 };
 
 export const Groups = {
   args: {
-    variant: 'btn-groups',
+    variant: 'btn-groups btn-default',
     children: 'Submit',
   },
 };
 
 export const Icons = {
   args: {
-    variant: 'btn-icon',
+    variant: 'btn-icon btn-default',
     children: (
       <>
         <svg
@@ -111,7 +118,7 @@ export const Icons = {
 
 export const ButtonLink = {
   args: {
-    variant: 'btn-link',
+    variant: 'btn-link btn-default',
     children: (
       <>
         <span>Download</span>

@@ -95,6 +95,9 @@ export const Colors = {
   args: {
     children: (
       <>
+        <hr />
+        <h2>Primary colors</h2>
+        <hr />
         <Button
           disabled={false}
           variant=" m-2 bg-primary-dark"
@@ -114,7 +117,9 @@ export const Colors = {
         >
           primary-light
         </Button>
-
+        <hr />
+        <h2>Secondary colors</h2>
+        <hr />
         <Button disabled={false} variant=" m-2 bg-secondary" roundedFull={true}>
           secondary
         </Button>
@@ -134,7 +139,9 @@ export const Colors = {
         >
           secondary-light
         </Button>
-
+        <hr />
+        <h2>Accent colors</h2>
+        <hr />
         <Button
           disabled={false}
           variant=" m-2 bg-accent-dark"
@@ -154,7 +161,49 @@ export const Colors = {
         >
           accent-light
         </Button>
+        <hr />
+        <h2>Border colors</h2>
+        <hr />
+        <Button disabled={false} variant=" m-2 bg-line-dark" roundedFull={true}>
+          line-dark
+        </Button>
 
+        <Button disabled={false} variant=" m-2 bg-line" roundedFull={true}>
+          line
+        </Button>
+
+        <Button
+          disabled={false}
+          variant=" m-2 bg-line-light"
+          roundedFull={true}
+        >
+          line-light
+        </Button>
+        <hr />
+        <h2>Letter colors</h2>
+        <hr />
+        <Button
+          disabled={false}
+          variant=" m-2 bg-letter-dark"
+          roundedFull={true}
+        >
+          letter-dark
+        </Button>
+
+        <Button disabled={false} variant=" m-2 bg-letter" roundedFull={true}>
+          letter
+        </Button>
+
+        <Button
+          disabled={false}
+          variant=" m-2 bg-letter-light"
+          roundedFull={true}
+        >
+          letter-light
+        </Button>
+        <hr />
+        <h2>warning colors</h2>
+        <hr />
         <Button disabled={false} variant=" m-2 bg-error" roundedFull={true}>
           error
         </Button>
@@ -174,6 +223,7 @@ export const Colors = {
         <Button disabled={false} variant=" m-2 bg-neutral" roundedFull={true}>
           neutral
         </Button>
+        <hr />
       </>
     ),
     variant: '',

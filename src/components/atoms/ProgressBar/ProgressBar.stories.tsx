@@ -5,12 +5,19 @@ export default {
   component: ProgressBar,
 };
 
+export const Default = {
+  args: {
+    value: 50,
+    max: 100,
+    height: 0.5,
+  },
+};
 export const BasicProgressBar = {
   args: {
     value: 50,
     max: 100,
     color: 'primary-dark',
-    height: '4px',
+    height: 3,
     striped: false,
   },
 };
@@ -20,7 +27,7 @@ export const StripedProgressBar = {
     value: 70,
     max: 100,
     color: 'primary-dark',
-    height: '6px',
+    height: 6,
     striped: true,
   },
 };
@@ -30,7 +37,7 @@ export const FullProgressBar = {
     value: 80,
     max: 100,
     color: 'primary-dark',
-    height: '8px',
+    height: 8,
     striped: false,
   },
 };

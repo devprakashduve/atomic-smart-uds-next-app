@@ -25,13 +25,13 @@
   }
 }
 .spinner-light {
-  @apply border-t-primary-light;
+  @apply border-t-line-light;
 }
 
 .spinner-primary {
-  @apply border-t-primary;
+  @apply border-t-line;
 }
 
 .spinner-dark {
-  @apply border-t-primary-dark;
+  @apply border-t-line-dark;
 }

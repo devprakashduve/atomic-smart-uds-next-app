@@ -1,48 +1,92 @@
-import React from 'react';
-import { SwitchProps } from './Switch.interface';
+import React, { useState } from 'react';
+import { SwitchProps } from './SwitchProps.interface';
+import { classNames } from '@/Components/utilities/componentsMethods';
 
-const Switch = ({ checked, onChange, name, size, title }: SwitchProps) => {
-  const [isChecked, setIsChecked] = React.useState(checked);
-  const handleToggle = () => {
-    setIsChecked(!isChecked);
-    onChange && onChange(!checked);
-  };
-
-  let boxSize = 'h-5 w-10';
-  let thumbSize = '5';
-
-  switch (size) {
-    case 'lg':
-      boxSize = 'h-8 w-16';
-      thumbSize = '8';
-      break;
-    case 'md':
-      boxSize = 'h-6 w-12';
-      thumbSize = '6';
-      break;
-    default:
-      boxSize = 'h-5 w-10';
-      thumbSize = '5';
-      break;
-  }
-
-  let setTitle = name;
-  title && (setTitle = title);
+const Switch = (props: SwitchProps) => {
+  const {
+    textForOn,
+    textForOff,
+    disabled,
+    checked,
+    disableIcons,
+    noBackground,
+  } = props;
+  const [enabled, setEnabled] = useState(checked);
+  const switchClass = classNames(
+    !noBackground
+      ? enabled
+        ? 'bg-line-light'
+        : 'bg-line-light'
+      : enabled
+        ? 'border border-border'
+        : 'border border-border-light'
+  );
   return (
-    <div className={`relative inline-block ${boxSize}`}>
-      <input
-        title={setTitle}
-        checked={isChecked}
-        onChange={handleToggle}
-        name={name}
-        type="checkbox"
-        className={`peer ${boxSize} cursor-pointer appearance-none rounded-full bg-line transition-colors duration-300 checked:bg-line-dark`}
-      />
-      <label
-        htmlFor={name}
-        className={`absolute left-0 top-0 h-${thumbSize} w-${thumbSize} cursor-pointer rounded-full border border-slate-300 bg-white shadow-sm transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-line`}
-      ></label>
-    </div>
+    <label className="flex cursor-pointer items-center">
+      <div className="relative">
+        <input
+          type="checkbox"
+          className="sr-only"
+          checked={enabled}
+          onChange={() => setEnabled(!enabled)}
+          disabled={disabled}
+        />
+        {/* Switch Background */}
+        <div
+          className={`h-10 w-20 rounded-full shadow-inner transition-all ${
+            switchClass
+          }`}
+        ></div>
+
+        {/* Dot with Check Mark */}
+        <div
+          className={`absolute left-2 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-line-dark shadow transition-all ${
+            enabled ? 'translate-x-full' : ''
+          }`}
+        >
+          {!disableIcons &&
+            (enabled ? (
+              <svg
+                className="h-6 w-6 text-letter-dark dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 11.917 9.724 16.5 19 7.5"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6 text-letter-dark dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18 17.94 6M18 18 6.06 6"
+                />
+              </svg>
+            ))}
+        </div>
+      </div>
+      {/* Label */}
+      <span className="ml-3">{enabled ? textForOn : textForOff}</span>
+    </label>
   );
 };
 

@@ -1,22 +1,26 @@
 .btn::first-letter {
   text-transform: uppercase;
 }
+
 .btn {
-  @apply bg-btn-dark text-btn-light hover:bg-btn-light hover:text-btn-dark hover:border-btn-dark inline-flex border border-transparent text-center text-sm shadow-sm transition-all hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  @apply inline-flex border border-transparent text-center text-sm shadow-sm transition-all hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+}
+.btn-default {
+  @apply bg-btn-dark text-btn-light hover:border-btn-dark hover:bg-btn-light hover:text-btn-dark;
 }
 
 .btn-pill-outline {
-  @apply border-btn-dark text-btn-dark border bg-transparent hover:border-transparent;
+  @apply border border-btn-dark bg-transparent text-btn-dark hover:border-transparent;
 }
 
 .btn-outline {
-  @apply border-btn-dark border bg-transparent hover:border-transparent;
+  @apply border border-btn-dark bg-transparent hover:border-transparent;
 }
 
 .btn-disabled {
-  @apply bg-btn-dark text-btn-light cursor-not-allowed opacity-50;
+  @apply cursor-not-allowed bg-btn-dark text-btn-light opacity-50;
 }
 
 .btn-link {
-  @apply text-btn-dark hover:text-btn bg-transparent shadow-none transition-all hover:border-transparent hover:bg-transparent hover:shadow-none focus:shadow-none active:shadow-none;
+  @apply bg-transparent text-btn-dark shadow-none transition-all hover:border-transparent hover:bg-transparent hover:text-btn hover:shadow-none focus:shadow-none active:shadow-none;
 }
