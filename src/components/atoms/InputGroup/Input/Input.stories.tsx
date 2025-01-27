@@ -1,4 +1,5 @@
 import Input from '.';
+import { InputSize, InputType } from './InputProps.interface';
 
 export default {
   title: 'Components/Atoms/InputGroup/Input',
@@ -11,15 +12,20 @@ export default {
     disabled: { control: 'boolean' },
     type: {
       control: 'select',
-      options: ['text', 'password', 'number', 'email', 'tel', ''],
+      options: Object.values(InputType),
     },
     label: { control: 'text' },
     id: { control: 'text' },
     customClassNames: { control: 'text' },
-    size: { control: 'select', options: ['sm', 'md', 'lg'] },
+    size: {
+      control: 'select',
+      options: Object.values(InputSize),
+    },
     isRequired: { control: 'boolean' },
     rounded: { control: 'boolean' },
     roundedFull: { control: 'boolean' },
+    showIcon: { control: 'boolean' },
+    customIconSVG: { control: 'object' },
   },
 };
 
@@ -30,7 +36,7 @@ export const Default = {
     placeholder: 'Enter text',
     value: '',
     disabled: false,
-    type: 'text',
+    type: InputType.TEXT,
     label: 'Default Input',
     isRequired: true,
     onChange: (value: string) => console.log(value),
@@ -44,7 +50,7 @@ export const WithValue = {
     placeholder: 'Enter text',
     value: 'Sample text',
     disabled: false,
-    type: 'text',
+    type: InputType.TEXT,
     label: 'Input with Value',
     onChange: (value: string) => console.log(value),
   },
@@ -57,7 +63,7 @@ export const Disabled = {
     placeholder: 'Enter text',
     value: '',
     disabled: true,
-    type: 'text',
+    type: InputType.TEXT,
     label: 'Disabled Input',
   },
 };
@@ -69,7 +75,7 @@ export const Password = {
     placeholder: 'Enter password',
     value: '',
     disabled: false,
-    type: 'password',
+    type: InputType.PASSWORD,
     label: 'Password Input',
     onChange: (value: string) => console.log(value),
     showIcon: true,
@@ -83,7 +89,7 @@ export const Number = {
     placeholder: 'Enter number',
     value: '',
     disabled: false,
-    type: 'number',
+    type: InputType.NUMBER,
     label: 'Number Input',
     onChange: (value: string) => console.log(value),
   },
@@ -96,7 +102,7 @@ export const Email = {
     placeholder: 'Enter email',
     value: '',
     disabled: false,
-    type: 'email',
+    type: InputType.EMAIL,
     label: 'Email Input',
     onChange: (value: string) => console.log(value),
   },
@@ -109,7 +115,7 @@ export const Tel = {
     placeholder: 'Enter phone number',
     value: '',
     disabled: false,
-    type: 'tel',
+    type: InputType.TEL,
     label: 'Telephone Input',
     onChange: (value: string) => console.log(value),
     showIcon: true,
@@ -123,7 +129,7 @@ export const TelWithCustomIcon = {
     placeholder: 'Enter phone number',
     value: '',
     disabled: false,
-    type: 'tel',
+    type: InputType.TEL,
     label: 'Telephone Input',
     onChange: (value: string) => console.log(value),
     showIcon: true,
@@ -141,4 +147,345 @@ export const TelWithCustomIcon = {
       </svg>
     ),
   },
+};
+
+export const Rounded = {
+  args: {
+    id: 'rounded',
+    name: 'rounded',
+    placeholder: 'Enter text',
+    value: '',
+    disabled: false,
+    type: InputType.TEXT,
+    label: 'Rounded Input',
+    rounded: true,
+    onChange: (value: string) => console.log(value),
+  },
+};
+
+export const RoundedFull = {
+  args: {
+    id: 'rounded-full',
+    name: 'rounded-full',
+    placeholder: 'Enter text',
+    value: '',
+    disabled: false,
+    type: InputType.TEXT,
+    label: 'Rounded Full Input',
+    roundedFull: true,
+    onChange: (value: string) => console.log(value),
+    rounded: true,
+  },
+};
+
+export const SmallSize = {
+  args: {
+    id: 'small-size',
+    name: 'small-size',
+    placeholder: 'Enter text',
+    value: '',
+    disabled: false,
+    type: InputType.TEXT,
+    label: 'Small Size Input',
+    size: InputSize.SM,
+    onChange: (value: string) => console.log(value),
+  },
+};
+
+export const MediumSize = {
+  args: {
+    id: 'medium-size',
+    name: 'medium-size',
+    placeholder: 'Enter text',
+    value: '',
+    disabled: false,
+    type: InputType.TEXT,
+    label: 'Medium Size Input',
+    size: InputSize.MD,
+    onChange: (value: string) => console.log(value),
+  },
+};
+
+export const LargeSize = {
+  args: {
+    id: 'large-size',
+    name: 'large-size',
+    placeholder: 'Enter text',
+    value: '',
+    disabled: false,
+    type: InputType.TEXT,
+    label: 'Large Size Input',
+    size: InputSize.LG,
+    onChange: (value: string) => console.log(value),
+  },
+};
+
+// COMPARISON STORIES
+export const SizeComparison = {
+  render: () => (
+    <div className="flex flex-col gap-4 p-4">
+      <Input
+        label="Small Size"
+        size={InputSize.SM}
+        placeholder="Small input"
+        type={InputType.TEXT}
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+      />
+      <Input
+        label="Medium Size"
+        size={InputSize.MD}
+        placeholder="Medium input"
+        type={InputType.TEXT}
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+      />
+      <Input
+        label="Large Size"
+        size={InputSize.LG}
+        placeholder="Large input"
+        type={InputType.TEXT}
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+      />
+    </div>
+  ),
+};
+
+export const TypeComparison = {
+  render: () => (
+    <div className="flex flex-col gap-4 p-4">
+      <Input
+        label="Text Input"
+        type={InputType.TEXT}
+        placeholder="Enter text"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Password"
+        type={InputType.PASSWORD}
+        showIcon
+        placeholder="Enter password"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Email"
+        type={InputType.EMAIL}
+        placeholder="email@example.com"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Telephone"
+        type={InputType.TEL}
+        showIcon
+        placeholder="+1 234 567 890"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Number"
+        type={InputType.NUMBER}
+        placeholder="Enter number"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+      />
+    </div>
+  ),
+};
+
+export const StateComparison = {
+  render: () => (
+    <div className="flex flex-col gap-4 p-4">
+      <Input
+        label="Normal State"
+        placeholder="Regular input"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Disabled State"
+        disabled
+        placeholder="Disabled input"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Required Field"
+        isRequired
+        placeholder="Required input"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+      <Input
+        label="With Value"
+        value="Pre-filled content"
+        placeholder="Has value"
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+    </div>
+  ),
+};
+
+export const StyleComparison = {
+  render: () => (
+    <div className="flex flex-col gap-4 p-4">
+      <Input
+        label="Default Style"
+        placeholder="Normal borders"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Rounded"
+        rounded
+        placeholder="Rounded corners"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Full Rounded"
+        roundedFull
+        placeholder="Pill-shaped"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Error State"
+        value="Invalid value"
+        customClassNames="border-error"
+        placeholder="With error"
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+    </div>
+  ),
+};
+
+export const IconComparison = {
+  render: () => (
+    <div className="flex flex-col gap-4 p-4">
+      <Input
+        label="Password Toggle"
+        type={InputType.PASSWORD}
+        showIcon
+        placeholder="With eye icon"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Telephone Icon"
+        type={InputType.TEL}
+        showIcon
+        placeholder="With phone icon"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+      />
+      <Input
+        label="Custom Icon"
+        showIcon
+        customIconSVG={
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+            />
+          </svg>
+        }
+        placeholder="Custom SVG icon"
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        type={InputType.TEXT}
+        size={InputSize.SM}
+      />
+    </div>
+  ),
 };

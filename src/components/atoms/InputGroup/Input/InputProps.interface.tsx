@@ -1,20 +1,33 @@
 import React from 'react';
 
+export enum InputSize {
+  SM = 'sm',
+  MD = 'md',
+  LG = 'lg',
+}
+
+export enum InputType {
+  TEXT = 'text',
+  PASSWORD = 'password',
+  NUMBER = 'number',
+  EMAIL = 'email',
+  TEL = 'tel',
+}
+
 export interface InputProps {
   value: string;
   name: string;
-  onChange: (e: string) => void;
+  onChange: (value: string) => void;
   placeholder?: string;
   disabled?: boolean;
-  type: string;
+  type: InputType;
   label?: string;
   id?: string;
   customClassNames?: string;
-  size: 'sm' | 'md' | 'lg';
+  size: InputSize;
   isRequired?: boolean;
   rounded?: boolean;
   roundedFull?: boolean;
-  title?: string;
   showIcon?: boolean;
   customIconSVG?: React.ReactNode;
 }

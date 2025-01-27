@@ -4,7 +4,7 @@
 }
 
 .slider-thumb {
-  @apply w-full appearance-none rounded-full bg-line-light;
+  @apply w-full appearance-none rounded-full;
 }
 .slider-thumb::-webkit-slider-thumb {
   @apply bg-line-dark;

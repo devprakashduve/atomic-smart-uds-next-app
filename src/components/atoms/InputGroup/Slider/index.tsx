@@ -12,6 +12,8 @@ const Slider: React.FC<SliderProps> = ({
   setStep,
   disabled = false,
   customClassNames = 'h-2',
+  border,
+  background,
 }) => {
   const [value, setValue] = useState(initialValue);
 
@@ -21,8 +23,13 @@ const Slider: React.FC<SliderProps> = ({
     onChange(newValue);
     setStep(newValue); // Update step based on the new value
   };
-
-  const sliderClass = classNames(customClassNames);
+  const borderColor =
+    'border border-line-light hover:border-line focus:border-line-dark ';
+  const sliderClass = classNames(
+    customClassNames,
+    border ? borderColor : '',
+    background ? '' : 'bg-line'
+  );
 
   return (
     <div className="slider-container">

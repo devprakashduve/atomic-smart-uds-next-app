@@ -6,4 +6,5 @@ export interface SwitchProps {
   textForOff?: string;
   disableIcons?: boolean;
   noBackground?: boolean;
+  size?: 'sm' | 'md' | 'lg';
 }

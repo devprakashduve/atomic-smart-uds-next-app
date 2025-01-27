@@ -10,42 +10,57 @@ const Switch = (props: SwitchProps) => {
     checked,
     disableIcons,
     noBackground,
+    size = 'md',
   } = props;
-  const [enabled, setEnabled] = useState(checked);
+  const [isChecked, setIsChecked] = useState(checked);
   const switchClass = classNames(
     !noBackground
-      ? enabled
+      ? isChecked
         ? 'bg-line-light'
         : 'bg-line-light'
-      : enabled
+      : isChecked
         ? 'border border-border'
         : 'border border-border-light'
   );
+
+  const sizeClasses = {
+    sm: {
+      container: 'w-16 h-8',
+      dot: 'w-6 h-6',
+    },
+    md: {
+      container: 'w-20 h-10',
+      dot: 'w-8 h-8 ',
+    },
+    lg: {
+      container: 'w-24 h-12',
+      dot: 'w-10 h-10 ',
+    },
+  };
+
   return (
     <label className="flex cursor-pointer items-center">
       <div className="relative">
         <input
           type="checkbox"
           className="sr-only"
-          checked={enabled}
-          onChange={() => setEnabled(!enabled)}
+          checked={isChecked}
+          onChange={() => setIsChecked(!isChecked)}
           disabled={disabled}
         />
         {/* Switch Background */}
         <div
-          className={`h-10 w-20 rounded-full shadow-inner transition-all ${
-            switchClass
-          }`}
+          className={`rounded-full border border-line-light shadow-inner transition-all hover:border-line focus:border-line-dark ${switchClass} ${sizeClasses[size].container}`}
         ></div>
 
-        {/* Dot with Check Mark */}
+        {/* Thumb with Check Mark */}
         <div
-          className={`absolute left-2 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-line-dark shadow transition-all ${
-            enabled ? 'translate-x-full' : ''
+          className={`absolute left-2 top-1 flex items-center justify-center rounded-full bg-line-dark shadow transition-all ${sizeClasses[size].dot} ${
+            isChecked ? 'translate-x-full' : ''
           }`}
         >
           {!disableIcons &&
-            (enabled ? (
+            (isChecked ? (
               <svg
                 className="h-6 w-6 text-letter-dark dark:text-white"
                 aria-hidden="true"
@@ -85,7 +100,7 @@ const Switch = (props: SwitchProps) => {
         </div>
       </div>
       {/* Label */}
-      <span className="ml-3">{enabled ? textForOn : textForOff}</span>
+      <span className="ml-3">{isChecked ? textForOn : textForOff}</span>
     </label>
   );
 };
