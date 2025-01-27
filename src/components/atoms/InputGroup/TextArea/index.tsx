@@ -1,34 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextAreaProps } from './TextAreaProps.interface';
 import './TextArea.css';
 
 const TextArea: React.FC<TextAreaProps> = ({
-  value,
+  value = '',
   onChange,
   placeholder = '',
   disabled = false,
   maxLength,
   showCharCount = false,
+  rows = 4,
+  cols,
+  autoFocus = false,
+  readOnly = false,
+  className = '',
+  id,
+  'aria-label': ariaLabel,
+  'aria-labelledby': ariaLabelledby,
 }) => {
-  const [text, setText] = useState(value); // Set the initial value of the input to the value prop
+  const [text, setText] = useState(value);
+  const remainingChars = maxLength ? maxLength - text.length : 0;
+
+  useEffect(() => {
+    setText(value);
+  }, [value]);
 
   const handleTextChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(event.target.value); // Update the state with the new value
+    const newValue = event.target.value;
+    if (maxLength && newValue.length > maxLength) return;
 
-    onChange && onChange(event); // Call the parent onChange function
+    setText(newValue);
+    onChange?.(event);
   };
+
   return (
     <div className="relative">
       <textarea
+        id={id}
         value={text}
         onChange={handleTextChange}
         placeholder={placeholder}
         disabled={disabled}
         maxLength={maxLength}
-        className={`textarea-base ${disabled ? 'textarea-disabled' : ''}`}
+        rows={rows}
+        cols={cols}
+        autoFocus={autoFocus}
+        readOnly={readOnly}
+        aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledby}
+        aria-describedby={showCharCount ? `${id}-char-count` : undefined}
+        className={`textarea-base ${disabled ? 'textarea-disabled' : ''} ${className}`}
       />
-      {showCharCount && maxLength && (
-        <div className="text-sm">
+
+      {showCharCount && maxLength !== undefined && (
+        <div
+          id={`${id}-char-count`}
+          className={`char-count ${remainingChars <= 10 ? 'text-warning' : ''} ${remainingChars <= 0 ? 'text-error' : ''}`}
+        >
           {text.length}/{maxLength}
         </div>
       )}
