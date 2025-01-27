@@ -8,4 +8,6 @@ export interface SliderProps {
   color?: string;
   disabled?: boolean;
   customClassNames?: string;
+  border?: boolean;
+  background?: boolean;
 }
