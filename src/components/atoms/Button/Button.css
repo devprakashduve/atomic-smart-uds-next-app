@@ -3,8 +3,10 @@
 }
 
 .btn {
-  @apply inline-flex border border-transparent text-center text-sm shadow-sm transition-all hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  @apply inline-flex items-center border border-transparent text-center shadow-sm transition-all hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
 }
+
+/* Variant Styles */
 .btn-default {
   @apply bg-btn-dark text-btn-light hover:border-btn-dark hover:bg-btn-light hover:text-btn-dark;
 }
@@ -22,5 +24,31 @@
 }
 
 .btn-link {
-  @apply bg-transparent text-btn-dark shadow-none transition-all hover:border-transparent hover:bg-transparent hover:text-btn hover:shadow-none focus:shadow-none active:shadow-none;
+  @apply bg-transparent text-btn-dark shadow-none hover:bg-transparent hover:text-btn-dark/80;
+}
+
+.btn-three-d {
+  @apply transform shadow-[0_4px_0_rgba(0,0,0,0.1)] active:translate-y-0.5;
+}
+
+.btn-elevated {
+  @apply shadow-lg transition-shadow hover:shadow-xl;
+}
+
+.btn-icon {
+  @apply p-2 !important;
+}
+
+.btn-groups {
+  @apply border-r-0 last:border-r hover:relative hover:z-10;
+}
+
+/* Loading Spinner */
+.btn-loading {
+  @apply mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent;
+}
+
+/* Add to existing styles */
+.btn-link {
+  @apply bg-transparent text-btn-dark underline-offset-4 shadow-none transition-all hover:bg-transparent hover:text-btn-dark/80 hover:underline hover:shadow-none focus:shadow-none active:shadow-none;
 }

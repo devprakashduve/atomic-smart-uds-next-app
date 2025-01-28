@@ -9,37 +9,32 @@ export const DefaultVideo = {
   args: {
     src: 'https://www.w3schools.com/html/movie.mp4',
     alt: 'Sample Video',
-    controls: true,
-    autoplay: false,
-    loop: false,
-    muted: false,
-    width: '100%',
-    height: 'auto',
   },
 };
 
-export const AutoplayVideo = {
+export const YouTubeVideo = {
+  args: {
+    src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    alt: 'YouTube Video',
+    autoplay: false,
+    muted: true,
+  },
+};
+
+export const CustomControlsVideo = {
+  args: {
+    src: 'https://www.w3schools.com/html/movie.mp4',
+    alt: 'Custom Controls Video',
+    useCustomControls: true,
+    controls: false,
+  },
+};
+
+export const AutoPlayMuted = {
   args: {
     src: 'https://www.w3schools.com/html/movie.mp4',
     alt: 'Autoplay Video',
-    controls: true,
     autoplay: true,
-    loop: false,
     muted: true,
-    width: '100%',
-    height: 'auto',
-  },
-};
-
-export const LoopingVideo = {
-  args: {
-    src: 'https://www.w3schools.com/html/movie.mp4',
-    alt: 'Looping Video',
-    controls: true,
-    autoplay: false,
-    loop: true,
-    muted: false,
-    width: '100%',
-    height: 'auto',
   },
 };
