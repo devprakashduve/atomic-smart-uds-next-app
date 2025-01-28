@@ -199,6 +199,7 @@ export default {
         black: '900',
       },
       borderRadius: {
+        DEFAULT: '8px',
         lg: '12px', // Large border radius
         xl: '16px', // Extra large border radius
         '2xl': '24px', // 2x Extra large border radius

@@ -2,6 +2,7 @@ import React from 'react';
 import { IconProps } from './IconProps.interface';
 import './Icon.css';
 import { classNames } from '@/Components/utilities/componentsMethods';
+import { ServerStackIcon } from '@heroicons/react/24/outline';
 
 const Icon: React.FC<IconProps> = ({
   name,

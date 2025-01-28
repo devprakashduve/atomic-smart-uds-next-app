@@ -1,148 +1,134 @@
 import React from 'react';
 import Button from '.';
+import {
+  ButtonVariant,
+  ButtonSize,
+  ButtonRounded,
+} from './ButtonProps.interface';
+import { ArrowDownIcon, ArrowUpRightIcon } from '@heroicons/react/24/outline';
+import { ArrowDownTrayIcon } from '@heroicons/react/24/solid';
 
 export default {
   title: 'Components/Atoms/Button',
   component: Button,
-};
-
-export const Default = {
-  args: {
-    variant: 'btn-default',
-    disabled: false,
-    children: 'Submit',
-  },
-};
-export const Simple = {
-  args: {
-    variant: 'btn-simple btn-default',
-    disabled: false,
-    children: 'Submit',
-  },
-};
-
-export const Pill = {
-  args: {
-    variant: 'btn-pill btn-default',
-    disabled: false,
-    children: 'Submit',
-    roundedFull: true,
-  },
-};
-
-export const PillOutline = {
-  args: {
-    roundedFull: true,
-    variant: 'btn-pill-outline btn-default',
-    disabled: false,
-    children: (
-      <>
-        <span>Download</span>
-        <svg
-          className="ml-2 h-4 w-4 fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        >
-          <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-        </svg>
-      </>
-    ),
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: [
+        'default',
+        'outline',
+        'pill',
+        'pill-outline',
+        'bordered',
+        'three-d',
+        'elevated',
+        'link',
+        'icon',
+        'groups',
+        'disabled',
+      ],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+    },
+    rounded: {
+      control: { type: 'select' },
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+    },
   },
 };
 
-export const Outline = {
-  args: {
-    rounded: true,
-    variant: 'btn-outline btn-default',
-    children: 'submit',
-  },
+const Template: any = (args: any) => <Button {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Default Button',
+  variant: 'default',
 };
 
-export const Bordered = {
-  args: {
-    rounded: true,
-    variant: 'btn-bordered btn-default',
-    children: 'Submit',
-  },
+export const Sizes = () => (
+  <div className="space-x-2">
+    {(['xs', 'sm', 'md', 'lg', 'xl'] as ButtonSize[]).map((size) => (
+      <Button key={size} size={size} variant="default">
+        {size.toUpperCase()}
+      </Button>
+    ))}
+  </div>
+);
+
+export const RoundedVariants = () => (
+  <div className="space-x-2">
+    {(['none', 'sm', 'md', 'lg', 'full'] as ButtonRounded[]).map((rounded) => (
+      <Button key={rounded} rounded={rounded} variant="default">
+        {rounded}
+      </Button>
+    ))}
+  </div>
+);
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  children: 'Download',
+  icon: <ArrowDownTrayIcon />,
+  iconPosition: 'right',
 };
 
-export const Disabled = {
-  args: {
-    rounded: true,
-    variant: 'btn-disabled btn-default',
-    children: 'Submit',
-  },
+export const LoadingState = Template.bind({});
+LoadingState.args = {
+  children: 'Processing',
+  loading: true,
 };
 
-export const ThreeD = {
-  args: {
-    rounded: true,
-    variant: 'btn-three-d btn-default',
-    children: 'Submit',
-  },
+export const DisabledState = Template.bind({});
+DisabledState.args = {
+  children: 'Disabled',
+  disabled: true,
 };
 
-export const Elevated = {
-  args: {
-    rounded: true,
-    variant: 'btn-elevated btn-default',
-    children: 'Submit',
-  },
+export const AsLink = Template.bind({});
+AsLink.args = {
+  children: 'View Documentation',
+  href: 'https://example.com',
+  target: '_blank',
+  variant: 'link',
+  icon: <ArrowUpRightIcon className="ml-2 h-4 w-4" />,
+  iconPosition: 'right',
 };
 
-export const Groups = {
-  args: {
-    variant: 'btn-groups btn-default',
-    children: 'Submit',
-  },
-};
-
-export const Icons = {
-  args: {
-    variant: 'btn-icon btn-default',
-    children: (
-      <>
-        <svg
-          className="mr-2 h-4 w-4 fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        >
-          <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-        </svg>
-        <span>Download</span>
-      </>
-    ),
-    disabled: false,
-  },
-};
-
-export const ButtonLink = {
-  args: {
-    variant: 'btn-link btn-default',
-    children: (
-      <>
-        <span>Download</span>
-
-        <svg
-          className="ml-2 h-6 w-6 fill-current"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M19 12H5m14 0-4 4m4-4-4-4"
-          />
-        </svg>
-      </>
-    ),
-    disabled: false,
-    isLink: true,
-  },
-};
+export const Comparison = () => (
+  <div className="space-y-4">
+    <div className="space-x-2">
+      <Button variant="default">Default</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="pill">Pill</Button>
+      <Button variant="pill-outline">Pill Outline</Button>
+    </div>
+    <div className="space-x-2">
+      <Button variant="three-d">3D Effect</Button>
+      <Button variant="elevated">Elevated</Button>
+      <Button variant="link">Link Style</Button>
+      <Button variant="icon" icon={<ArrowDownIcon />}>
+        Icon Button
+      </Button>
+    </div>
+    <div className="space-x-2">
+      <Button size="xs">Extra Small</Button>
+      <Button size="lg">Large</Button>
+      <Button rounded="full">Rounded Full</Button>
+      <Button disabled>Disabled</Button>
+    </div>
+    <div className="space-x-2">
+      <Button variant="link">Internal Link</Button>
+      <Button
+        variant="link"
+        href="https://example.com"
+        target="_blank"
+        icon={<ArrowUpRightIcon />}
+        iconPosition="right"
+      >
+        External Link
+      </Button>
+    </div>
+  </div>
+);
