@@ -116,6 +116,7 @@ const Input: React.FC<InputProps> = ({
         />
         {showIcon && (
           <span
+            className="absolute inset-y-0 right-0 flex cursor-pointer items-center pr-3"
             onClick={() => {
               if (type === InputType.PASSWORD) {
                 setIconName(iconName === 'openEye' ? 'closeEye' : 'openEye');
