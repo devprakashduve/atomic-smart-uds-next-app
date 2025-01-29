@@ -1,26 +1,55 @@
 import React from 'react';
 import { TypographyProps } from './TypographyProps.interface';
 
+const variantSizeMap = {
+  heading: '4xl',
+  subheading: '2xl',
+  body: 'base',
+  caption: 'sm',
+  overline: 'xs',
+  button: 'lg',
+};
+
+const variantWeightMap = {
+  heading: 'bold',
+  subheading: 'medium',
+  body: 'normal',
+  caption: 'light',
+  overline: 'light',
+  button: 'bold',
+};
+
+const variantExtraClasses = {
+  heading: '',
+  subheading: '',
+  body: '',
+  caption: '',
+  overline: 'uppercase',
+  button: 'uppercase',
+};
+
 const Typography: React.FC<TypographyProps> = ({
   children,
-  variant,
+  variant = 'body',
   size,
   weight,
   color,
   align,
   customClassNames = '',
 }) => {
+  const sizeClass = size ? `text-${size}` : `text-${variantSizeMap[variant]}`;
+  const weightClass = weight
+    ? `font-${weight}`
+    : `font-${variantWeightMap[variant]}`;
+  const extraClasses = variantExtraClasses[variant];
+  const alignClass = align ? `text-${align}` : '';
+
   const classNames = [
-    variant === 'heading' && 'text-4xl font-bold',
-    variant === 'subheading' && 'text-2xl font-medium',
-    variant === 'body' && 'text-base font-normal',
-    variant === 'caption' && 'text-sm font-light',
-    variant === 'overline' && 'text-xs uppercase font-light',
-    variant === 'button' && 'text-lg uppercase font-bold',
-    size && `text-${size}`,
-    weight && `font-${weight}`,
+    sizeClass,
+    weightClass,
+    extraClasses,
     color && `text-${color}`,
-    align && `text-${align}`,
+    alignClass,
     customClassNames,
   ]
     .filter(Boolean)
