@@ -1,11 +1,12 @@
 export interface AvatarProps {
-  src: string;
+  src?: string;
   alt: string;
-  size: number;
-  initials: string;
-  width: number;
-  height: number;
+  size?: number;
+  initials?: string;
+  width?: number;
+  height?: number;
   customClassNames?: string;
   circle?: boolean;
   rounded?: boolean;
+  status?: 'online' | 'offline' | 'away' | 'busy';
 }

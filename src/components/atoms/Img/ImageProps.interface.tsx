@@ -4,4 +4,5 @@ export interface ImageProps {
   width?: number;
   height?: number;
   customClassNames?: string;
+  onError?: () => void;
 }
