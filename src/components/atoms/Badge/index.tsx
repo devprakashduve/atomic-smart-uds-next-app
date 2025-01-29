@@ -3,18 +3,39 @@ import { BadgeProps } from './BadgeProps.interface';
 import './Badge.css';
 import { classNames } from '@/Components/utilities/componentsMethods';
 
-const Badge: React.FC<BadgeProps> = ({
-  customColor,
-  scale,
-  children,
-  variant,
-}) => {
-  const badgeClass = classNames(
-    `badge-base ${'text-' + scale + 'xl'}`,
-    variant
-  );
+const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
+  (
+    {
+      backgroundColor,
+      scale = 'base',
+      children,
+      variant = 'primary',
+      className,
+      ariaLabel,
+    },
+    ref
+  ) => {
+    const badgeClass = classNames(
+      'badge-base',
+      `text-${scale}`,
+      `badge-${variant}`,
+      className
+    );
 
-  return <span className={badgeClass}>{children}</span>;
-};
+    return (
+      <span
+        ref={ref}
+        className={badgeClass}
+        style={{ backgroundColor }}
+        role="status"
+        aria-label={ariaLabel}
+      >
+        {children}
+      </span>
+    );
+  }
+);
+
+Badge.displayName = 'Badge';
 
 export default Badge;
