@@ -1,15 +1,12 @@
 import Typography from '.';
-import Button from '../Button';
 
 export default {
-  title: 'Typography',
+  title: 'Components/Typography',
   component: Typography,
   argTypes: {
     children: {
       control: 'text',
-      description:
-        'The text children to be displayed within the Typography component.',
-      table: { type: { summary: 'string' } },
+      description: 'Text content for the typography component',
     },
     variant: {
       control: { type: 'select' },
@@ -21,12 +18,6 @@ export default {
         'overline',
         'button',
       ],
-      description: 'Defines the visual style of the Typography component.',
-      table: {
-        type: {
-          summary: 'heading | subheading | body | caption | overline | button',
-        },
-      },
     },
     size: {
       control: { type: 'select' },
@@ -43,19 +34,10 @@ export default {
         '6xl',
         '7xl',
       ],
-      description: 'Specifies the size of the text.',
-      table: {
-        type: {
-          summary:
-            'xs | sm | base | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl | 7xl',
-        },
-      },
     },
     weight: {
       control: { type: 'select' },
       options: ['light', 'normal', 'medium', 'bold', 'black'],
-      description: 'Sets the font weight of the text.',
-      table: { type: { summary: 'light | normal | medium | bold | black' } },
     },
     color: {
       control: { type: 'select' },
@@ -75,277 +57,159 @@ export default {
         'success',
         'neutral',
       ],
-      description: 'Determines the color of the text.',
-      table: {
-        type: {
-          summary:
-            'primary-light | primary | primary-dark | secondary-light | secondary | secondary-dark | accent-light | accent | accent-dark | error | warning | info | success | neutral',
-        },
-      },
     },
     align: {
       control: { type: 'select' },
       options: ['left', 'center', 'right'],
-      description: 'Aligns the text children.',
-      table: { type: { summary: 'left | center | right' } },
     },
   },
 };
-export const Colors = {
-  args: {
-    children: (
-      <>
-        <hr />
-        <h2>Primary colors</h2>
-        <hr />
-        <Button
-          disabled={false}
-          variant=" m-2 bg-primary-dark"
-          roundedFull={true}
-        >
-          primary-dark
-        </Button>
 
-        <Button disabled={false} variant=" m-2 bg-primary" roundedFull={true}>
-          primary
-        </Button>
-
-        <Button
-          disabled={false}
-          variant=" m-2 bg-primary-light"
-          roundedFull={true}
-        >
-          primary-light
-        </Button>
-        <hr />
-        <h2>Secondary colors</h2>
-        <hr />
-        <Button disabled={false} variant=" m-2 bg-secondary" roundedFull={true}>
-          secondary
-        </Button>
-
-        <Button
-          disabled={false}
-          variant=" m-2 bg-secondary-dark"
-          roundedFull={true}
-        >
-          secondary-dark
-        </Button>
-
-        <Button
-          disabled={false}
-          variant=" m-2 bg-secondary-light"
-          roundedFull={true}
-        >
-          secondary-light
-        </Button>
-        <hr />
-        <h2>Accent colors</h2>
-        <hr />
-        <Button
-          disabled={false}
-          variant=" m-2 bg-accent-dark"
-          roundedFull={true}
-        >
-          accent-dark
-        </Button>
-
-        <Button disabled={false} variant=" m-2 bg-accent" roundedFull={true}>
-          accent
-        </Button>
-
-        <Button
-          disabled={false}
-          variant=" m-2 bg-accent-light"
-          roundedFull={true}
-        >
-          accent-light
-        </Button>
-        <hr />
-        <h2>Border colors</h2>
-        <hr />
-        <Button disabled={false} variant=" m-2 bg-line-dark" roundedFull={true}>
-          line-dark
-        </Button>
-
-        <Button disabled={false} variant=" m-2 bg-line" roundedFull={true}>
-          line
-        </Button>
-
-        <Button
-          disabled={false}
-          variant=" m-2 bg-line-light"
-          roundedFull={true}
-        >
-          line-light
-        </Button>
-        <hr />
-        <h2>Letter colors</h2>
-        <hr />
-        <Button
-          disabled={false}
-          variant=" m-2 bg-letter-dark"
-          roundedFull={true}
-        >
-          letter-dark
-        </Button>
-
-        <Button disabled={false} variant=" m-2 bg-letter" roundedFull={true}>
-          letter
-        </Button>
-
-        <Button
-          disabled={false}
-          variant=" m-2 bg-letter-light"
-          roundedFull={true}
-        >
-          letter-light
-        </Button>
-        <hr />
-        <h2>warning colors</h2>
-        <hr />
-        <Button disabled={false} variant=" m-2 bg-error" roundedFull={true}>
-          error
-        </Button>
-
-        <Button disabled={false} variant=" m-2 bg-warning" roundedFull={true}>
-          warning
-        </Button>
-
-        <Button disabled={false} variant=" m-2 bg-info" roundedFull={true}>
-          info
-        </Button>
-
-        <Button disabled={false} variant=" m-2 bg-success" roundedFull={true}>
-          success
-        </Button>
-
-        <Button disabled={false} variant=" m-2 bg-neutral" roundedFull={true}>
-          neutral
-        </Button>
-        <hr />
-      </>
-    ),
-    variant: '',
-    size: '',
-    weight: '',
-    color: '',
-    align: '',
-  },
-};
 export const Default = {
   args: {
-    children: 'This is a default typography component',
+    children: 'Default body text with normal weight',
     variant: 'body',
     size: 'base',
     weight: 'normal',
-    color: 'accent',
+    color: 'neutral',
     align: 'left',
   },
 };
 
-export const Heading = {
-  args: {
-    children: 'This is a heading',
-    variant: 'heading',
-    size: '2xl',
-    weight: 'bold',
-    color: 'primary',
-    align: 'left',
-  },
+export const AllVariants = {
+  render: () => (
+    <div className="space-y-4">
+      <Typography variant="heading">Heading Text (2xl bold)</Typography>
+      <Typography variant="subheading">Subheading Text (xl medium)</Typography>
+      <Typography variant="body">Body Text (base normal)</Typography>
+      <Typography variant="caption">Caption Text (sm light)</Typography>
+      <Typography variant="overline">Overline Text (xs uppercase)</Typography>
+      <Typography variant="button">Button Text (lg bold uppercase)</Typography>
+    </div>
+  ),
 };
 
-export const Subheading = {
-  args: {
-    children: 'This is a subheading',
-    variant: 'subheading',
-    size: '2xl',
-    weight: 'medium',
-    color: 'secondary',
-    align: 'left',
-  },
+export const HeadingVariations = {
+  render: () => (
+    <div className="space-y-4">
+      <Typography variant="heading" size="4xl">
+        Main Heading (4xl)
+      </Typography>
+      <Typography variant="heading" size="3xl">
+        Section Heading (3xl)
+      </Typography>
+      <Typography variant="heading" size="2xl">
+        Subsection Heading (2xl)
+      </Typography>
+    </div>
+  ),
 };
 
-export const Caption = {
-  args: {
-    children: 'This is a caption',
-    variant: 'caption',
-    size: 'sm',
-    weight: 'light',
-    color: 'accent',
-    align: 'right',
-  },
+export const TextWeights = {
+  render: () => (
+    <div className="space-y-2">
+      <Typography weight="light">Light Weight Text</Typography>
+      <Typography weight="normal">Normal Weight Text</Typography>
+      <Typography weight="medium">Medium Weight Text</Typography>
+      <Typography weight="bold">Bold Weight Text</Typography>
+      <Typography weight="black">Black Weight Text</Typography>
+    </div>
+  ),
 };
 
-export const ButtonText = {
-  args: {
-    children: 'Click Me',
-    variant: 'button',
-    size: 'lg',
-    weight: 'bold',
-    color: 'primary-dark',
-    align: 'center',
-  },
+export const TextAlignments = {
+  render: () => (
+    <div className="space-y-4">
+      <Typography align="left">Left aligned text</Typography>
+      <Typography align="center">Center aligned text</Typography>
+      <Typography align="right">Right aligned text</Typography>
+    </div>
+  ),
 };
 
-export const Overline = {
-  args: {
-    children: 'This is an overline',
-    variant: 'overline',
-    size: 'xs',
-    weight: 'normal',
-    color: 'accent-light',
-    align: 'left',
-  },
+export const ColorPalette = {
+  render: () => (
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <Typography color="primary">Primary Text</Typography>
+        <Typography color="primary-light">Primary Light</Typography>
+        <Typography color="primary-dark">Primary Dark</Typography>
+      </div>
+
+      <div className="space-y-2">
+        <Typography color="secondary">Secondary Text</Typography>
+        <Typography color="secondary-light">Secondary Light</Typography>
+        <Typography color="secondary-dark">Secondary Dark</Typography>
+      </div>
+
+      <div className="space-y-2">
+        <Typography color="accent">Accent Text</Typography>
+        <Typography color="accent-light">Accent Light</Typography>
+        <Typography color="accent-dark">Accent Dark</Typography>
+      </div>
+
+      <div className="space-y-2">
+        <Typography color="error">Error Text</Typography>
+        <Typography color="warning">Warning Text</Typography>
+        <Typography color="success">Success Text</Typography>
+        <Typography color="info">Info Text</Typography>
+        <Typography color="neutral">Neutral Text</Typography>
+      </div>
+    </div>
+  ),
 };
 
-export const LargeBodyText = {
-  args: {
-    children: 'This is a large body text',
-    variant: 'body',
-    size: '6xl',
-    weight: 'medium',
-    color: 'secondary-dark',
-    align: 'center',
-  },
+export const ResponsiveSizes = {
+  render: () => (
+    <div className="space-y-2">
+      {[
+        'xs',
+        'sm',
+        'base',
+        'lg',
+        'xl',
+        '2xl',
+        '3xl',
+        '4xl',
+        '5xl',
+        '6xl',
+        '7xl',
+      ].map((size: any) => (
+        <Typography key={size} size={size}>
+          {size.toUpperCase()} Text Size
+        </Typography>
+      ))}
+    </div>
+  ),
 };
 
-export const SmallBodyText = {
+export const InteractiveExample = {
   args: {
-    children: 'This is a small body text',
-    variant: 'body',
-    size: 'xs',
-    weight: 'light',
-    color: 'primary-light',
-    align: 'right',
-  },
-};
-export const ErrorText = {
-  args: {
-    children: 'This is an error message',
+    children: 'Edit me using Storybook controls!',
     variant: 'body',
     size: 'base',
-    weight: 'bold',
-    color: 'error',
-    align: 'center',
-  },
-};
-export const HighlightedText = {
-  args: {
-    children: 'This is highlighted text',
-    variant: 'body',
-    size: 'lg',
-    weight: 'bold',
-    color: 'accent-dark',
-    align: 'center',
+    weight: 'normal',
+    color: 'neutral',
+    align: 'left',
   },
   parameters: {
-    backgrounds: {
-      default: 'light',
-      values: [
-        { name: 'light', value: '#ffffff' },
-        { name: 'dark', value: '#000000' },
-      ],
+    docs: {
+      description: {
+        story: 'Interactive example - use Storybook controls to modify props',
+      },
     },
+  },
+};
+
+export const DarkModeExample = {
+  render: () => (
+    <div className="dark bg-gray-900 p-4">
+      <Typography color="primary-light">Primary Light in Dark Mode</Typography>
+      <Typography color="secondary">Secondary in Dark Mode</Typography>
+      <Typography color="accent">Accent in Dark Mode</Typography>
+    </div>
+  ),
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };

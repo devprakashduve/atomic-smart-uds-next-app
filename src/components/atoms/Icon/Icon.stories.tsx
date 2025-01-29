@@ -1,5 +1,18 @@
 import Icon from './index';
 
+const iconOptions = [
+  'search',
+  'openEye',
+  'closeEye',
+  'phone',
+  'envelop',
+  'user',
+  'facebook',
+  'home',
+  'bell',
+  'cog',
+];
+
 export default {
   title: 'Components/Atoms/Icon',
   component: Icon,
@@ -7,21 +20,16 @@ export default {
     name: {
       control: {
         type: 'select',
-        options: [
-          'search',
-          'openEye',
-          'closeEye',
-          'phone',
-          'envelop',
-          'user',
-          'facebook',
-        ],
+        options: iconOptions,
+      },
+    },
+    variant: {
+      control: {
+        type: 'select',
+        options: ['outline', 'solid'],
       },
     },
     customClassNames: {
-      control: 'text',
-    },
-    children: {
       control: 'text',
     },
   },
@@ -29,6 +37,19 @@ export default {
 
 export const Default = {
   args: {
-    name: 'Search',
+    name: 'search',
+    variant: 'outline',
   },
 };
+
+export const AllIcons = () => (
+  <div className="flex flex-wrap gap-4">
+    {iconOptions.map((icon) => (
+      <div key={icon} className="flex flex-col items-center gap-2">
+        <Icon name={icon} variant="outline" />
+        <Icon name={icon} variant="solid" />
+        <span>{icon}</span>
+      </div>
+    ))}
+  </div>
+);
