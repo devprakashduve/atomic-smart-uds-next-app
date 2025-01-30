@@ -1,7 +1,7 @@
 import Typography from '.';
 
 export default {
-  title: 'Components/Typography',
+  title: 'Typography',
   component: Typography,
   argTypes: {
     children: {
