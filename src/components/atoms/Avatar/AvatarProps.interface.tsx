@@ -5,7 +5,7 @@ export interface AvatarProps {
   initials?: string;
   width?: number;
   height?: number;
-  customClassNames?: string;
+  className?: string;
   circle?: boolean;
   rounded?: boolean;
   status?: 'online' | 'offline' | 'away' | 'busy';

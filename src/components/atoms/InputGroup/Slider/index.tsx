@@ -11,7 +11,7 @@ const Slider: React.FC<SliderProps> = ({
   onChange,
   setStep,
   disabled = false,
-  customClassNames = 'h-2',
+  className = 'h-2',
   border,
   background,
 }) => {
@@ -26,7 +26,7 @@ const Slider: React.FC<SliderProps> = ({
   const borderColor =
     'border border-line-light hover:border-line focus:border-line-dark ';
   const sliderClass = classNames(
-    customClassNames,
+    className,
     border ? borderColor : '',
     background ? '' : 'bg-line'
   );

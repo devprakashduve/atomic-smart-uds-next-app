@@ -30,6 +30,6 @@ export const HorizontalThickDark = {
   args: {
     orientation: 'vertical',
     thickness: 'thick',
-    customClassNames: 'border-primary-dark',
+    className: 'border-primary-dark',
   },
 };

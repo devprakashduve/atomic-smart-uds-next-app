@@ -14,7 +14,7 @@ export const BasicSlider = {
     onChange: (value: number) => console.log('Basic Slider Value:', value),
     setStep: (value: number) => console.log('Set Step:', value),
     disabled: false,
-    customClassNames: 'h-2',
+    className: 'h-2',
     border: true,
     background: true,
   },
@@ -29,7 +29,7 @@ export const DisabledSlider = {
     onChange: (value: number) => console.log('Disabled Slider Value:', value),
     setStep: (value: number) => console.log('Set Step:', value),
     disabled: true,
-    customClassNames: 'h-2',
+    className: 'h-2',
     border: true,
     background: true,
   },
@@ -45,7 +45,7 @@ export const CustomStepSlider = {
       console.log('Custom Step Slider Value:', value),
     setStep: (value: number) => console.log('Set Step:', value),
     disabled: false,
-    customClassNames: 'h-3 bg-accent',
+    className: 'h-3 bg-accent',
     border: true,
     background: true,
   },
@@ -60,7 +60,7 @@ export const NoBorderSlider = {
     onChange: (value: number) => console.log('No Border Slider Value:', value),
     setStep: (value: number) => console.log('Set Step:', value),
     disabled: false,
-    customClassNames: 'h-4',
+    className: 'h-4',
     border: false,
     background: true,
   },
@@ -76,7 +76,7 @@ export const CustomBackgroundSlider = {
       console.log('Custom Background Slider Value:', value),
     setStep: (value: number) => console.log('Set Step:', value),
     disabled: false,
-    customClassNames: 'h-4',
+    className: 'h-4',
     border: true,
     background: false,
   },
@@ -92,7 +92,7 @@ export const ComparisonSliders = () => (
       step={1}
       onChange={(value: number) => console.log('Comparison Slider 1:', value)}
       setStep={(value: number) => console.log('Set Step 1:', value)}
-      customClassNames="h-2 bg-primary"
+      className="h-2 bg-primary"
       border
       background
     />
@@ -103,7 +103,7 @@ export const ComparisonSliders = () => (
       step={5}
       onChange={(value: number) => console.log('Comparison Slider 2:', value)}
       setStep={(value: number) => console.log('Set Step 2:', value)}
-      customClassNames="h-3 bg-secondary"
+      className="h-3 bg-secondary"
       border
       background={false}
     />
@@ -114,7 +114,7 @@ export const ComparisonSliders = () => (
       step={10}
       onChange={(value: number) => console.log('Comparison Slider 3:', value)}
       setStep={(value: number) => console.log('Set Step 3:', value)}
-      customClassNames="h-4 bg-accent rounded-full"
+      className="h-4 rounded-full bg-accent"
       border={false}
       background
     />

@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({
   label,
   id,
   name,
-  customClassNames,
+  className,
   size = InputSize.MD,
   isRequired,
   rounded,
@@ -86,7 +86,7 @@ const Input: React.FC<InputProps> = ({
 
   const inputClass = classNames(
     'w-full bg-transparent placeholder:text-letter-light text-letter text-sm border border-line-light hover:border-line focus:border-line-dark pl-3 pr-10 py-2 transition duration-300 ease focus:outline-none shadow-sm',
-    customClassNames,
+    className,
     boxSize,
     error && 'border border-error hover:border-error focus:border-error',
     rounded && 'rounded',
@@ -96,7 +96,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="relative mt-4 w-full">
       {label && (
-        <Label customClassNames="block mb-2 text-sm text-letter" htmlFor={name}>
+        <Label className="mb-2 block text-sm text-letter" htmlFor={name}>
           {label}
           {isRequired && <span className="text-error"> *</span>}
         </Label>

@@ -35,7 +35,7 @@ const Typography: React.FC<TypographyProps> = ({
   weight,
   color,
   align,
-  customClassNames = '',
+  className = '',
 }) => {
   const sizeClass = size ? `text-${size}` : `text-${variantSizeMap[variant]}`;
   const weightClass = weight
@@ -50,7 +50,7 @@ const Typography: React.FC<TypographyProps> = ({
     extraClasses,
     color && `text-${color}`,
     alignClass,
-    customClassNames,
+    className,
   ]
     .filter(Boolean)
     .join(' ');

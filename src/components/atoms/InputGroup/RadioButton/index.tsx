@@ -63,7 +63,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
       </div>
       <Label
         htmlFor={radioId}
-        customClassNames={`mx-2 ${labelClassNames} ${disabled ? 'opacity-50' : ''}`}
+        className={`mx-2 ${labelClassNames} ${disabled ? 'opacity-50' : ''}`}
       >
         {label}
       </Label>

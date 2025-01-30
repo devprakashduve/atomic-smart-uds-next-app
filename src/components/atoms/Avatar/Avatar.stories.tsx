@@ -55,7 +55,7 @@ export const CustomSize = {
     alt: 'Large Avatar',
     size: 32,
     circle: true,
-    customClassNames: 'border-2 border-blue-500',
+    className: 'border-2 border-blue-500',
   },
 };
 
@@ -66,7 +66,7 @@ export const ComplexExample = {
     size: 20,
     circle: true,
     status: 'busy',
-    customClassNames: 'shadow-lg',
+    className: 'shadow-lg',
   },
 };
 
@@ -144,7 +144,7 @@ export const VariantsComparison = () => (
             size={20}
             circle
             status="online"
-            customClassNames="border-2 border-purple-500"
+            className="border-2 border-purple-500"
           />
           <span>Custom Border</span>
         </div>
@@ -155,7 +155,7 @@ export const VariantsComparison = () => (
             size={24}
             circle
             status="busy"
-            customClassNames="shadow-xl"
+            className="shadow-xl"
           />
           <span>With Shadow</span>
         </div>

@@ -7,7 +7,7 @@ export interface SliderProps {
   setStep: (step: number) => void;
   color?: string;
   disabled?: boolean;
-  customClassNames?: string;
+  className?: string;
   border?: boolean;
   background?: boolean;
 }

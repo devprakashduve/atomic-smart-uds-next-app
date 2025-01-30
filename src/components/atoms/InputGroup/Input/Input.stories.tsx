@@ -16,7 +16,7 @@ export default {
     },
     label: { control: 'text' },
     id: { control: 'text' },
-    customClassNames: { control: 'text' },
+    className: { control: 'text' },
     size: {
       control: 'select',
       options: Object.values(InputSize),
@@ -419,7 +419,7 @@ export const StyleComparison = {
       <Input
         label="Error State"
         value="Invalid value"
-        customClassNames="border-error"
+        className="border-error"
         placeholder="With error"
         name={''}
         onChange={function (value: string): void {

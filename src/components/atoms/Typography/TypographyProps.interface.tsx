@@ -36,5 +36,5 @@ export interface TypographyProps {
     | 'success'
     | 'neutral';
   align?: 'left' | 'center' | 'right';
-  customClassNames?: string;
+  className?: string;
 }

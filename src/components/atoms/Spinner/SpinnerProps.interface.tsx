@@ -4,6 +4,6 @@ export interface SpinnerProps {
   customLoader?: React.ReactNode;
   width: number;
   height: number;
-  customClassNames?: string;
+  className?: string;
   colorTheme: string;
 }

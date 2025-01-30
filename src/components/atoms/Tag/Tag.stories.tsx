@@ -1,4 +1,5 @@
 import Tag from '.';
+import Icon from '../Icon'; // Adjust the import path as necessary
 
 export default {
   title: 'Components/Atoms/Tag',
@@ -8,23 +9,36 @@ export default {
 export const DefaultTag = {
   args: {
     label: 'Tag 1',
-    color: 'blue',
     removable: true,
+    icon: <Icon name={'close'} variant="outline" />,
   },
 };
 
-export const GreenTag = {
+export const InteractiveTag = {
   args: {
-    label: 'Tag 2',
-    color: 'green',
+    label: 'Click Me',
+
+    onClick: () => console.log('Tag clicked'),
+    icon: <Icon name={'check'} variant="outline" />,
+  },
+};
+
+export const RemovableTag = {
+  args: {
+    label: 'Remove Me',
+
+    removable: true,
+    onRemove: () => console.log('Remove clicked'),
+    icon: <Icon name={'close'} variant="outline" />,
+  },
+};
+
+export const ComparisonTag = {
+  args: {
+    label: 'Compare Me',
+
     removable: false,
-  },
-};
-
-export const RedTag = {
-  args: {
-    label: 'Tag 3',
-    color: 'red',
-    removable: true,
+    onCompare: () => console.log('Compare clicked'),
+    icon: <Icon name={'close'} variant="outline" />,
   },
 };

@@ -5,7 +5,7 @@ import { classNames } from '@/Components/utilities/componentsMethods';
 
 const Paragraph: React.FC<ParagraphProps> = ({
   children,
-  customClassNames,
+  className,
   thin,
   normal = true,
   bold,
@@ -14,7 +14,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
     thin && 'font-thin',
     normal && 'font-normal',
     bold && 'font-bold',
-    customClassNames
+    className
   );
   return <p className={paraClass}>{children}</p>;
 };
