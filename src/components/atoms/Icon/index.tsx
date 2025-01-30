@@ -14,6 +14,8 @@ import {
   CogIcon as OutlineCogIcon,
   XMarkIcon as OutlineCloseIcon,
   CheckIcon as OutlineCheckIcon,
+  PlusIcon as OutlinePlusIcon,
+  MinusIcon as OutlineMinusIcon,
 } from '@heroicons/react/24/outline';
 import {
   MagnifyingGlassIcon as SolidSearchIcon,
@@ -27,6 +29,8 @@ import {
   CogIcon as SolidCogIcon,
   XMarkIcon as SolidCloseIcon,
   CheckIcon as SolidCheckIcon,
+  PlusIcon as SolidPlusIcon,
+  MinusIcon as SolidMinusIcon,
 } from '@heroicons/react/24/solid';
 
 const iconMap = {
@@ -42,6 +46,8 @@ const iconMap = {
     cog: OutlineCogIcon,
     close: OutlineCloseIcon,
     check: OutlineCheckIcon,
+    plus: OutlinePlusIcon,
+    minus: OutlineMinusIcon,
   },
   solid: {
     search: SolidSearchIcon,
@@ -55,6 +61,8 @@ const iconMap = {
     cog: SolidCogIcon,
     close: SolidCloseIcon,
     check: SolidCheckIcon,
+    plus: SolidPlusIcon,
+    minus: SolidMinusIcon,
   },
 };
 
