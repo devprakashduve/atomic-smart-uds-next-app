@@ -20,7 +20,7 @@ export default {
         defaultValue: { summary: 50 },
       },
     },
-    customClassNames: {
+    className: {
       control: { type: 'text' },
       description: 'Custom class names to apply to the spinner.',
       table: {
@@ -60,7 +60,7 @@ export const WithCSSLight = {
   args: {
     width: 50,
     height: 50,
-    customClassNames: '',
+    className: '',
     variant: 'css',
     colorTheme: 'light',
   },
@@ -70,7 +70,7 @@ export const WithCSSPrimary = {
   args: {
     width: 50,
     height: 50,
-    customClassNames: '',
+    className: '',
     variant: 'css',
     colorTheme: 'primary',
   },
@@ -80,7 +80,7 @@ export const WithCSSDark = {
   args: {
     width: 50,
     height: 50,
-    customClassNames: '',
+    className: '',
     variant: 'css',
     colorTheme: 'dark',
   },
@@ -90,7 +90,7 @@ export const WithSVG = {
   args: {
     width: 96,
     height: 96,
-    customClassNames: '',
+    className: '',
     variant: 'svg',
   },
 };
@@ -99,7 +99,7 @@ export const CustomLoader = {
   args: {
     width: 96,
     height: 96,
-    customClassNames: '',
+    className: '',
     variant: 'svg',
     customLoader: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">

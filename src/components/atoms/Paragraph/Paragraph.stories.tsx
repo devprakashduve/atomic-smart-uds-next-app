@@ -8,7 +8,7 @@ export default {
 export const Thin = {
   args: {
     children: 'This is a paragraph.',
-    customClassNames: 'font-light',
+    className: 'font-light',
     thin: true,
   },
 };
@@ -16,7 +16,7 @@ export const Thin = {
 export const Normal = {
   args: {
     children: 'This is a paragraph.',
-    customClassNames: 'font-light',
+    className: 'font-light',
     normal: true,
   },
 };
@@ -24,7 +24,7 @@ export const Normal = {
 export const Bold = {
   args: {
     children: 'This is a custom styled paragraph.',
-    customClassNames: 'font-dark',
+    className: 'font-dark',
     bold: true,
   },
 };

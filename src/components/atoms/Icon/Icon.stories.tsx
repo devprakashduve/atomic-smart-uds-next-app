@@ -31,7 +31,7 @@ export default {
         options: ['outline', 'solid'],
       },
     },
-    customClassNames: {
+    className: {
       control: 'text',
     },
   },
@@ -51,12 +51,12 @@ export const AllIcons = () => (
         <Icon
           name={icon}
           variant="outline"
-          customClassNames="text-primary-dark transition-all hover:text-primary"
+          className="text-primary-dark transition-all hover:text-primary"
         />
         <Icon
           name={icon}
           variant="solid"
-          customClassNames="text-primary-dark transition-all hover:text-primary"
+          className="text-primary-dark transition-all hover:text-primary"
         />
         <span>{icon}</span>
       </div>

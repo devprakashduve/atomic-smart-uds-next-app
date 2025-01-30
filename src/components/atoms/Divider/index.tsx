@@ -6,7 +6,7 @@ import { classNames } from '@/Components/utilities/componentsMethods';
 const Divider: React.FC<DividerProps> = ({
   orientation = 'horizontal',
   thickness = 'medium',
-  customClassNames,
+  className,
 }) => {
   const orientationClasses = {
     horizontal: 'divider-horizontal',
@@ -21,7 +21,7 @@ const Divider: React.FC<DividerProps> = ({
 
   const dividerClasses = classNames(
     `divider ${orientationClasses[orientation]} ${thicknessClasses[thickness]} border-primary`,
-    customClassNames
+    className
   );
   return <div className={dividerClasses} />;
 };

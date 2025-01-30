@@ -8,7 +8,7 @@ const Avatar: React.FC<AvatarProps> = ({
   src,
   alt,
   size = 16,
-  customClassNames = '',
+  className = '',
   width = 105,
   height = 105,
   circle = false,
@@ -19,7 +19,7 @@ const Avatar: React.FC<AvatarProps> = ({
   const [imageError, setImageError] = useState(false);
   const containerClasses = classNames(
     `w-${size} h-${size} relative`,
-    `overflow-hidden ${rounded ? 'rounded' : ''} ${circle ? 'rounded-full' : ''} ${customClassNames}`
+    `overflow-hidden ${rounded ? 'rounded' : ''} ${circle ? 'rounded-full' : ''} ${className}`
   );
   const imgClasses = 'w-full h-full object-cover';
 
@@ -29,7 +29,7 @@ const Avatar: React.FC<AvatarProps> = ({
     <div className={containerClasses}>
       {showImage ? (
         <Img
-          customClassNames={imgClasses}
+          className={imgClasses}
           src={src}
           alt={alt}
           width={width}

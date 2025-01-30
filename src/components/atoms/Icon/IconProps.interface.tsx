@@ -1,6 +1,6 @@
 export interface IconProps {
   name: string;
   variant?: 'outline' | 'solid';
-  customClassNames?: string;
+  className?: string;
   children?: React.ReactNode;
 }

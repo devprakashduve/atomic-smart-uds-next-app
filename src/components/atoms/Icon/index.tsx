@@ -61,10 +61,10 @@ const iconMap = {
 const Icon: React.FC<IconProps> = ({
   name,
   variant = 'outline',
-  customClassNames = 'right-3',
+  className = 'right-3',
   children,
 }) => {
-  const iconClass = classNames(' ', customClassNames);
+  const iconClass = classNames(' ', className);
 
   if (name === 'facebook') {
     return (
