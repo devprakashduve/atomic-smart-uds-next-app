@@ -1,26 +1,31 @@
 import React from 'react';
 import { BreadcrumbProps } from './BreadcrumbProps.interface';
 import './Breadcrumb.css';
+import Link from '@/Components/Atoms/Link';
 
-const Breadcrumbs: React.FC<BreadcrumbProps> = ({ items }) => {
+const Breadcrumbs: React.FC<BreadcrumbProps> = ({
+  items,
+  separator = '>',
+  className = '',
+}) => {
+  if (!items || items.length === 0) return null;
+
   return (
-    <nav aria-label="Breadcrumb" className="breadcrumbs-nav">
-      <ul className="flex space-x-2">
+    <nav aria-label="Breadcrumb" className={`breadcrumbs-nav ${className}`}>
+      <ol className="flex space-x-1">
         {items.map((item, index) => (
-          <li key={index} className="breadcrumb-item">
+          <li key={index} className="breadcrumb-item flex items-center">
             {item.href ? (
-              <a href={item.href} className="text-blue-600 hover:text-blue-800">
-                {item.label}
-              </a>
+              <Link href={item.href} target="_self" text={item.label} />
             ) : (
-              <span className="text-gray-600">{item.label}</span>
+              <Link href={'#'} target="_self" text={item.label} />
             )}
             {index < items.length - 1 && (
-              <span className="mx-2 text-gray-600">/</span>
+              <span className="mx-2 text-letter">{separator}</span>
             )}
           </li>
         ))}
-      </ul>
+      </ol>
     </nav>
   );
 };
