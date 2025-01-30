@@ -11,6 +11,8 @@ const iconOptions = [
   'home',
   'bell',
   'cog',
+  'close',
+  'check',
 ];
 
 export default {
@@ -46,8 +48,16 @@ export const AllIcons = () => (
   <div className="flex flex-wrap gap-4">
     {iconOptions.map((icon) => (
       <div key={icon} className="flex flex-col items-center gap-2">
-        <Icon name={icon} variant="outline" />
-        <Icon name={icon} variant="solid" />
+        <Icon
+          name={icon}
+          variant="outline"
+          customClassNames="text-primary-dark transition-all hover:text-primary"
+        />
+        <Icon
+          name={icon}
+          variant="solid"
+          customClassNames="text-primary-dark transition-all hover:text-primary"
+        />
         <span>{icon}</span>
       </div>
     ))}

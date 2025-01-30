@@ -12,6 +12,8 @@ import {
   HomeIcon as OutlineHomeIcon,
   BellIcon as OutlineBellIcon,
   CogIcon as OutlineCogIcon,
+  XMarkIcon as OutlineCloseIcon,
+  CheckIcon as OutlineCheckIcon,
 } from '@heroicons/react/24/outline';
 import {
   MagnifyingGlassIcon as SolidSearchIcon,
@@ -23,6 +25,8 @@ import {
   HomeIcon as SolidHomeIcon,
   BellIcon as SolidBellIcon,
   CogIcon as SolidCogIcon,
+  XMarkIcon as SolidCloseIcon,
+  CheckIcon as SolidCheckIcon,
 } from '@heroicons/react/24/solid';
 
 const iconMap = {
@@ -36,6 +40,8 @@ const iconMap = {
     home: OutlineHomeIcon,
     bell: OutlineBellIcon,
     cog: OutlineCogIcon,
+    close: OutlineCloseIcon,
+    check: OutlineCheckIcon,
   },
   solid: {
     search: SolidSearchIcon,
@@ -47,6 +53,8 @@ const iconMap = {
     home: SolidHomeIcon,
     bell: SolidBellIcon,
     cog: SolidCogIcon,
+    close: SolidCloseIcon,
+    check: SolidCheckIcon,
   },
 };
 
@@ -56,10 +64,7 @@ const Icon: React.FC<IconProps> = ({
   customClassNames = 'right-3',
   children,
 }) => {
-  const iconClass = classNames(
-    ' text-primary-dark transition-all hover:text-primary',
-    customClassNames
-  );
+  const iconClass = classNames(' ', customClassNames);
 
   if (name === 'facebook') {
     return (
