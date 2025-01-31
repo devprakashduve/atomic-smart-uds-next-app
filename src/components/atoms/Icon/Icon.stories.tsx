@@ -13,6 +13,8 @@ const iconOptions = [
   'cog',
   'close',
   'check',
+  'plus',
+  'minus',
 ];
 
 export default {

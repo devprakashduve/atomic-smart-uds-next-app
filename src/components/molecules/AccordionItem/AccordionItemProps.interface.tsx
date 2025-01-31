@@ -1,9 +1,10 @@
 export interface AccordionItemProps {
-  title: string; // Title of the accordion item
-  content: string | React.ReactNode; // Content to display when the accordion item is expanded
-  isOpen?: boolean; // Optional: Determines if the item is open by default
-}
-
-export interface AccordionProps {
-  items: AccordionItemProps[]; // List of accordion items
+  title: string;
+  content: string | React.ReactNode;
+  isOpen?: boolean;
+  disabled?: boolean;
+  variant?: 'default' | 'filled';
+  icon?: React.ReactNode | ((isExpanded: boolean) => React.ReactNode);
+  onToggle?: (isExpanded: boolean) => void;
+  isRounded?: boolean;
 }

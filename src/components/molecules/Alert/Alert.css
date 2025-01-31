@@ -1,9 +1,0 @@
-/* General Alert Styles */
-.alert {
-  @apply flex items-start rounded-md border-l-4 p-4 shadow-md;
-}
-
-/* Alert Dismiss Button */
-.alert button {
-  @apply ml-4 text-xl text-gray-600 hover:text-gray-900 focus:outline-none;
-}
