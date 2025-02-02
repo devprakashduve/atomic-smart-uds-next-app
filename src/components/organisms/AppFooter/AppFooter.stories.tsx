@@ -12,7 +12,7 @@ const Template: StoryFn<AppFooterProps> = (args) => <AppFooter {...args} />;
 
 export const DefaultFooter = Template.bind({});
 DefaultFooter.args = {
-  copyrightText: '© 2024 My Company. All Rights Reserved.',
+  copyrightText: '© 2024 My Company. All Rights Reserved. test message',
   links: [
     { label: 'Privacy Policy', url: 'https://www.example.com/privacy' },
     { label: 'Terms of Service', url: 'https://www.example.com/terms' },
