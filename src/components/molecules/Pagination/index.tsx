@@ -1,6 +1,33 @@
 import React from 'react';
 import { PaginationProps } from './PaginationProps.interface';
 import './Pagination.css';
+import Button from '@/Components/Atoms/Button';
+
+const PaginationButton: React.FC<{
+  onClick: () => void;
+  disabled: boolean;
+  className: string;
+  children: React.ReactNode;
+}> = ({ onClick, disabled, className, children }) => (
+  <Button className={className} onClick={onClick} disabled={disabled}>
+    {children}
+  </Button>
+);
+
+const PageNumberButton: React.FC<{
+  page: number;
+  currentPage: number;
+  onClick: (page: number) => void;
+}> = ({ page, currentPage, onClick }) => (
+  <Button
+    key={page}
+    variant="outline"
+    className={`${page === currentPage ? 'active' : ''}`}
+    onClick={() => onClick(page)}
+  >
+    {page}
+  </Button>
+);
 
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,
@@ -18,13 +45,12 @@ const Pagination: React.FC<PaginationProps> = ({
     const pages = [];
     for (let i = 1; i <= totalPages; i++) {
       pages.push(
-        <button
+        <PageNumberButton
           key={i}
-          className={`pagination-button ${i === currentPage ? 'active' : ''}`}
-          onClick={() => handleClick(i)}
-        >
-          {i}
-        </button>
+          page={i}
+          currentPage={currentPage}
+          onClick={handleClick}
+        />
       );
     }
     return pages;
@@ -32,21 +58,21 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <div className={`pagination-container ${className || ''}`}>
-      <button
+      <PaginationButton
         className="pagination-button previous"
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
       >
         Previous
-      </button>
+      </PaginationButton>
       {renderPageNumbers()}
-      <button
+      <PaginationButton
         className="pagination-button next"
         onClick={() => handleClick(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
         Next
-      </button>
+      </PaginationButton>
     </div>
   );
 };

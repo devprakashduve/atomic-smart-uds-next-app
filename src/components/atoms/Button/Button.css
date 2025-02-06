@@ -10,7 +10,9 @@
 .btn-default {
   @apply bg-btn-dark text-btn-light hover:border-none hover:bg-btn-dark/70;
 }
-
+.btn.active {
+  @apply bg-btn-dark text-btn-light hover:border-none hover:bg-btn-dark/70;
+}
 .btn-pill-outline {
   @apply border border-btn-dark bg-transparent text-btn-dark hover:border-transparent;
 }
