@@ -5,7 +5,7 @@ import {
   ButtonSize,
   ButtonRounded,
 } from './ButtonProps.interface';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 import './Button.css';
 
 const variantClasses: Record<ButtonVariant, string> = {

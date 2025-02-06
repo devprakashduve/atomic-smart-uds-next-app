@@ -3,7 +3,7 @@ import { ImageProps } from './ImageProps.interface';
 
 import './Image.css';
 import Image from 'next/image';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 
 const Img: React.FC<ImageProps> = ({ src, alt, width, height, className }) => {
   const imageClasses = classNames('', className);

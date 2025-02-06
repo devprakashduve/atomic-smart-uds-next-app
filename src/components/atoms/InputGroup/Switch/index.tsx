@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SwitchProps } from './SwitchProps.interface';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 
 const Switch = (props: SwitchProps) => {
   const {

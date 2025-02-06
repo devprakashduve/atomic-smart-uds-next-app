@@ -1,7 +1,7 @@
 import React from 'react';
 import { SpinnerProps } from './SpinnerProps.interface';
 import './Spinner.css';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 
 const Spinner: React.FC<SpinnerProps> = ({
   width = 48,

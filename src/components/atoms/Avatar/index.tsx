@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AvatarProps } from './AvatarProps.interface';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 import Img from '../Img';
 import './Avatar.css';
 

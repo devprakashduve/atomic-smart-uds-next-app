@@ -1,4 +1,4 @@
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 import './Tooltip.css';
 
 export default function Tooltip({

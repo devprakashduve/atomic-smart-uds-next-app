@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SliderProps } from './SliderProps.interface';
 import './Slider.css';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 
 const Slider: React.FC<SliderProps> = ({
   min,
