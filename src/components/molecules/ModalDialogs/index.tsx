@@ -81,25 +81,28 @@ export default function ModalDialogs({
             </div>
           </div>
           <div className="bg-line-dark/75 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-            <Button
-              type="button"
-              onClick={() => {
-                onConfirm();
-                onClose();
-              }}
-              variant="default"
-            >
-              {confirmText}
-            </Button>
-
-            <Button
-              type="button"
-              onClick={onClose}
-              variant="pill"
-              className="mr-2"
-            >
-              {cancelText}
-            </Button>
+            {confirmText && (
+              <Button
+                type="button"
+                onClick={() => {
+                  onConfirm();
+                  onClose();
+                }}
+                variant="default"
+              >
+                {confirmText}
+              </Button>
+            )}
+            {cancelText && (
+              <Button
+                type="button"
+                onClick={onClose}
+                variant="default"
+                className="mr-2"
+              >
+                {cancelText}
+              </Button>
+            )}
           </div>
         </div>
       </div>
