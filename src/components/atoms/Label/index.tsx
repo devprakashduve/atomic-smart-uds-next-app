@@ -2,7 +2,7 @@ import React from 'react';
 import { LabelProps } from './LabelProps.interface';
 
 import './Label.css';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 
 const Label: React.FC<LabelProps> = ({ children, htmlFor, className }) => {
   const labelClass = classNames(`label-base block`, className);

@@ -1,7 +1,8 @@
 import React from 'react';
 import { IconProps } from './IconProps.interface';
 import './Icon.css';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
+
 import {
   MagnifyingGlassIcon as OutlineSearchIcon,
   EyeIcon as OutlineEyeIcon,
@@ -16,6 +17,7 @@ import {
   CheckIcon as OutlineCheckIcon,
   PlusIcon as OutlinePlusIcon,
   MinusIcon as OutlineMinusIcon,
+  ExclamationTriangleIcon as OutlineWarningIcon,
 } from '@heroicons/react/24/outline';
 import {
   MagnifyingGlassIcon as SolidSearchIcon,
@@ -31,6 +33,7 @@ import {
   CheckIcon as SolidCheckIcon,
   PlusIcon as SolidPlusIcon,
   MinusIcon as SolidMinusIcon,
+  ExclamationTriangleIcon as SolidWarningIcon,
 } from '@heroicons/react/24/solid';
 
 const iconMap = {
@@ -48,6 +51,7 @@ const iconMap = {
     check: OutlineCheckIcon,
     plus: OutlinePlusIcon,
     minus: OutlineMinusIcon,
+    warning: OutlineWarningIcon,
   },
   solid: {
     search: SolidSearchIcon,
@@ -63,6 +67,7 @@ const iconMap = {
     check: SolidCheckIcon,
     plus: SolidPlusIcon,
     minus: SolidMinusIcon,
+    warning: SolidWarningIcon,
   },
 };
 

@@ -15,6 +15,7 @@ const iconOptions = [
   'check',
   'plus',
   'minus',
+  'warning',
 ];
 
 export default {

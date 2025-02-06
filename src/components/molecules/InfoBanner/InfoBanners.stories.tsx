@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import InfoBanner from './';
+import InfoBanner from '.';
 
 export default {
   title: 'Components/Molecules/InfoBanner',

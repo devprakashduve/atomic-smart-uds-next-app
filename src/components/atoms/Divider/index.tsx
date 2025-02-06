@@ -1,7 +1,7 @@
 import React from 'react';
 import './Divider.css';
 import { DividerProps } from './DividerProps.interface';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 
 const Divider: React.FC<DividerProps> = ({
   orientation = 'horizontal',

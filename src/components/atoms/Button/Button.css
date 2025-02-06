@@ -8,7 +8,7 @@
 
 /* Variant Styles */
 .btn-default {
-  @apply bg-btn-dark text-btn-light hover:border-btn-dark hover:bg-btn-light hover:text-btn-dark;
+  @apply bg-btn-dark text-btn-light hover:border-none hover:bg-btn-dark/70;
 }
 
 .btn-pill-outline {

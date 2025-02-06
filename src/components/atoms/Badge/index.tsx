@@ -1,7 +1,7 @@
 import React from 'react';
 import { BadgeProps } from './BadgeProps.interface';
 import './Badge.css';
-import { classNames } from '@/Components/utilities/componentsMethods';
+import { classNames } from '@/Components/Utilities/componentsMethods';
 
 const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
   (
