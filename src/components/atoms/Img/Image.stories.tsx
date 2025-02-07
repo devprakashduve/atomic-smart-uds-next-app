@@ -3,6 +3,7 @@ import Image from '.';
 export default {
   title: 'Components/Atoms/Image',
   component: Image,
+  tags: ['autodocs'],
 };
 
 export const Default = {

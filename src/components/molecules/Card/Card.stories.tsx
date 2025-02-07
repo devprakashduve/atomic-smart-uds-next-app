@@ -6,6 +6,7 @@ import { CardProps } from './CardProps.interface';
 export default {
   title: 'Components/Molecules/Card',
   component: Card,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<CardProps> = (args) => <Card {...args} />;

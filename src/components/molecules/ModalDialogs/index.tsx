@@ -52,7 +52,7 @@ export default function ModalDialogs({
 
       <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
         <div
-          className={`relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all duration-300 ease-out sm:my-8 sm:w-full sm:max-w-lg ${
+          className={`relative transform overflow-hidden rounded text-left shadow-xl transition-all duration-300 ease-out sm:my-8 sm:w-full sm:max-w-lg ${
             isActive ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
           }`}
           role="dialog"
@@ -63,8 +63,8 @@ export default function ModalDialogs({
           <div className="bg-line-dark/75 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">
               {icon && (
-                <div className="mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-line-dark/75 sm:mx-0 sm:h-10 sm:w-10">
-                  <Icon name={icon} className="h-6 w-6" />{' '}
+                <div className="mx-auto flex h-12 w-12 shrink-0 items-center justify-center sm:mx-0 sm:h-10 sm:w-10">
+                  <Icon name={icon} className="h-6 w-6" />
                 </div>
               )}
 

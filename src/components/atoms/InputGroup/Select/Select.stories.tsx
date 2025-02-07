@@ -10,6 +10,7 @@ interface SelectStoryArgs extends SelectProps {
 const meta: Meta<SelectStoryArgs> = {
   title: 'Components/Atoms/InputGroup/Select',
   component: Select,
+  tags: ['autodocs'],
   argTypes: {
     size: {
       control: { type: 'radio' },

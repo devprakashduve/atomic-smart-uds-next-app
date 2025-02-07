@@ -15,6 +15,7 @@ export default {
     },
     backgroundColor: { control: 'color' },
   },
+  tags: ['autodocs'],
 };
 
 export const Default = {

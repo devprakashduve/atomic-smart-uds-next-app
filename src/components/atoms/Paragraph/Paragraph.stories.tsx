@@ -3,6 +3,7 @@ import Paragraph from '.';
 export default {
   title: 'Components/Atoms/Paragraph',
   component: Paragraph,
+  tags: ['autodocs'],
 };
 
 export const Thin = {

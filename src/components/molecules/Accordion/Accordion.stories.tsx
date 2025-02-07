@@ -6,6 +6,7 @@ import { AccordionProps } from './AccordionProps.interface';
 export default {
   title: 'Components/Molecules/Accordion',
   component: Accordion,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<AccordionProps> = (args) => <Accordion {...args} />;

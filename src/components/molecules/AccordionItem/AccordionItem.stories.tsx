@@ -4,6 +4,7 @@ import AccordionItem from '.';
 export default {
   title: 'Components/Molecules/AccordionItem',
   component: AccordionItem,
+  tags: ['autodocs'],
   argTypes: {
     title: {
       control: 'text',

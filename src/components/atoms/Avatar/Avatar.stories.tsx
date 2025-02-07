@@ -3,6 +3,7 @@ import Avatar from '.';
 export default {
   title: 'Components/Atoms/Avatar',
   component: Avatar,
+  tags: ['autodocs'],
 };
 
 export const Default = {

@@ -4,6 +4,7 @@ import Icon from '../Icon'; // Adjust the import path as necessary
 export default {
   title: 'Components/Atoms/Tag',
   component: Tag,
+  tags: ['autodocs'],
 };
 
 export const DefaultTag = {

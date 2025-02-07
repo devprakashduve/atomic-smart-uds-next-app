@@ -21,6 +21,7 @@ const iconOptions = [
 export default {
   title: 'Components/Atoms/Icon',
   component: Icon,
+  tags: ['autodocs'],
   argTypes: {
     name: {
       control: {

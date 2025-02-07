@@ -5,6 +5,7 @@ import Paragraph from '../Paragraph';
 export default {
   title: 'Components/Atoms/Tooltip',
   component: Tooltip,
+  tags: ['autodocs'],
 };
 
 export const DefaultTooltip = {

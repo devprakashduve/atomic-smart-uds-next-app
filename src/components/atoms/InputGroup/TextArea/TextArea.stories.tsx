@@ -4,6 +4,7 @@ import TextArea from './index';
 const meta: Meta<typeof TextArea> = {
   title: 'Components/Atoms/InputGroup/TextArea',
   component: TextArea,
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <div className="max-w-2xl p-4">

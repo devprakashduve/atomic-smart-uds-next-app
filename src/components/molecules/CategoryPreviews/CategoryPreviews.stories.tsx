@@ -5,6 +5,7 @@ import CategoryPreviews from '.';
 export default {
   title: 'Components/Molecules/CategoryPreviews',
   component: CategoryPreviews,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn = (args) => <CategoryPreviews {...args} />;

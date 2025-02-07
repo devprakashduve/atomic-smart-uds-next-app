@@ -3,6 +3,7 @@ import Switch from '.';
 export default {
   title: 'Components/Atoms/InputGroup/Switch',
   component: Switch,
+  tags: ['autodocs'],
   argTypes: {
     checked: { control: 'boolean' },
     disabled: { control: 'boolean' },

@@ -3,6 +3,7 @@ import Checkbox from '.';
 export default {
   title: 'Components/Atoms/InputGroup/Checkbox',
   component: Checkbox,
+  tags: ['autodocs'],
   args: {
     name: 'example-checkbox',
   },

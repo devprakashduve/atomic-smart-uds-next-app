@@ -6,6 +6,7 @@ import { PaginationProps } from './PaginationProps.interface';
 export default {
   title: 'Components/Molecules/Pagination',
   component: Pagination,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<PaginationProps> = (args) => {
@@ -26,6 +27,6 @@ const Template: StoryFn<PaginationProps> = (args) => {
 export const DefaultPagination = Template.bind({});
 DefaultPagination.args = {
   currentPage: 1,
-  totalPages: 10,
+  totalPages: 100,
   onPageChange: (page) => console.log('Page changed to:', page),
 };

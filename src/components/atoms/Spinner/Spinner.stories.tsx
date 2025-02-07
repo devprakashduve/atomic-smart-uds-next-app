@@ -3,6 +3,7 @@ import Spinner from './index';
 export default {
   title: 'Components/Atoms/Spinner',
   component: Spinner,
+  tags: ['autodocs'],
   argTypes: {
     width: {
       control: { type: 'number' },
