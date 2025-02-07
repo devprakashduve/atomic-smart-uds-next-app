@@ -43,7 +43,33 @@ const Pagination: React.FC<PaginationProps> = ({
 
   const renderPageNumbers = () => {
     const pages = [];
-    for (let i = 1; i <= totalPages; i++) {
+    const maxPagesToShow = 5;
+    const halfMaxPagesToShow = Math.floor(maxPagesToShow / 2);
+
+    let startPage = Math.max(1, currentPage - halfMaxPagesToShow);
+    let endPage = Math.min(totalPages, currentPage + halfMaxPagesToShow);
+
+    if (currentPage <= halfMaxPagesToShow) {
+      endPage = Math.min(totalPages, maxPagesToShow);
+    } else if (currentPage + halfMaxPagesToShow >= totalPages) {
+      startPage = Math.max(1, totalPages - maxPagesToShow + 1);
+    }
+
+    if (startPage > 1) {
+      pages.push(
+        <PageNumberButton
+          key={1}
+          page={1}
+          currentPage={currentPage}
+          onClick={handleClick}
+        />
+      );
+      if (startPage > 2) {
+        pages.push(<span key="start-ellipsis">...</span>);
+      }
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
       pages.push(
         <PageNumberButton
           key={i}
@@ -53,6 +79,21 @@ const Pagination: React.FC<PaginationProps> = ({
         />
       );
     }
+
+    if (endPage < totalPages) {
+      if (endPage < totalPages - 1) {
+        pages.push(<span key="end-ellipsis">...</span>);
+      }
+      pages.push(
+        <PageNumberButton
+          key={totalPages}
+          page={totalPages}
+          currentPage={currentPage}
+          onClick={handleClick}
+        />
+      );
+    }
+
     return pages;
   };
 

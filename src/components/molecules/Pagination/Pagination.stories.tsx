@@ -26,6 +26,6 @@ const Template: StoryFn<PaginationProps> = (args) => {
 export const DefaultPagination = Template.bind({});
 DefaultPagination.args = {
   currentPage: 1,
-  totalPages: 10,
+  totalPages: 100,
   onPageChange: (page) => console.log('Page changed to:', page),
 };
