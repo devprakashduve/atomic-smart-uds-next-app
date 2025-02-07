@@ -1,3 +1,5 @@
+import Avatar from '@/Components/Atoms/Avatar';
+import Img from '@/Components/Atoms/Img';
 import React from 'react';
 
 interface ProfileCardProps {
@@ -5,6 +7,7 @@ interface ProfileCardProps {
   profileImage: string;
   name: string;
   title: string;
+  height?: number;
 }
 
 export default function ProfileCard({
@@ -12,15 +15,20 @@ export default function ProfileCard({
   profileImage,
   name,
   title,
+  height = 36,
 }: ProfileCardProps) {
   return (
-    <div className="max-w-sm overflow-hidden rounded-lg bg-white shadow-lg">
-      <img className="h-32 w-full object-cover" src={coverImage} alt="Cover" />
+    <div className="w-full overflow-hidden rounded-lg bg-white shadow-lg">
+      <Img src={coverImage} alt="Cover" className={`w-full h-${height}`} />
       <div className="-mt-10 flex justify-center">
-        <img
-          className="h-20 w-20 rounded-full border-4 border-white object-cover"
-          src={profileImage}
+        <Avatar
           alt="Profile"
+          circle
+          className="border-4 border-white object-cover shadow-lg"
+          initials="CD"
+          size={20}
+          status="online"
+          src={profileImage}
         />
       </div>
       <div className="p-4 text-center">
