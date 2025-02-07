@@ -1,16 +1,13 @@
 import React from 'react';
 import Button from '.';
-import {
-  ButtonVariant,
-  ButtonSize,
-  ButtonRounded,
-} from './ButtonProps.interface';
+import { ButtonSize, ButtonRounded } from './ButtonProps.interface';
 import { ArrowDownIcon, ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid';
 
 export default {
   title: 'Components/Atoms/Button',
   component: Button,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: { type: 'select' },

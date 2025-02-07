@@ -4,6 +4,7 @@ import { InputSize, InputType } from './InputProps.interface';
 export default {
   title: 'Components/Atoms/InputGroup/Input',
   component: Input,
+  tags: ['autodocs'],
   argTypes: {
     value: { control: 'text' },
     name: { control: 'text' },

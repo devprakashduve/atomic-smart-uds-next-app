@@ -6,6 +6,7 @@ import { AlertProps } from './AlertProps.interface';
 export default {
   title: 'Components/Molecules/Alert',
   component: Alert,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<AlertProps> = (args) => <Alert {...args} />;

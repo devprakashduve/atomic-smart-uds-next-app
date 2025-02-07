@@ -3,6 +3,7 @@ import Link from '.';
 export default {
   title: 'Components/Atoms/Link',
   component: Link,
+  tags: ['autodocs'],
 };
 
 export const Default = {

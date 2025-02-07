@@ -3,6 +3,7 @@ import ProgressBar from './index';
 export default {
   title: 'Components/Atoms/ProgressBar',
   component: ProgressBar,
+  tags: ['autodocs'],
 };
 
 export const Default = {

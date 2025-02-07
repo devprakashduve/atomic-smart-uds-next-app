@@ -6,6 +6,7 @@ import { BreadcrumbProps } from './BreadcrumbProps.interface';
 export default {
   title: 'Components/Molecules/Breadcrumbs',
   component: Breadcrumbs,
+  tags: ['autodocs'],
   argTypes: {
     separator: {
       control: 'text',

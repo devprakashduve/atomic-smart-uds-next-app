@@ -3,6 +3,7 @@ import Video from '.';
 export default {
   title: 'Components/Atoms/Video',
   component: Video,
+  tags: ['autodocs'],
 };
 
 export const DefaultVideo = {

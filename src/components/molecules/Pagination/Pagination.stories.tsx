@@ -6,6 +6,7 @@ import { PaginationProps } from './PaginationProps.interface';
 export default {
   title: 'Components/Molecules/Pagination',
   component: Pagination,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<PaginationProps> = (args) => {

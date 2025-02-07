@@ -3,6 +3,7 @@ import Typography from '.';
 export default {
   title: 'Typography',
   component: Typography,
+  tags: ['autodocs'],
   argTypes: {
     children: {
       control: 'text',

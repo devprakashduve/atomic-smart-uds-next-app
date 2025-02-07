@@ -6,6 +6,7 @@ import { ButtonGroupProps } from './ButtonGroupProps.interface';
 export default {
   title: 'Components/Molecules/ButtonGroup',
   component: ButtonGroup,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<ButtonGroupProps> = (args) => <ButtonGroup {...args} />;

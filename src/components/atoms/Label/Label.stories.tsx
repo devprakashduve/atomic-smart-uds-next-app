@@ -3,6 +3,7 @@ import Label from '.';
 export default {
   title: 'Components/Atoms/Label',
   component: Label,
+  tags: ['autodocs'],
 };
 
 export const Default = {

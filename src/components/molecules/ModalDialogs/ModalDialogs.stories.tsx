@@ -5,6 +5,7 @@ import ModalDialogs from '.';
 export default {
   title: 'Components/Molecules/ModalDialogs',
   component: ModalDialogs,
+  tags: ['autodocs'],
   args: {
     isOpen: false,
     title: 'Deactivate account',

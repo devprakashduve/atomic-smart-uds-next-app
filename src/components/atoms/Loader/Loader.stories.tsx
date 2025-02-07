@@ -3,6 +3,7 @@ import Loader from '.';
 export default {
   title: 'Components/Atoms/Loader',
   component: Loader,
+  tags: ['autodocs'],
 };
 
 export const SmallLoader = {

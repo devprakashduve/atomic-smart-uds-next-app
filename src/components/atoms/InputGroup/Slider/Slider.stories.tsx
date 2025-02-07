@@ -3,6 +3,7 @@ import Slider from '.';
 export default {
   title: 'Components/Atoms/InputGroup/Slider',
   component: Slider,
+  tags: ['autodocs'],
 };
 
 export const BasicSlider = {

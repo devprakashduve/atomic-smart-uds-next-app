@@ -3,6 +3,7 @@ import RadioButton from '.';
 export default {
   title: 'Components/Atoms/InputGroup/RadioButton',
   component: RadioButton,
+  tags: ['autodocs'],
   argTypes: {
     initialChecked: { control: 'boolean' },
     onChange: { action: 'changed' },

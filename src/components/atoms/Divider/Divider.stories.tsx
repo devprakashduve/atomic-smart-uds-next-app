@@ -3,6 +3,7 @@ import Divider from './index';
 export default {
   title: 'Components/Atoms/Divider',
   component: Divider,
+  tags: ['autodocs'],
 };
 
 export const HorizontalThin = {
