@@ -222,6 +222,8 @@ export const VariantsComparison = () => (
       defaultSelected={items[8]}
       placeholder="Select an option"
       size="lg"
+      label="Large rounded full"
+      required
       roundedFull
     />
     <h3>Rounded</h3>
