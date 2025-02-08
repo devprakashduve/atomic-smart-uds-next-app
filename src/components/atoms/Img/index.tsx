@@ -5,8 +5,14 @@ import './Image.css';
 import Image from 'next/image';
 import { classNames } from '@/Components/Utilities/componentsMethods';
 
-const Img: React.FC<ImageProps> = ({ src, alt, width, height, className }) => {
-  const imageClasses = classNames('', className);
+const Img: React.FC<ImageProps> = ({
+  src,
+  alt,
+  width = 300,
+  height = 300,
+  className,
+}) => {
+  const imageClasses = classNames('object-cover', className);
 
   return (
     <Image

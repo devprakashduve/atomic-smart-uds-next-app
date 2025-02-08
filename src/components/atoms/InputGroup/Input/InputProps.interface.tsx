@@ -24,7 +24,7 @@ export interface InputProps {
   label?: string;
   id?: string;
   className?: string;
-  size: InputSize;
+  size?: InputSize;
   isRequired?: boolean;
   rounded?: boolean;
   roundedFull?: boolean;

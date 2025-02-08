@@ -5,6 +5,7 @@ import ProfileCard from './index';
 export default {
   title: 'Components/Molecules/CardsGroup/ProfileCard',
   component: ProfileCard,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn = (args: any) => <ProfileCard {...args} />;
