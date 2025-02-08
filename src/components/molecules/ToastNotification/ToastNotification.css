@@ -9,22 +9,22 @@
 
 /* Success Toast */
 .toast-notification.success {
-  @apply bg-green-500;
+  @apply bg-success;
 }
 
 /* Error Toast */
 .toast-notification.error {
-  @apply bg-red-500;
+  @apply bg-error;
 }
 
 /* Info Toast */
 .toast-notification.info {
-  @apply bg-blue-500;
+  @apply bg-info;
 }
 
 /* Warning Toast */
 .toast-notification.warning {
-  @apply bg-yellow-500;
+  @apply bg-warning;
 }
 
 /* Toast Message */
