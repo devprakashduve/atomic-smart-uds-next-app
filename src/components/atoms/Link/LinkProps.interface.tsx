@@ -1,5 +1,6 @@
 export interface LinkProps {
   href: string;
-  text: string;
+  text?: string;
   target?: '_blank' | '_self' | '_parent' | '_top';
+  children?: React.ReactNode;
 }
