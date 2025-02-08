@@ -5,6 +5,7 @@ import FeatureCard from './index';
 export default {
   title: 'Components/Molecules/CardsGroup/FeatureCard',
   component: FeatureCard,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<typeof FeatureCard> = (args) => (

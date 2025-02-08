@@ -3,7 +3,7 @@
 }
 
 .btn {
-  @apply inline-flex items-center justify-center border border-transparent transition-all hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  @apply inline-flex items-center justify-center border border-transparent hover:shadow focus:shadow-none active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
 }
 
 /* Variant Styles */

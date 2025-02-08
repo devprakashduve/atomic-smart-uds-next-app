@@ -6,6 +6,7 @@ import { ImageCardProps } from './ImageCardProps.interface';
 export default {
   title: 'Components/Molecules/CardsGroup/ImageCard',
   component: ImageCard,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<ImageCardProps> = (args: ImageCardProps) => (

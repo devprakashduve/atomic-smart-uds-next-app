@@ -5,6 +5,7 @@ import ProductCard from './index';
 export default {
   title: 'Components/Molecules/CardsGroup/ProductCard',
   component: ProductCard,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn = (args) => (

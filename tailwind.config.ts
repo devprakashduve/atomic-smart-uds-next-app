@@ -1,3 +1,4 @@
+import { Background } from '@/Components/Atoms/Tooltip/Tooltip.stories';
 import type { Config } from 'tailwindcss';
 
 const colorPalette = {
@@ -25,6 +26,18 @@ const colorPalette = {
     light: '#94A3B8', // Slate-400
     DEFAULT: '#334155', // Slate-700
     dark: '#0F172A', // Slate-900
+  },
+  rating: {
+    light: '#FDE047', // Yellow
+    DEFAULT: '#FACC15', // Yellow
+    dark: '#ccc', // Dark Yellow
+  },
+  card: {
+    background: '#FFF',
+    to_background: '#FACC15',
+    light: '#FDE047', // Yellow
+    DEFAULT: '#FACC15', // Yellow
+    dark: '#374151', // Dark Yellow
   },
   btn: {
     light: '#E2E8F0', // Slate-200
@@ -77,6 +90,18 @@ const colorPalette2 = {
     DEFAULT: '#1F2937', // Gray-800
     dark: '#111827', // Gray-900
   },
+  rating: {
+    light: '#FDE047', // Yellow
+    DEFAULT: '#FACC15', // Yellow
+    dark: '#ccc', // Dark Yellow
+  },
+  card: {
+    background: '#FFF',
+    to_background: '#FACC15',
+    light: '#FDE047', // Yellow
+    DEFAULT: '#FACC15', // Yellow
+    dark: '#374151', // Dark Yellow
+  },
   btn: {
     light: '#E5E7EB', // Light Gray
     DEFAULT: '#9CA3AF', // Medium Gray
@@ -126,6 +151,18 @@ const darkPinkWhitePalette = {
     light: '#9CA3AF', // Gray (Slate-400)
     DEFAULT: '#1F2937', // Dark Charcoal (Slate-800)
     dark: '#111827', // Almost Black (Slate-900)
+  },
+  rating: {
+    light: '#FDE047', // Yellow
+    DEFAULT: '#FACC15', // Yellow
+    dark: '#ccc', // Dark Yellow
+  },
+  card: {
+    background: '#FFF',
+    to_background: '#FACC15',
+    light: '#FDE047', // Yellow
+    DEFAULT: '#FACC15', // Yellow
+    dark: '#374151', // Dark Yellow
   },
   btn: {
     light: '#FBCFE8', // Light Pink

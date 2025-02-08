@@ -1,12 +1,7 @@
 import Button from '@/Components/Atoms/Button';
+import Img from '@/Components/Atoms/Img';
 import React from 'react';
-
-interface ProductCardProps {
-  imageUrl: string;
-  productName: string;
-  price: string;
-  onAddToCart: () => void;
-}
+import { ProductCardProps } from './ProductCard.interface';
 
 export default function ProductCard({
   imageUrl,
@@ -16,7 +11,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <div className="max-w-sm overflow-hidden rounded-lg bg-white shadow-lg">
-      <img className="w-full" src={imageUrl} alt={productName} />
+      <Img className="w-full" src={imageUrl} alt={productName} />
       <div className="p-4">
         <h3 className="text-lg font-semibold">{productName}</h3>
         <p className="text-line">{price}</p>

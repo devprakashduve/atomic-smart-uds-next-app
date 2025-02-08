@@ -6,6 +6,7 @@ import { RatingProps } from './RatingProps.interface';
 export default {
   title: 'Components/Molecules/Rating',
   component: Rating,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<RatingProps> = (args) => {

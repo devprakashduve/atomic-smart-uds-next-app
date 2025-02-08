@@ -1,19 +1,19 @@
 /* Rating Container */
 .rating-container {
-  @apply flex items-center gap-1;
+  @apply flex items-center;
 }
 
 /* Star Icon */
 .rating-star {
-  @apply cursor-default text-xl text-gray-400;
+  @apply text-rating-dark cursor-default text-xl;
 }
 
 /* Filled Star */
 .rating-star.filled {
-  @apply text-yellow-400;
+  @apply text-rating-light;
 }
 
 /* Interactive Star */
 .rating-star.interactive {
-  @apply cursor-pointer hover:text-yellow-500;
+  @apply hover:text-rating cursor-pointer;
 }
