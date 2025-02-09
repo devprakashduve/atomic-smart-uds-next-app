@@ -40,13 +40,15 @@ const FileUploader: React.FC<FileUploaderProps> = ({
 
   return (
     <div className="file-uploader space-y-4">
-      <label className="block text-sm font-semibold text-gray-700">
+      <label className="block text-sm font-semibold text-letter-dark">
         {label}
       </label>
       <input
         type="file"
         onChange={handleFileChange}
-        className="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="w-full rounded-md border border-line-light p-3 hover:border-line-dark focus:outline-none"
+        title="Upload file"
+        placeholder="Choose a file"
       />
       {error && <p className="text-sm text-red-600">{error}</p>}
     </div>

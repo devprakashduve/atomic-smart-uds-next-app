@@ -16,6 +16,17 @@ const iconOptions = [
   'plus',
   'minus',
   'warning',
+  'arrowPath',
+  'chartPie',
+  'cursorArrowRays',
+  'fingerPrint',
+  'squaresPlus',
+  'bellAlert',
+  'lightBulb',
+  'chevronDown',
+  'playCircle',
+  'chatBubbleLeftRight',
+  'bars3',
 ];
 
 export default {
