@@ -5,6 +5,7 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
+import Img from '@/Components/Atoms/Img';
 
 const navigation = {
   categories: [
@@ -147,7 +148,7 @@ function MobileMenu({
     open && (
       <div className="fixed inset-0 z-40 lg:hidden">
         <div
-          className="fixed inset-0 bg-black/25"
+          className="bg-menu-dark fixed inset-0"
           onClick={() => setOpen(false)}
         />
         <div className="fixed inset-0 z-40 flex">
@@ -156,23 +157,27 @@ function MobileMenu({
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
+                className="text-menu-dark relative -m-2 inline-flex items-center justify-center rounded-md p-2"
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="size-6" />
               </button>
             </div>
             <div className="mt-2">
-              <div className="border-b border-gray-200">
+              <div className="border-menu-light border-b">
                 <div className="-mb-px flex space-x-8 px-4">
                   {navigation.categories.map((category) => (
                     <button
                       key={category.name}
-                      onClick={() => setActiveTab(category.name)}
+                      onClick={() =>
+                        setActiveTab(
+                          activeTab === category.name ? '' : category.name
+                        )
+                      }
                       className={`${
                         activeTab === category.name
-                          ? 'border-indigo-600 text-indigo-600'
-                          : 'border-transparent text-gray-900'
+                          ? 'border-menu-dark/80 text-menu-dark'
+                          : 'text-menu-light border-transparent'
                       } flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium`}
                     >
                       {category.name}
@@ -191,14 +196,14 @@ function MobileMenu({
                               key={item.name}
                               className="group relative text-sm"
                             >
-                              <img
+                              <Img
                                 alt={item.imageAlt}
                                 src={item.imageSrc}
-                                className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
+                                className="bg-menu-light aspect-square w-full rounded-lg object-cover group-hover:opacity-75"
                               />
                               <a
                                 href={item.href}
-                                className="mt-6 block font-medium text-gray-900"
+                                className="text-menu-dark mt-6 block font-medium"
                               >
                                 <span
                                   aria-hidden="true"
@@ -216,7 +221,7 @@ function MobileMenu({
                           <div key={section.name}>
                             <p
                               id={`${category.id}-${section.id}-heading-mobile`}
-                              className="font-medium text-gray-900"
+                              className="text-menu-dark font-medium"
                             >
                               {section.name}
                             </p>
@@ -229,7 +234,7 @@ function MobileMenu({
                                 <li key={item.name} className="flow-root">
                                   <a
                                     href={item.href}
-                                    className="-m-2 block p-2 text-gray-500"
+                                    className="text-menu-dark/50 -m-2 block p-2"
                                   >
                                     {item.name}
                                   </a>
@@ -243,23 +248,23 @@ function MobileMenu({
                 )}
               </div>
             </div>
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+            <div className="border-menu-light space-y-6 border-t px-4 py-6">
               {navigation.pages.map((page) => (
                 <div key={page.name} className="flow-root">
                   <a
                     href={page.href}
-                    className="-m-2 block p-2 font-medium text-gray-900"
+                    className="text-menu-dark -m-2 block p-2 font-medium"
                   >
                     {page.name}
                   </a>
                 </div>
               ))}
             </div>
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+            <div className="border-menu-light space-y-6 border-t px-4 py-6">
               <div className="flow-root">
                 <a
                   href="#"
-                  className="-m-2 block p-2 font-medium text-gray-900"
+                  className="text-menu-dark -m-2 block p-2 font-medium"
                 >
                   Sign in
                 </a>
@@ -267,20 +272,20 @@ function MobileMenu({
               <div className="flow-root">
                 <a
                   href="#"
-                  className="-m-2 block p-2 font-medium text-gray-900"
+                  className="text-menu-dark -m-2 block p-2 font-medium"
                 >
                   Create account
                 </a>
               </div>
             </div>
-            <div className="border-t border-gray-200 px-4 py-6">
+            <div className="border-menu-light border-t px-4 py-6">
               <a href="#" className="-m-2 flex items-center p-2">
                 <img
                   alt=""
-                  src="https://tailwindui.com/plus/img/flags/flag-canada.svg"
+                  src="/images/avatar.jpg"
                   className="block h-auto w-5 shrink-0"
                 />
-                <span className="ml-3 block text-base font-medium text-gray-900">
+                <span className="text-menu-dark ml-3 block text-base font-medium">
                   CAD
                 </span>
                 <span className="sr-only">, change currency</span>
@@ -293,91 +298,107 @@ function MobileMenu({
   );
 }
 
-function DesktopMenu() {
+interface DesktopMenuProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
+function DesktopMenu({ activeTab, setActiveTab }: DesktopMenuProps) {
   return (
     <div className="hidden lg:ml-8 lg:block lg:self-stretch">
       <div className="flex h-full space-x-8">
         {navigation.categories.map((category) => (
           <div key={category.name} className="flex">
             <div className="relative flex">
-              <button className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800">
+              <button
+                onClick={() =>
+                  setActiveTab(activeTab === category.name ? '' : category.name)
+                }
+                className={`relative z-10 -mb-px flex items-center border-b-2 ${
+                  activeTab === category.name
+                    ? 'border-menu-dark/90 text-menu-dark'
+                    : 'text-menu-dark/70 border-transparent'
+                } hover:text-menu-dark hover:border-menu-dark/80 pt-px text-sm font-medium transition-colors duration-200 ease-out`}
+              >
                 {category.name}
               </button>
             </div>
-            <div className="absolute inset-x-0 top-full text-sm text-gray-500">
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 top-1/2 bg-white shadow-sm"
-              />
-              <div className="relative bg-white">
-                <div className="mx-auto max-w-7xl px-8">
-                  <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                    <div className="col-start-2 grid grid-cols-2 gap-x-8">
-                      {category.featured.map((item) => (
-                        <div
-                          key={item.name}
-                          className="group relative text-base sm:text-sm"
-                        >
-                          <img
-                            alt={item.imageAlt}
-                            src={item.imageSrc}
-                            className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
-                          />
-                          <a
-                            href={item.href}
-                            className="mt-6 block font-medium text-gray-900"
+            {activeTab === category.name && (
+              <div className="text-menu-dark absolute inset-x-0 top-full text-sm">
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 top-1/2 bg-white shadow-sm"
+                />
+                <div className="relative bg-white">
+                  <div className="mx-auto max-w-7xl px-8">
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
+                      <div className="col-start-2 grid grid-cols-2 gap-x-8">
+                        {category.featured.map((item) => (
+                          <div
+                            key={item.name}
+                            className="group relative text-base sm:text-sm"
                           >
-                            <span
-                              aria-hidden="true"
-                              className="absolute inset-0 z-10"
+                            <img
+                              alt={item.imageAlt}
+                              src={item.imageSrc}
+                              className="bg-menu-light aspect-square w-full rounded-lg object-cover group-hover:opacity-75"
                             />
-                            {item.name}
-                          </a>
-                          <p aria-hidden="true" className="mt-1">
-                            Shop now
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
-                      {category.sections.map((section) => (
-                        <div key={section.name}>
-                          <p
-                            id={`${section.name}-heading`}
-                            className="font-medium text-gray-900"
-                          >
-                            {section.name}
-                          </p>
-                          <ul
-                            role="list"
-                            aria-labelledby={`${section.name}-heading`}
-                            className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                          >
-                            {section.items.map((item) => (
-                              <li key={item.name} className="flex">
-                                <a
-                                  href={item.href}
-                                  className="hover:text-gray-800"
-                                >
-                                  {item.name}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                            <a
+                              href={item.href}
+                              className="text-menu-dark mt-6 block font-medium"
+                            >
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0 z-10"
+                              />
+                              {item.name}
+                            </a>
+                            <p aria-hidden="true" className="mt-1">
+                              Shop now
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                        {category.sections.map((section) => (
+                          <div key={section.name}>
+                            <p
+                              id={`${section.name}-heading`}
+                              className="text-menu-dark font-medium"
+                            >
+                              {section.name}
+                            </p>
+                            <ul
+                              role="list"
+                              aria-labelledby={`${section.name}-heading`}
+                              className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                            >
+                              {section.items.map((item) => (
+                                <li key={item.name} className="flex">
+                                  <a
+                                    href={item.href}
+                                    className="hover:text-menu-dark"
+                                  >
+                                    {item.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         ))}
         {navigation.pages.map((page) => (
           <a
             key={page.name}
             href={page.href}
-            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+            className="text-menu-dark/80 hover:text-menu-dark/90 flex items-center text-sm font-medium"
           >
             {page.name}
           </a>
@@ -389,10 +410,10 @@ function DesktopMenu() {
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(navigation.categories[0].name);
+  const [activeTab, setActiveTab] = useState('');
 
   return (
-    <div className="bg-menu">
+    <div>
       <MobileMenu
         open={open}
         setOpen={setOpen}
@@ -400,19 +421,19 @@ export default function Navigation() {
         setActiveTab={setActiveTab}
       />
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <p className="bg-menu-dark/90 text-menu-light/80 flex h-10 items-center justify-center px-4 text-sm font-medium sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
         <nav
           aria-label="Top"
           className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         >
-          <div className="border-b border-gray-200">
+          <div className="border-menu-light border-b">
             <div className="flex h-16 items-center">
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
+                className="text-menu-dark/40 relative rounded-md bg-white p-2 lg:hidden"
               >
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon aria-hidden="true" className="size-6" />
@@ -427,19 +448,19 @@ export default function Navigation() {
                   />
                 </a>
               </div>
-              <DesktopMenu />
+              <DesktopMenu activeTab={activeTab} setActiveTab={setActiveTab} />
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
                     href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    className="text-menu-dark/80 hover:text-menu-dark/90 text-sm font-medium"
                   >
                     Sign in
                   </a>
-                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
+                  <span aria-hidden="true" className="bg-menu-light h-6 w-px" />
                   <a
                     href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    className="text-menu-dark/80 hover:text-menu-dark/90 text-sm font-medium"
                   >
                     Create account
                   </a>
@@ -447,11 +468,11 @@ export default function Navigation() {
                 <div className="hidden lg:ml-8 lg:flex">
                   <a
                     href="#"
-                    className="flex items-center text-gray-700 hover:text-gray-800"
+                    className="text-menu-dark/80 hover:text-menu-dark/90 flex items-center"
                   >
-                    <img
+                    <Img
                       alt=""
-                      src="https://tailwindui.com/plus/img/flags/flag-canada.svg"
+                      src="/images/avatar.jpg"
                       className="block h-auto w-5 shrink-0"
                     />
                     <span className="ml-3 block text-sm font-medium">CAD</span>
@@ -459,7 +480,10 @@ export default function Navigation() {
                   </a>
                 </div>
                 <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <a
+                    href="#"
+                    className="text-menu-dark/40 hover:text-menu-dark/50 p-2"
+                  >
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon
                       aria-hidden="true"
@@ -471,9 +495,9 @@ export default function Navigation() {
                   <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       aria-hidden="true"
-                      className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500"
+                      className="text-menu-dark/40 group-hover:text-menu-dark/50 size-6 shrink-0"
                     />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                    <span className="text-menu-dark/80 group-hover:text-menu-dark/90 ml-2 text-sm font-medium">
                       0
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
