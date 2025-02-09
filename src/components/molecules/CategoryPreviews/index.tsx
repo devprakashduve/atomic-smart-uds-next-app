@@ -1,8 +1,11 @@
+import Img from '@/Components/Atoms/Img';
+import Link from '@/Components/Atoms/Link';
+
 const callouts = [
   {
     name: 'Desk and Office',
     description: 'Work from home accessories',
-    imageSrc: 'https://via.placeholder.com/50',
+    imageSrc: '/images/avatar.jpg',
     imageAlt:
       'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
@@ -10,7 +13,7 @@ const callouts = [
   {
     name: 'Self-Improvement',
     description: 'Journals and note-taking',
-    imageSrc: 'https://via.placeholder.com/50',
+    imageSrc: '/images/avatar.jpg',
     imageAlt:
       'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
@@ -18,7 +21,7 @@ const callouts = [
   {
     name: 'Travel',
     description: 'Daily commute essentials',
-    imageSrc: 'https://via.placeholder.com/50',
+    imageSrc: '/images/avatar.jpg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
@@ -34,16 +37,16 @@ export default function CategoryPreviews() {
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
             {callouts.map((callout) => (
               <div key={callout.name} className="group relative">
-                <img
+                <Img
                   alt={callout.imageAlt}
                   src={callout.imageSrc}
                   className="sm:aspect-2/1 w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 lg:aspect-square"
                 />
                 <h3 className="mt-6 text-sm text-gray-500">
-                  <a href={callout.href}>
+                  <Link href={callout.href}>
                     <span className="absolute inset-0" />
                     {callout.name}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="text-base font-semibold text-gray-900">
                   {callout.description}

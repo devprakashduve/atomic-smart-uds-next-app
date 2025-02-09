@@ -1,63 +1,65 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import FlyoutMenus from '.';
-import { FlyoutMenuProps } from './FlyoutMenu.interface';
+import { FlyoutMenusProps } from './FlyoutMenus.interface';
 
 export default {
   title: 'Components/Molecules/FlyoutMenus',
   component: FlyoutMenus,
 } as Meta;
 
-const Template: StoryFn<FlyoutMenuProps> = (
-  args: React.JSX.IntrinsicAttributes
-) => <FlyoutMenus {...args} />;
+const Template: StoryFn<FlyoutMenusProps> = (args) => <FlyoutMenus {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  isOpen: true,
-  onClose: () => {
-    console.log('onClose');
-  },
-  items: [
+  solutions: [
     {
-      id: '1',
-      label: 'Menu Item 1',
-      onClick: () => console.log('Menu Item 1 clicked'),
+      name: 'Analytics',
+      description: 'Get a better understanding of your traffic',
+      href: '#',
+      icon: 'chartPie',
     },
     {
-      id: '2',
-      label: 'Menu Item 2',
-      onClick: () => console.log('Menu Item 2 clicked'),
+      name: 'Engagement',
+      description: 'Speak directly to your customers',
+      href: '#',
+      icon: 'cursorArrowRays',
     },
     {
-      id: '3',
-      label: 'Menu Item 3',
-      onClick: () => console.log('Menu Item 3 clicked'),
+      name: 'Security',
+      description: "Your customers' data will be safe and secure",
+      href: '#',
+      icon: 'fingerPrint',
+    },
+    {
+      name: 'Integrations',
+      description: 'Connect with third-party tools',
+      href: '#',
+      icon: 'squaresPlus',
+    },
+    {
+      name: 'Automations',
+      description: 'Build strategic funnels that will convert',
+      href: '#',
+      icon: 'arrowPath',
+    },
+    {
+      name: 'Notifications',
+      description: 'Stay updated with real-time alerts',
+      href: '#',
+      icon: 'bellAlert',
+    },
+    {
+      name: 'Ideas',
+      description: 'Capture and manage your ideas',
+      href: '#',
+      icon: 'lightBulb',
     },
   ],
-};
-
-export const WithCustomProps = Template.bind({});
-WithCustomProps.args = {
-  isOpen: true,
-  onClose: () => {
-    console.log('onClose');
-  },
-  items: [
-    {
-      id: '1',
-      label: 'Menu Item 1',
-      onClick: () => console.log('Menu Item 1 clicked'),
-    },
-    {
-      id: '2',
-      label: 'Menu Item 2',
-      onClick: () => console.log('Menu Item 2 clicked'),
-    },
-    {
-      id: '3',
-      label: 'Menu Item 3',
-      onClick: () => console.log('Menu Item 3 clicked'),
-    },
+  callsToAction: [
+    { name: 'Watch demo', href: '#', icon: 'playCircle' },
+    { name: 'Contact sales', href: '#', icon: 'phone' },
+    { name: 'Chat with us', href: '#', icon: 'chatBubbleLeftRight' },
+    { name: 'Send an email', href: '#', icon: 'envelop' },
   ],
 };

@@ -1,131 +1,5 @@
-import { Background } from '@/Components/Atoms/Tooltip/Tooltip.stories';
 import type { Config } from 'tailwindcss';
 
-const colorPalette = {
-  primary: {
-    light: '#B9FBC0', // Soft Mint Green
-    DEFAULT: '#34D399', // Green Teal
-    dark: '#059669', // Deep Green
-  },
-  secondary: {
-    light: '#FFD6E8', // Soft Pink
-    DEFAULT: '#FB7185', // Vibrant Coral Pink
-    dark: '#9F1239', // Deep Red
-  },
-  accent: {
-    light: '#FFEDD5', // Soft Peach
-    DEFAULT: '#F97316', // Orange
-    dark: '#C2410C', // Deep Orange
-  },
-  line: {
-    light: '#E2E8F0', // Slate-200
-    DEFAULT: '#CBD5E1', // Slate-300
-    dark: '#94A3B8', // Slate-400
-  },
-  letter: {
-    light: '#94A3B8', // Slate-400
-    DEFAULT: '#334155', // Slate-700
-    dark: '#0F172A', // Slate-900
-  },
-  rating: {
-    light: '#FDE047', // Yellow
-    DEFAULT: '#FACC15', // Yellow
-    dark: '#ccc', // Dark Yellow
-  },
-  card: {
-    background: '#FFF',
-    to_background: '#FACC15',
-    light: '#FDE047', // Yellow
-    DEFAULT: '#FACC15', // Yellow
-    dark: '#374151', // Dark Yellow
-  },
-  btn: {
-    light: '#E2E8F0', // Slate-200
-    DEFAULT: '#CBD5E1', // Slate-300
-    dark: '#94A3B8', // Slate-400
-  },
-  neutral: '#E5E7EB', // Light Gray
-  info: '#38BDF8', // Sky Blue
-  success: '#22C55E', // Bright Green
-  warning: '#FACC15', // Yellow
-  error: '#EF4444', // Red
-  complementary: {
-    primaryComplement: '#D1345B', // Complementary to Green
-    secondaryComplement: '#32BFB2', // Complementary to Coral Pink
-    accentComplement: '#16A3F9', // Complementary to Orange
-  },
-  analogous: {
-    primaryAnalogous1: '#34D3C1', // Teal-based Analogous
-    primaryAnalogous2: '#34D36C', // Light Lime Green
-  },
-  triadic: {
-    triadic1: '#D39934', // Triadic Color for Primary
-    triadic2: '#9934D3', // Deep Purple contrasting triad
-  },
-};
-
-const colorPalette2 = {
-  primary: {
-    light: '#A7F3D0', // Mint Green
-    DEFAULT: '#10B981', // Emerald
-    dark: '#064E3B', // Deep Green
-  },
-  secondary: {
-    light: '#FBCFE8', // Pale Pink
-    DEFAULT: '#EC4899', // Bright Pink
-    dark: '#9D174D', // Dark Magenta
-  },
-  accent: {
-    light: '#FDE68A', // Soft Yellow
-    DEFAULT: '#F59E0B', // Amber
-    dark: '#B45309', // Brownish Orange
-  },
-  line: {
-    light: '#F1F5F9', // Slate-50
-    DEFAULT: '#D1D5DB', // Slate-200
-    dark: '#6B7280', // Slate-500
-  },
-  letter: {
-    light: '#9CA3AF', // Cool Gray-400
-    DEFAULT: '#1F2937', // Gray-800
-    dark: '#111827', // Gray-900
-  },
-  rating: {
-    light: '#FDE047', // Yellow
-    DEFAULT: '#FACC15', // Yellow
-    dark: '#ccc', // Dark Yellow
-  },
-  card: {
-    background: '#FFF',
-    to_background: '#FACC15',
-    light: '#FDE047', // Yellow
-    DEFAULT: '#FACC15', // Yellow
-    dark: '#374151', // Dark Yellow
-  },
-  btn: {
-    light: '#E5E7EB', // Light Gray
-    DEFAULT: '#9CA3AF', // Medium Gray
-    dark: '#4B5563', // Dark Gray
-  },
-  neutral: '#F3F4F6', // Neutral Gray
-  info: '#60A5FA', // Blue
-  success: '#4ADE80', // Lime Green
-  warning: '#FBBF24', // Orange Yellow
-  error: '#DC2626', // Bright Red
-  complementary: {
-    primaryComplement: '#B91C1C', // Complementary to Emerald
-    secondaryComplement: '#059669', // Complementary to Pink
-    accentComplement: '#2563EB', // Complementary to Amber
-  },
-  analogous: {
-    primaryAnalogous1: '#10B9A6', // Teal-Green
-    primaryAnalogous2: '#10B94C', // Greenish Lime
-  },
-  triadic: {
-    triadic1: '#B91073', // Magenta
-    triadic2: '#0B10B9', // Deep Blue
-  },
-};
 const darkPinkWhitePalette = {
   primary: {
     light: '#FBCFE8', // Light Pink
@@ -159,10 +33,18 @@ const darkPinkWhitePalette = {
   },
   card: {
     background: '#FFF',
-    to_background: '#FACC15',
-    light: '#FDE047', // Yellow
-    DEFAULT: '#FACC15', // Yellow
-    dark: '#374151', // Dark Yellow
+    to_background: '#FBCFE8',
+    light: '#FBCFE8', // Light Pink
+    DEFAULT: '#DB2777', // Dark Pink
+    dark: '#9D174D', // Deep Magenta
+  },
+  menu: {
+    background: '#FBCFE8', // Light Pink
+    to_background: '#FBCFE8', // Dark Pink
+    hover: '#f2f2f2', // Deep Magenta
+    light: '#FBCFE8', // Light Pink
+    DEFAULT: '#DB2777', // Dark Pink
+    dark: '#9D174D', // Deep Magenta
   },
   btn: {
     light: '#FBCFE8', // Light Pink
@@ -236,6 +118,7 @@ export default {
         black: '900',
       },
       borderRadius: {
+        menu: '0px',
         DEFAULT: '8px',
         lg: '12px', // Large border radius
         xl: '16px', // Extra large border radius

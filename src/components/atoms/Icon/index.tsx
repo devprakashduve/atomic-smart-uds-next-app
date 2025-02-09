@@ -18,6 +18,7 @@ import {
   PlusIcon as OutlinePlusIcon,
   MinusIcon as OutlineMinusIcon,
   ExclamationTriangleIcon as OutlineWarningIcon,
+  Bars3Icon as OutlineBars3Icon,
 } from '@heroicons/react/24/outline';
 import {
   MagnifyingGlassIcon as SolidSearchIcon,
@@ -34,7 +35,23 @@ import {
   PlusIcon as SolidPlusIcon,
   MinusIcon as SolidMinusIcon,
   ExclamationTriangleIcon as SolidWarningIcon,
+  Bars3Icon as SolidBars3Icon,
 } from '@heroicons/react/24/solid';
+
+import {
+  ChevronDownIcon,
+  PlayCircleIcon,
+  ChatBubbleLeftRightIcon,
+} from '@heroicons/react/20/solid';
+import {
+  ArrowPathIcon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  BellAlertIcon,
+  LightBulbIcon,
+} from '@heroicons/react/24/outline';
 
 const iconMap = {
   outline: {
@@ -52,6 +69,14 @@ const iconMap = {
     plus: OutlinePlusIcon,
     minus: OutlineMinusIcon,
     warning: OutlineWarningIcon,
+    arrowPath: ArrowPathIcon,
+    chartPie: ChartPieIcon,
+    cursorArrowRays: CursorArrowRaysIcon,
+    fingerPrint: FingerPrintIcon,
+    squaresPlus: SquaresPlusIcon,
+    bellAlert: BellAlertIcon,
+    lightBulb: LightBulbIcon,
+    bars3: OutlineBars3Icon,
   },
   solid: {
     search: SolidSearchIcon,
@@ -68,6 +93,10 @@ const iconMap = {
     plus: SolidPlusIcon,
     minus: SolidMinusIcon,
     warning: SolidWarningIcon,
+    chevronDown: ChevronDownIcon,
+    playCircle: PlayCircleIcon,
+    chatBubbleLeftRight: ChatBubbleLeftRightIcon,
+    bars3: SolidBars3Icon,
   },
 };
 
@@ -99,7 +128,8 @@ const Icon: React.FC<IconProps> = ({
     );
   }
 
-  const IconComponent = iconMap[variant][name as keyof typeof iconMap.outline];
+  const IconComponent =
+    iconMap[variant][name as unknown as keyof (typeof iconMap)[typeof variant]];
 
   if (!IconComponent) return null;
 
