@@ -26,7 +26,7 @@ interface MobileMenuProps {
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, subLinks }) =>
   isOpen ? (
-    <div className="from-menu-background to-menu-to_background rounded-menu mt-0 w-full min-w-48 bg-gradient-to-r p-1">
+    <div className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu mt-0 w-full min-w-48 bg-gradient-to-r p-1">
       {subLinks.map((link) => (
         <Link
           key={link.name}
@@ -44,7 +44,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
   let Elements = null;
   isOpen
     ? (Elements = (
-        <div className="from-menu-background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-left shadow-lg">
+        <div className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-left shadow-lg">
           {links.map((link) =>
             link.subLinks ? (
               <div key={link.name} className="relative">
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
   };
 
   return (
-    <nav className="from-menu-background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-center">
+    <nav className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-center">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           {/* Logo Section */}
