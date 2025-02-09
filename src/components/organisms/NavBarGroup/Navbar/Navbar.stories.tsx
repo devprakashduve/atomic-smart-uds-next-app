@@ -1,31 +1,17 @@
 import React from 'react';
-
 import Navbar from '.';
 import { Meta, StoryFn } from '@storybook/react';
 
 export default {
-  title: 'Components/Organisms/Navbar',
+  title: 'Components/Organisms/NavBarGroup/Navbar',
   component: Navbar,
+  tags: ['autodocs'],
 } as Meta<typeof Navbar>;
 
 const Template: StoryFn<typeof Navbar> = (args) => <Navbar {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
-
-export const DefaultNavBar = Template.bind({});
-DefaultNavBar.args = {
-  logo: '/images/avatar.jpg', // Example logo URL
-  links: [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
-  ],
-};
-
-export const CustomNavBar = Template.bind({});
-CustomNavBar.args = {
+Default.args = {
   logo: '/images/avatar.jpg', // Custom logo URL
   links: [
     { name: 'Dashboard', href: '/dashboard' },
