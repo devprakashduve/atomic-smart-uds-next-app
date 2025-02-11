@@ -48,7 +48,7 @@ function MobileMenu({
               </button>
             </div>
             <div className="mt-2">
-              <div className="border-menu-light border-b">
+              <div className="border-menu-dark border-b">
                 <div className="-mb-px flex space-x-8 px-4">
                   {navigation.categories &&
                     navigation.categories.map((category) => (
@@ -63,7 +63,7 @@ function MobileMenu({
                           activeTab === category.name
                             ? 'border-menu-dark/90 text-menu-dark'
                             : 'text-menu-dark/70 border-transparent'
-                        } flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium`}
+                        } flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base`}
                       >
                         {category.name}
                       </button>
@@ -79,25 +79,22 @@ function MobileMenu({
                           <div className="grid grid-cols-2 gap-x-4">
                             {category.featured &&
                               category.featured.map((item) => (
-                                <div
-                                  key={item.name}
-                                  className="group relative text-sm"
-                                >
+                                <div key={item.name} className="group relative">
                                   <Img
                                     alt={item.imageAlt}
                                     src={item.imageSrc}
                                     className="bg-menu-light aspect-square w-full rounded-lg object-cover group-hover:opacity-75"
                                   />
-                                  <a
+                                  <Link
                                     href={item.href}
-                                    className="text-menu-dark mt-6 block font-medium"
+                                    className="text-menu-dark/90 hover:text-menu-dark/50 mt-6 block"
                                   >
                                     <span
                                       aria-hidden="true"
                                       className="absolute inset-0 z-10"
                                     />
                                     {item.name}
-                                  </a>
+                                  </Link>
                                   <p aria-hidden="true" className="mt-1">
                                     {shopNowText}
                                   </p>
@@ -108,7 +105,7 @@ function MobileMenu({
                             <div key={section.name}>
                               <p
                                 id={`${category.id}-${section.id}-heading-mobile`}
-                                className="text-menu-dark font-medium"
+                                className="text-menu-dark"
                               >
                                 {section.name}
                               </p>
@@ -119,12 +116,12 @@ function MobileMenu({
                               >
                                 {section.items.map((item) => (
                                   <li key={item.name} className="flow-root">
-                                    <a
+                                    <Link
                                       href={item.href}
-                                      className="text-menu-dark/50 -m-2 block p-2"
+                                      className="text-menu-dark/90 hover:text-menu-dark/50 -m-2 block p-2"
                                     >
                                       {item.name}
-                                    </a>
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
@@ -135,54 +132,57 @@ function MobileMenu({
                   )}
               </div>
             </div>
-            <div className="border-menu-light space-y-6 border-t px-4 py-6">
+            <div className="border-menu-dark space-y-6 border-t px-4 py-6">
               {navigation.pages &&
                 navigation.pages.map((page) => (
                   <div key={page.name} className="flow-root">
-                    <a
+                    <Link
                       href={page.href}
-                      className="text-menu-dark -m-2 block p-2 font-medium"
+                      className="text-menu-dark/90 hover:text-menu-dark/50 -m-2 block p-2"
                     >
                       {page.name}
-                    </a>
+                    </Link>
                   </div>
                 ))}
             </div>
-            <div className="border-menu-light space-y-6 border-t px-4 py-6">
+            <div className="border-menu-dark space-y-6 border-t px-4 py-6">
               {signInText && (
                 <div className="flow-root">
-                  <a
+                  <Link
                     href="#"
-                    className="text-menu-dark -m-2 block p-2 font-medium"
+                    className="text-menu-dark/90 hover:text-menu-dark/50 -m-2 block p-2"
                   >
                     {signInText}
-                  </a>
+                  </Link>
                 </div>
               )}
 
               {createAccountText && (
                 <div className="flow-root">
-                  <a
+                  <Link
                     href="#"
-                    className="text-menu-dark -m-2 block p-2 font-medium"
+                    className="text-menu-dark/90 hover:text-menu-dark/50 -m-2 block p-2"
                   >
                     {createAccountText}
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
-            <div className="border-menu-light border-t px-4 py-6">
-              <a href="#" className="-m-2 flex items-center p-2">
+            <div className="border-menu-dark border-t px-4 py-6">
+              <Link
+                href="#"
+                className="text-menu-dark/90 hover:text-menu-dark/50 -m-2 flex items-center p-2"
+              >
                 <Img
                   alt=""
                   src="/images/avatar.jpg"
                   className="block h-auto w-5 shrink-0"
                 />
-                <span className="text-menu-dark ml-3 block text-base font-medium">
+                <span className="text-menu-dark/90 hover:text-menu-dark/50 ml-3 block text-base">
                   {currency}
                 </span>
                 <span className="sr-only">{changeCurrencyText}</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -214,7 +214,7 @@ function DesktopMenu({
                     activeTab === category.name
                       ? 'border-menu-dark/90 text-menu-dark'
                       : 'text-menu-dark/70 border-transparent'
-                  } hover:text-menu-dark hover:border-menu-dark/80 pt-px text-sm font-medium transition-colors duration-200 ease-out`}
+                  } hover:text-menu-dark hover:border-menu-dark/80 pt-px transition-colors duration-200 ease-out`}
                   href={'#'}
                   underlineHover={false}
                 >
@@ -222,7 +222,7 @@ function DesktopMenu({
                 </Link>
               </div>
               {activeTab === category.name && (
-                <div className="text-menu-dark absolute inset-x-0 top-full text-sm">
+                <div className="text-menu-dark absolute inset-x-0 top-full">
                   <div
                     aria-hidden="true"
                     className="bg-menu-background from-menu-from_background to-menu-to_background absolute inset-0 top-1/2 bg-gradient-to-r shadow-sm"
@@ -237,23 +237,23 @@ function DesktopMenu({
                             {category.featured.map((item) => (
                               <div
                                 key={item.name}
-                                className="group relative text-base sm:text-sm"
+                                className="sm: group relative text-base"
                               >
                                 <Img
                                   alt={item.imageAlt}
                                   src={item.imageSrc}
                                   className="bg-menu-light aspect-square w-full rounded-lg object-cover group-hover:opacity-75"
                                 />
-                                <a
+                                <Link
                                   href={item.href}
-                                  className="text-menu-dark mt-6 block font-medium"
+                                  className="text-menu-dark/90 hover:text-menu-dark/50 mt-6 block"
                                 >
                                   <span
                                     aria-hidden="true"
                                     className="absolute inset-0 z-10"
                                   />
                                   {item.name}
-                                </a>
+                                </Link>
                                 <p aria-hidden="true" className="mt-1">
                                   {shopNowText}
                                 </p>
@@ -261,12 +261,12 @@ function DesktopMenu({
                             ))}
                           </div>
                         )}
-                        <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                        <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10">
                           {category.sections.map((section) => (
                             <div key={section.name}>
                               <p
                                 id={`${section.name}-heading`}
-                                className="text-menu-dark font-medium"
+                                className="text-menu-dark"
                               >
                                 {section.name}
                               </p>
@@ -280,7 +280,7 @@ function DesktopMenu({
                                     <Button
                                       variant="link"
                                       href={item.href}
-                                      className="hover:text-menu-dark"
+                                      className="text-menu-dark/90 hover:text-menu-dark/50"
                                       target="_blank"
                                       icon={<ArrowRightIcon />}
                                       iconPosition="right"
@@ -302,13 +302,13 @@ function DesktopMenu({
           ))}
         {navigation.pages &&
           navigation.pages.map((page) => (
-            <a
+            <Link
               key={page.name}
               href={page.href}
-              className="text-menu-dark/80 hover:text-menu-dark/90 flex items-center text-sm font-medium"
+              className="text-menu-dark/90 hover:text-menu-dark/50 flex items-center"
             >
               {page.name}
-            </a>
+            </Link>
           ))}
       </div>
     </div>
@@ -346,7 +346,7 @@ export default function MegaMenuNavBar({
       />
       <header className="bg-menu-background from-menu-from_background to-menu-to_background relative bg-gradient-to-r">
         {freeDeliveryText && (
-          <p className="bg-menu-dark/90 text-menu-light/80 flex h-10 items-center justify-center px-4 text-sm font-medium sm:px-6 lg:px-8">
+          <p className="bg-menu-dark/90 text-menu-light/80 flex h-10 items-center justify-center p-2 sm:py-6 lg:px-8">
             {freeDeliveryText}
           </p>
         )}
@@ -354,11 +354,11 @@ export default function MegaMenuNavBar({
           aria-label="Top"
           className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         >
-          <div className="border-menu-light border-b">
+          <div className="border-menu-dark border-b">
             <div className="flex h-20 items-center">
               <Link
                 onClick={() => setOpen(true)}
-                className="text-menu-dark/40 bg-menu-light relative rounded-md p-2 lg:hidden"
+                className="text-menu-dark bg-menu-light relative rounded-md p-2 lg:hidden"
                 href={'#'}
               >
                 <span className="sr-only">Menu</span>
@@ -382,7 +382,8 @@ export default function MegaMenuNavBar({
                     <>
                       <Link
                         href="#"
-                        className="text-menu-dark/80 hover:text-menu-dark/90 text-sm font-medium"
+                        underlineHover={false}
+                        className="text-menu-dark/90 hover:text-menu-dark/50"
                       >
                         {signInText}
                       </Link>
@@ -395,7 +396,8 @@ export default function MegaMenuNavBar({
                   {createAccountText && (
                     <Link
                       href="#"
-                      className="text-menu-dark/80 hover:text-menu-dark/90 text-sm font-medium"
+                      underlineHover={false}
+                      className="text-menu-dark/90 hover:text-menu-dark/50"
                     >
                       {createAccountText}
                     </Link>
@@ -412,9 +414,7 @@ export default function MegaMenuNavBar({
                         src="/images/avatar.jpg"
                         className="block h-auto w-5 shrink-0"
                       />
-                      <span className="ml-3 block text-sm font-medium">
-                        {currency}
-                      </span>
+                      <span className="ml-3 block">{currency}</span>
                       <span className="sr-only">{changeCurrencyText}</span>
                     </a>
                   </div>
@@ -423,7 +423,7 @@ export default function MegaMenuNavBar({
                   <div className="flex lg:ml-6">
                     <a
                       href="#"
-                      className="text-menu-dark/40 hover:text-menu-dark/50 p-2"
+                      className="text-menu-dark/90 hover:text-menu-dark/50 p-2"
                     >
                       <span className="sr-only">Search</span>
                       <MagnifyingGlassIcon
