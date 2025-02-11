@@ -40,7 +40,7 @@ const darkPinkWhitePalette = {
   },
   menu: {
     background: '#fff',
-    from_background: '#FBCFE8', // Light Pink
+    from_background: '', // Light Pink
     to_background: '#FBCFE8', // Dark Pink
     hover: '#f2f2f2', // Deep Magenta
     light: '#FBCFE8', // Light Pink
