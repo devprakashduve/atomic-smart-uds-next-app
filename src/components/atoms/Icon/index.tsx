@@ -19,6 +19,7 @@ import {
   MinusIcon as OutlineMinusIcon,
   ExclamationTriangleIcon as OutlineWarningIcon,
   Bars3Icon as OutlineBars3Icon,
+  ArrowRightIcon as OutlineArrowRightIcon,
 } from '@heroicons/react/24/outline';
 import {
   MagnifyingGlassIcon as SolidSearchIcon,
@@ -36,6 +37,7 @@ import {
   MinusIcon as SolidMinusIcon,
   ExclamationTriangleIcon as SolidWarningIcon,
   Bars3Icon as SolidBars3Icon,
+  ArrowRightIcon as SolidArrowRightIcon,
 } from '@heroicons/react/24/solid';
 
 import {
@@ -77,6 +79,7 @@ const iconMap = {
     bellAlert: BellAlertIcon,
     lightBulb: LightBulbIcon,
     bars3: OutlineBars3Icon,
+    arrowRight: OutlineArrowRightIcon,
   },
   solid: {
     search: SolidSearchIcon,
@@ -97,6 +100,7 @@ const iconMap = {
     playCircle: PlayCircleIcon,
     chatBubbleLeftRight: ChatBubbleLeftRightIcon,
     bars3: SolidBars3Icon,
+    arrowRight: SolidArrowRightIcon,
   },
 };
 

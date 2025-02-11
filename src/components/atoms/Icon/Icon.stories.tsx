@@ -27,6 +27,7 @@ const iconOptions = [
   'playCircle',
   'chatBubbleLeftRight',
   'bars3',
+  'arrowRight',
 ];
 
 export default {

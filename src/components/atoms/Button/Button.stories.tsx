@@ -123,6 +123,7 @@ export const Comparison = () => (
         target="_blank"
         icon={<ArrowUpRightIcon />}
         iconPosition="right"
+        underlineHover={true}
       >
         External Link
       </Button>

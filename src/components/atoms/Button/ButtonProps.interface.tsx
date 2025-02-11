@@ -30,4 +30,5 @@ export interface ButtonProps {
   iconPosition?: 'left' | 'right';
   ariaLabel?: string;
   className?: string;
+  underlineHover?: boolean;
 }

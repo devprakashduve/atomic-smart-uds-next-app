@@ -54,13 +54,15 @@ const Button: React.FC<ButtonProps> = ({
   iconPosition = 'left',
   ariaLabel,
   className,
+  underlineHover = false,
 }) => {
   const baseClasses = classNames(
     'btn',
     variantClasses[variant],
     sizeClasses[size],
     roundedClasses[rounded],
-    className
+    className,
+    underlineHover && 'hover:underline'
   );
 
   const content = loading ? (

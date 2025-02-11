@@ -52,5 +52,5 @@
 
 /* Add to existing styles */
 .btn-link {
-  @apply bg-transparent text-btn-dark underline-offset-4 shadow-none transition-all hover:bg-transparent hover:text-btn-dark/80 hover:underline hover:shadow-none focus:shadow-none active:shadow-none;
+  @apply bg-transparent text-btn-dark underline-offset-4 shadow-none transition-all hover:bg-transparent hover:text-btn-dark/80 hover:shadow-none focus:shadow-none active:shadow-none;
 }
