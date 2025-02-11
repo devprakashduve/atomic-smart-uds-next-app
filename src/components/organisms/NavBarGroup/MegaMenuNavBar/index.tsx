@@ -277,16 +277,14 @@ function DesktopMenu({
                               >
                                 {section.items.map((item) => (
                                   <li key={item.name} className="flex">
-                                    <Button
-                                      variant="link"
+                                    <Link
                                       href={item.href}
                                       className="text-menu-dark/90 hover:text-menu-dark/50"
                                       target="_blank"
-                                      icon={<ArrowRightIcon />}
-                                      iconPosition="right"
+                                      underlineHover={false}
                                     >
                                       {item.name}
-                                    </Button>
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
