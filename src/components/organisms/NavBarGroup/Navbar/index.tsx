@@ -26,12 +26,12 @@ interface MobileMenuProps {
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, subLinks }) =>
   isOpen ? (
-    <div className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu mt-0 w-full min-w-48 bg-gradient-to-r p-1">
+    <div className="mt-0 w-full min-w-48 rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1">
       {subLinks.map((link) => (
         <Link
           key={link.name}
           href={link.href}
-          className="hover:bg-menu-hover rounded-menu block w-full px-4 py-2"
+          className="block w-full rounded-menu px-4 py-2 hover:bg-menu-hover"
         >
           {link.name}
         </Link>
@@ -44,13 +44,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
   let Elements = null;
   isOpen
     ? (Elements = (
-        <div className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-left shadow-lg">
+        <div className="rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1 text-left shadow-lg">
           {links.map((link) =>
             link.subLinks ? (
               <div key={link.name} className="relative">
                 <Link
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="hover:bg-menu-hover rounded-menu flex w-full items-center justify-between px-4 py-2"
+                  className="flex w-full items-center justify-between rounded-menu px-4 py-2 hover:bg-menu-hover"
                   href={'#'}
                   underlineHover={false}
                 >
@@ -69,7 +69,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
                 key={link.name}
                 href={link.href}
                 underlineHover={false}
-                className="hover:bg-menu-hover rounded-menu block px-4 py-2"
+                className="block rounded-menu px-4 py-2 hover:bg-menu-hover"
               >
                 {link.name}
               </Link>
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
   };
 
   return (
-    <nav className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-center">
+    <nav className="rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1 text-center">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           {/* Logo Section */}
@@ -110,7 +110,7 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
                 <div key={link.name} className="relative">
                   <Link
                     onClick={() => handleLinkClick(link.name)}
-                    className={`hover:text-menu-dark flex items-center ${activeLink === link.name ? 'underline' : ''}`}
+                    className={`flex items-center hover:text-menu-dark ${activeLink === link.name ? 'underline' : ''}`}
                     href={'#'}
                   >
                     {link.name}
@@ -143,13 +143,13 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
                 <Icon
                   name={'close'}
                   variant={'solid'}
-                  className="text-menu-dark hover:text-menu transition-all"
+                  className="text-menu-dark transition-all hover:text-menu"
                 />
               ) : (
                 <Icon
                   name={'bars3'}
                   variant={'solid'}
-                  className="text-menu-dark hover:text-menu transition-all"
+                  className="text-menu-dark transition-all hover:text-menu"
                 />
               )}
             </Button>
