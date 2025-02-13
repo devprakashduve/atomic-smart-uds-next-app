@@ -1,11 +1,12 @@
-export interface NavLink {
+export interface NavCustomLink {
   name: string;
   href: string;
-  subLinks?: NavLink[];
+  subCustomLinks?: NavCustomLink[];
 }
 
 export interface NavBarLogoLinksProps {
   logo: string;
-  links: NavLink[];
+  links: NavCustomLink[];
   backgroundColor?: string;
+  searchPlaceHolder?: string;
 }

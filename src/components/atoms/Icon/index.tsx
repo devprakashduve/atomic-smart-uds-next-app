@@ -110,7 +110,10 @@ const Icon: React.FC<IconProps> = ({
   className = 'right-3',
   children,
 }) => {
-  const iconClass = classNames(' ', className);
+  const iconClass = classNames(
+    'text-primary-dark hover:text-primary-light ',
+    className
+  );
 
   if (name === 'facebook') {
     return (

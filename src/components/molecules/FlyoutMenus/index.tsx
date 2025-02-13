@@ -5,7 +5,7 @@ import {
   ListItemProps,
   ActionItemProps,
 } from './FlyoutMenus.interface';
-import Link from '@/Components/Atoms/Link';
+import CustomLink from '@/Components/Atoms/CustomLink';
 
 function ListItem(props: ListItemProps) {
   return (
@@ -24,10 +24,10 @@ function ListItem(props: ListItemProps) {
       </div>
       <div>
         <div className="font-semibold text-gray-900">
-          <Link href={props.href} underlineHover={false}>
+          <CustomLink href={props.href} underlineHover={false}>
             {props.name}
             <span className="absolute inset-0" />
-          </Link>
+          </CustomLink>
         </div>
         <p className="mt-1 text-gray-600">{props.description}</p>
       </div>

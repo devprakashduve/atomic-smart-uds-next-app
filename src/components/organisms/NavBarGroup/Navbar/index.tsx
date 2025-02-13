@@ -1,40 +1,43 @@
 import Button from '@/Components/Atoms/Button';
 import Icon from '@/Components/Atoms/Icon';
-import Link from '@/Components/Atoms/Link';
+import CustomLink from '@/Components/Atoms/CustomLink';
 import React, { useState } from 'react';
 
-interface Link {
+interface CustomLink {
   name: string;
   href: string;
-  subLinks?: Link[];
+  subCustomLinks?: CustomLink[];
 }
 
 interface NavbarProps {
   logo: string;
-  links: Link[];
+  links: CustomLink[];
 }
 
 interface DropdownMenuProps {
   isOpen: boolean;
-  subLinks: Link[];
+  subCustomLinks: CustomLink[];
 }
 
 interface MobileMenuProps {
   isOpen: boolean;
-  links: Link[];
+  links: CustomLink[];
 }
 
-const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, subLinks }) =>
+const DropdownMenu: React.FC<DropdownMenuProps> = ({
+  isOpen,
+  subCustomLinks,
+}) =>
   isOpen ? (
     <div className="mt-0 w-full min-w-48 rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1">
-      {subLinks.map((link) => (
-        <Link
+      {subCustomLinks.map((link) => (
+        <CustomLink
           key={link.name}
           href={link.href}
           className="block w-full rounded-menu px-4 py-2 hover:bg-menu-hover"
         >
           {link.name}
-        </Link>
+        </CustomLink>
       ))}
     </div>
   ) : null;
@@ -46,9 +49,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
     ? (Elements = (
         <div className="rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1 text-left shadow-lg">
           {links.map((link) =>
-            link.subLinks ? (
+            link.subCustomLinks ? (
               <div key={link.name} className="relative">
-                <Link
+                <CustomLink
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className="flex w-full items-center justify-between rounded-menu px-4 py-2 hover:bg-menu-hover"
                   href={'#'}
@@ -56,23 +59,23 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
                 >
                   {link.name}
                   <Icon name={'chevronDown'} variant={'solid'} />
-                </Link>
+                </CustomLink>
                 <div className="pl-4">
                   <DropdownMenu
                     isOpen={isDropdownOpen}
-                    subLinks={link.subLinks}
+                    subCustomLinks={link.subCustomLinks}
                   />
                 </div>
               </div>
             ) : (
-              <Link
+              <CustomLink
                 key={link.name}
                 href={link.href}
                 underlineHover={false}
                 className="block rounded-menu px-4 py-2 hover:bg-menu-hover"
               >
                 {link.name}
-              </Link>
+              </CustomLink>
             )
           )}
         </div>
@@ -85,10 +88,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
 const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState<string | null>(null);
+  const [activeCustomLink, setActiveCustomLink] = useState<string | null>(null);
 
-  const handleLinkClick = (linkName: string) => {
-    setActiveLink(() => (linkName === activeLink ? null : linkName));
+  const handleCustomLinkClick = (linkName: string) => {
+    setActiveCustomLink(() =>
+      linkName === activeCustomLink ? null : linkName
+    );
     setIsDropdownOpen(!isDropdownOpen);
   };
 
@@ -106,32 +111,32 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
           {/* Desktop Menu */}
           <div className="hidden items-center space-x-6 sm:flex">
             {links.map((link) =>
-              link.subLinks ? (
+              link.subCustomLinks ? (
                 <div key={link.name} className="relative">
-                  <Link
-                    onClick={() => handleLinkClick(link.name)}
-                    className={`flex items-center hover:text-menu-dark ${activeLink === link.name ? 'underline' : ''}`}
+                  <CustomLink
+                    onClick={() => handleCustomLinkClick(link.name)}
+                    className={`flex items-center hover:text-menu-dark ${activeCustomLink === link.name ? 'underline' : ''}`}
                     href={'#'}
                   >
                     {link.name}
                     <Icon name={'chevronDown'} variant={'solid'} />
-                  </Link>
+                  </CustomLink>
                   <div className="absolute top-11">
                     <DropdownMenu
-                      isOpen={isDropdownOpen && activeLink === link.name}
-                      subLinks={link.subLinks}
+                      isOpen={isDropdownOpen && activeCustomLink === link.name}
+                      subCustomLinks={link.subCustomLinks}
                     />
                   </div>
                 </div>
               ) : (
-                <Link
+                <CustomLink
                   key={link.name}
                   href={link.href}
-                  className={activeLink === link.name ? 'underline' : ''}
-                  onClick={() => handleLinkClick(link.name)}
+                  className={activeCustomLink === link.name ? 'underline' : ''}
+                  onClick={() => handleCustomLinkClick(link.name)}
                 >
                   {link.name}
-                </Link>
+                </CustomLink>
               )
             )}
           </div>

@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
 
-const useActiveLink = (initialLink: string | null = null) => {
-  const [activeLink, setActiveLink] = useState<string | null>(() => {
-    return sessionStorage.getItem('activeLink') || initialLink;
-  });
+const useActiveCustomLink = (initialCustomLink: string | null = null) => {
+  const [activeCustomLink, setActiveCustomLink] = useState<string | null>(
+    () => {
+      return sessionStorage.getItem('activeCustomLink') || initialCustomLink;
+    }
+  );
 
   useEffect(() => {
-    if (activeLink) {
-      sessionStorage.setItem('activeLink', activeLink);
+    if (activeCustomLink) {
+      sessionStorage.setItem('activeCustomLink', activeCustomLink);
     } else {
-      sessionStorage.removeItem('activeLink');
+      sessionStorage.removeItem('activeCustomLink');
     }
-  }, [activeLink]);
+  }, [activeCustomLink]);
 
-  return [activeLink, setActiveLink] as const;
+  return [activeCustomLink, setActiveCustomLink] as const;
 };
 
-export default useActiveLink;
+export default useActiveCustomLink;

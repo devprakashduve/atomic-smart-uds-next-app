@@ -3,7 +3,7 @@ export interface NavBarProps {
   links: {
     name: string;
     href: string;
-    subLinks?: {
+    subCustomLinks?: {
       name: string;
       href: string;
     }[];

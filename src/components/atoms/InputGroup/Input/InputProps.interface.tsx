@@ -30,4 +30,5 @@ export interface InputProps {
   roundedFull?: boolean;
   showIcon?: boolean;
   customIconSVG?: React.ReactNode;
+  customIconName?: string;
 }

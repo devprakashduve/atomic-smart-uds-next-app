@@ -1,14 +1,14 @@
 import { Meta, StoryFn } from '@storybook/react';
-import NavBarLogoLinks from '.';
+import NavBarLogoCustomLinks from '.';
 
 export default {
-  title: 'Components/Organisms/NavBarGroup/NavBarLogoLinks',
-  component: NavBarLogoLinks,
+  title: 'Components/Organisms/NavBarGroup/NavBarLogoCustomLinks',
+  component: NavBarLogoCustomLinks,
   tags: ['autodocs'],
 } as Meta;
 
-const Template: StoryFn<typeof NavBarLogoLinks> = (args) => (
-  <NavBarLogoLinks {...args} />
+const Template: StoryFn<typeof NavBarLogoCustomLinks> = (args) => (
+  <NavBarLogoCustomLinks {...args} />
 );
 
 export const Default = Template.bind({});
@@ -22,11 +22,11 @@ Default.args = {
     {
       name: 'About',
       href: '#',
-      subLinks: [
+      subCustomLinks: [
         {
           name: 'Our Team',
           href: '#',
-          subLinks: [
+          subCustomLinks: [
             { name: 'Member 1', href: '#' },
             { name: 'Member 2', href: '#' },
           ],
@@ -40,7 +40,7 @@ Default.args = {
     {
       name: 'Services',
       href: '#',
-      subLinks: [
+      subCustomLinks: [
         {
           name: 'Consulting',
           href: '#',
@@ -56,7 +56,7 @@ Default.args = {
       href: '#',
     },
   ],
-  backgroundColor: 'bg-gray-100',
+  searchPlaceHolder: 'search...',
 };
 
 export const DarkMode = Template.bind({});

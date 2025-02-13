@@ -1,7 +1,7 @@
 export interface MenuItem {
   label: string; // The text displayed for the menu item
   icon?: React.ReactNode; // Optional icon for the menu item
-  link?: string; // Link for navigation
+  link?: string; // CustomLink for navigation
   subMenu?: MenuItem[]; // Nested submenu items
 }
 

@@ -177,7 +177,7 @@ export default function Navigation() {
               </button>
             </div>
 
-            {/* Links */}
+            {/* CustomLinks */}
             <TabGroup className="mt-2">
               <div className="border-b border-gray-200">
                 <TabList className="-mb-px flex space-x-8 px-4">

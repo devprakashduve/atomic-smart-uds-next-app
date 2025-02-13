@@ -12,7 +12,7 @@ import {
   MegaMenuDesktopMenuProps,
   MegaMenuNavBarComponentProps,
 } from './MegaMenuNavBar.interface';
-import Link from '@/Components/Atoms/Link';
+import CustomLink from '@/Components/Atoms/CustomLink';
 import Button from '@/Components/Atoms/Button';
 
 function MobileMenu({
@@ -85,7 +85,7 @@ function MobileMenu({
                                     src={item.imageSrc}
                                     className="aspect-square w-full rounded-lg bg-menu-light object-cover group-hover:opacity-75"
                                   />
-                                  <Link
+                                  <CustomLink
                                     href={item.href}
                                     underlineHover={false}
                                     className="mt-6 block text-menu-dark/90 hover:text-menu-dark/50"
@@ -95,7 +95,7 @@ function MobileMenu({
                                       className="absolute inset-0 z-10"
                                     />
                                     {item.name}
-                                  </Link>
+                                  </CustomLink>
                                   <p aria-hidden="true" className="mt-1">
                                     {shopNowText}
                                   </p>
@@ -117,13 +117,13 @@ function MobileMenu({
                               >
                                 {section.items.map((item) => (
                                   <li key={item.name} className="flow-root">
-                                    <Link
+                                    <CustomLink
                                       href={item.href}
                                       underlineHover={false}
                                       className="-m-2 block p-2 text-menu-dark/90 hover:text-menu-dark/50"
                                     >
                                       {item.name}
-                                    </Link>
+                                    </CustomLink>
                                   </li>
                                 ))}
                               </ul>
@@ -138,43 +138,43 @@ function MobileMenu({
               {navigation.pages &&
                 navigation.pages.map((page) => (
                   <div key={page.name} className="flow-root">
-                    <Link
+                    <CustomLink
                       href={page.href}
                       underlineHover={false}
                       className="-m-2 block p-2 text-menu-dark/90 hover:text-menu-dark/50"
                     >
                       {page.name}
-                    </Link>
+                    </CustomLink>
                   </div>
                 ))}
             </div>
             <div className="space-y-6 border-t border-menu-dark px-4 py-6">
               {signInText && (
                 <div className="flow-root">
-                  <Link
+                  <CustomLink
                     href="#"
                     underlineHover={false}
                     className="-m-2 block p-2 text-menu-dark/90 hover:text-menu-dark/50"
                   >
                     {signInText}
-                  </Link>
+                  </CustomLink>
                 </div>
               )}
 
               {createAccountText && (
                 <div className="flow-root">
-                  <Link
+                  <CustomLink
                     href="#"
                     underlineHover={false}
                     className="-m-2 block p-2 text-menu-dark/90 hover:text-menu-dark/50"
                   >
                     {createAccountText}
-                  </Link>
+                  </CustomLink>
                 </div>
               )}
             </div>
             <div className="border-t border-menu-dark px-4 py-6">
-              <Link
+              <CustomLink
                 href="#"
                 underlineHover={false}
                 className="-m-2 flex items-center p-2 text-menu-dark/90 hover:text-menu-dark/50"
@@ -188,7 +188,7 @@ function MobileMenu({
                   {currency}
                 </span>
                 <span className="sr-only">{changeCurrencyText}</span>
-              </Link>
+              </CustomLink>
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@ function DesktopMenu({
           navigation.categories.map((category) => (
             <div key={category.name} className="flex">
               <div className="relative flex">
-                <Link
+                <CustomLink
                   onClick={() =>
                     setActiveTab(
                       activeTab === category.name ? '' : category.name
@@ -225,7 +225,7 @@ function DesktopMenu({
                   underlineHover={false}
                 >
                   {category.name}
-                </Link>
+                </CustomLink>
               </div>
               {activeTab === category.name && (
                 <div className="absolute inset-x-0 top-full text-menu-dark">
@@ -250,7 +250,7 @@ function DesktopMenu({
                                   src={item.imageSrc}
                                   className="aspect-square w-full rounded-lg bg-menu-light object-cover group-hover:opacity-75"
                                 />
-                                <Link
+                                <CustomLink
                                   href={item.href}
                                   underlineHover={false}
                                   className="mt-6 block text-menu-dark/90 hover:text-menu-dark/50"
@@ -260,7 +260,7 @@ function DesktopMenu({
                                     className="absolute inset-0 z-10"
                                   />
                                   {item.name}
-                                </Link>
+                                </CustomLink>
                                 <p aria-hidden="true" className="mt-1">
                                   {shopNowText}
                                 </p>
@@ -284,14 +284,14 @@ function DesktopMenu({
                               >
                                 {section.items.map((item) => (
                                   <li key={item.name} className="flex">
-                                    <Link
+                                    <CustomLink
                                       href={item.href}
                                       className="text-menu-dark/90 hover:text-menu-dark/50"
                                       target="_blank"
                                       underlineHover={false}
                                     >
                                       {item.name}
-                                    </Link>
+                                    </CustomLink>
                                   </li>
                                 ))}
                               </ul>
@@ -307,14 +307,14 @@ function DesktopMenu({
           ))}
         {navigation.pages &&
           navigation.pages.map((page) => (
-            <Link
+            <CustomLink
               key={page.name}
               href={page.href}
               underlineHover={false}
               className="flex items-center text-menu-dark/90 hover:text-menu-dark/50"
             >
               {page.name}
-            </Link>
+            </CustomLink>
           ))}
       </div>
     </div>
@@ -362,7 +362,7 @@ export default function MegaMenuNavBar({
         >
           <div className="border-b border-menu-dark">
             <div className="flex h-20 items-center">
-              <Link
+              <CustomLink
                 onClick={() => setOpen(true)}
                 underlineHover={false}
                 className="relative rounded-md bg-menu-light p-2 text-menu-dark lg:hidden"
@@ -370,7 +370,7 @@ export default function MegaMenuNavBar({
               >
                 <span className="sr-only">Menu</span>
                 <Bars3Icon aria-hidden="true" className="size-6" />
-              </Link>
+              </CustomLink>
               <div className="ml-4 flex lg:ml-0">
                 <Button variant="icon" href="/">
                   <span className="sr-only">{logoAlt}</span>
@@ -387,13 +387,13 @@ export default function MegaMenuNavBar({
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {signInText && (
                     <>
-                      <Link
+                      <CustomLink
                         href="#"
                         underlineHover={false}
                         className="text-menu-dark/90 hover:text-menu-dark/50"
                       >
                         {signInText}
-                      </Link>
+                      </CustomLink>
                       <span
                         aria-hidden="true"
                         className="h-6 w-px bg-menu-light"
@@ -401,13 +401,13 @@ export default function MegaMenuNavBar({
                     </>
                   )}
                   {createAccountText && (
-                    <Link
+                    <CustomLink
                       href="#"
                       underlineHover={false}
                       className="text-menu-dark/90 hover:text-menu-dark/50"
                     >
                       {createAccountText}
-                    </Link>
+                    </CustomLink>
                   )}
                 </div>
                 {currency && (

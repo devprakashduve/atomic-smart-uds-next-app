@@ -268,6 +268,19 @@ export const TypeComparison = {
       <Input
         label="Text Input"
         type={InputType.TEXT}
+        placeholder="Search..."
+        value={''}
+        name={''}
+        onChange={function (value: string): void {
+          throw new Error('Function not implemented.');
+        }}
+        size={InputSize.SM}
+        showIcon={true}
+        customIconName="search"
+      />
+      <Input
+        label="Text Input"
+        type={InputType.TEXT}
         placeholder="Enter text"
         value={''}
         name={''}

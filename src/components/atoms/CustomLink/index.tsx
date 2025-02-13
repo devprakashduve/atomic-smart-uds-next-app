@@ -1,11 +1,11 @@
 import React from 'react';
-import { LinkProps } from './LinkProps.interface';
-
-import './Link.css';
+import { CustomLinkProps } from './CustomLink.interface';
+import './CustomLink.css';
 import { classNames } from '@/Components/Utilities/componentsMethods';
+import Link from 'next/link';
 
-const Link: React.FC<LinkProps> = ({
-  href,
+const CustomLink: React.FC<CustomLinkProps> = ({
+  href = '/',
   text,
   target = '_self',
   children,
@@ -16,15 +16,15 @@ const Link: React.FC<LinkProps> = ({
 }) => {
   const containerClasses = classNames(className);
   return (
-    <a
+    <Link
       onClick={onClick}
       href={href}
       target={target}
       className={`link ${underline ? 'underline' : ''} ${underlineHover ? 'hover:underline' : ''} ${containerClasses}`}
     >
       {text || children}
-    </a>
+    </Link>
   );
 };
 
-export default Link;
+export default CustomLink;

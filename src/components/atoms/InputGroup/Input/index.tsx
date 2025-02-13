@@ -22,6 +22,7 @@ const Input: React.FC<InputProps> = ({
   roundedFull,
   showIcon = false,
   customIconSVG,
+  customIconName,
 }) => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState('');
@@ -36,9 +37,11 @@ const Input: React.FC<InputProps> = ({
 
   useEffect(() => {
     const iconMap: { [key in InputType]?: string } = {
-      [InputType.PASSWORD]: 'openEye',
-      [InputType.EMAIL]: 'envelop',
-      [InputType.TEL]: 'phone',
+      [InputType.PASSWORD]: customIconName || 'openEye',
+      [InputType.EMAIL]: customIconName || 'envelop',
+      [InputType.TEL]: customIconName || 'phone',
+      [InputType.TEXT]: customIconName || '',
+      [InputType.NUMBER]: customIconName || '',
     };
     setIconName(iconMap[type] || '');
   }, [type]);
@@ -94,7 +97,7 @@ const Input: React.FC<InputProps> = ({
   );
 
   return (
-    <div className="relative mt-4 w-full">
+    <div className="relative w-full">
       {label && (
         <Label className="mb-2 block text-sm text-letter" htmlFor={name}>
           {label}
@@ -129,9 +132,11 @@ const Input: React.FC<InputProps> = ({
             }}
           >
             {customIconSVG ? (
-              <Icon name={''}>{customIconSVG}</Icon>
+              <Icon name={''} variant={'outline'}>
+                {customIconSVG}
+              </Icon>
             ) : (
-              <Icon name={iconName} />
+              <Icon name={iconName} variant={'outline'} />
             )}
           </span>
         )}
