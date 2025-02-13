@@ -78,7 +78,11 @@ export default function InfoBanner({
           aria-label="Dismiss banner"
           onClick={handleDismiss}
         >
-          <Icon name="close" className="text-letter-drk size-5" />
+          <Icon
+            name="close"
+            className="text-letter-light"
+            variant={'outline'}
+          />
         </Button>
       </div>
     </div>
