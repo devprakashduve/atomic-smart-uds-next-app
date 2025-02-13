@@ -1,40 +1,43 @@
 import Button from '@/Components/Atoms/Button';
 import Icon from '@/Components/Atoms/Icon';
-import Link from '@/Components/Atoms/Link';
+import CustomLink from '@/Components/Atoms/CustomLink';
 import React, { useState } from 'react';
 
-interface Link {
+interface CustomLink {
   name: string;
   href: string;
-  subLinks?: Link[];
+  subCustomLinks?: CustomLink[];
 }
 
 interface NavbarProps {
   logo: string;
-  links: Link[];
+  links: CustomLink[];
 }
 
 interface DropdownMenuProps {
   isOpen: boolean;
-  subLinks: Link[];
+  subCustomLinks: CustomLink[];
 }
 
 interface MobileMenuProps {
   isOpen: boolean;
-  links: Link[];
+  links: CustomLink[];
 }
 
-const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, subLinks }) =>
+const DropdownMenu: React.FC<DropdownMenuProps> = ({
+  isOpen,
+  subCustomLinks,
+}) =>
   isOpen ? (
-    <div className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu mt-0 w-full min-w-48 bg-gradient-to-r p-1">
-      {subLinks.map((link) => (
-        <Link
+    <div className="mt-0 w-full min-w-48 rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1">
+      {subCustomLinks.map((link) => (
+        <CustomLink
           key={link.name}
           href={link.href}
-          className="hover:bg-menu-hover rounded-menu block w-full px-4 py-2"
+          className="block w-full rounded-menu px-4 py-2 hover:bg-menu-hover"
         >
           {link.name}
-        </Link>
+        </CustomLink>
       ))}
     </div>
   ) : null;
@@ -44,35 +47,35 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
   let Elements = null;
   isOpen
     ? (Elements = (
-        <div className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-left shadow-lg">
+        <div className="rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1 text-left shadow-lg">
           {links.map((link) =>
-            link.subLinks ? (
+            link.subCustomLinks ? (
               <div key={link.name} className="relative">
-                <Link
+                <CustomLink
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="hover:bg-menu-hover rounded-menu flex w-full items-center justify-between px-4 py-2"
+                  className="flex w-full items-center justify-between rounded-menu px-4 py-2 hover:bg-menu-hover"
                   href={'#'}
                   underlineHover={false}
                 >
                   {link.name}
                   <Icon name={'chevronDown'} variant={'solid'} />
-                </Link>
+                </CustomLink>
                 <div className="pl-4">
                   <DropdownMenu
                     isOpen={isDropdownOpen}
-                    subLinks={link.subLinks}
+                    subCustomLinks={link.subCustomLinks}
                   />
                 </div>
               </div>
             ) : (
-              <Link
+              <CustomLink
                 key={link.name}
                 href={link.href}
                 underlineHover={false}
-                className="hover:bg-menu-hover rounded-menu block px-4 py-2"
+                className="block rounded-menu px-4 py-2 hover:bg-menu-hover"
               >
                 {link.name}
-              </Link>
+              </CustomLink>
             )
           )}
         </div>
@@ -85,15 +88,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, links }) => {
 const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState<string | null>(null);
+  const [activeCustomLink, setActiveCustomLink] = useState<string | null>(null);
 
-  const handleLinkClick = (linkName: string) => {
-    setActiveLink(() => (linkName === activeLink ? null : linkName));
+  const handleCustomLinkClick = (linkName: string) => {
+    setActiveCustomLink(() =>
+      linkName === activeCustomLink ? null : linkName
+    );
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
-    <nav className="bg-menu-background. from-menu-from_background to-menu-to_background rounded-menu bg-gradient-to-r p-1 text-center">
+    <nav className="rounded-menu bg-menu-background bg-gradient-to-r from-menu-from_background to-menu-to_background p-1 text-center">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           {/* Logo Section */}
@@ -106,32 +111,32 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
           {/* Desktop Menu */}
           <div className="hidden items-center space-x-6 sm:flex">
             {links.map((link) =>
-              link.subLinks ? (
+              link.subCustomLinks ? (
                 <div key={link.name} className="relative">
-                  <Link
-                    onClick={() => handleLinkClick(link.name)}
-                    className={`hover:text-menu-dark flex items-center ${activeLink === link.name ? 'underline' : ''}`}
+                  <CustomLink
+                    onClick={() => handleCustomLinkClick(link.name)}
+                    className={`flex items-center hover:text-menu-dark ${activeCustomLink === link.name ? 'underline' : ''}`}
                     href={'#'}
                   >
                     {link.name}
                     <Icon name={'chevronDown'} variant={'solid'} />
-                  </Link>
+                  </CustomLink>
                   <div className="absolute top-11">
                     <DropdownMenu
-                      isOpen={isDropdownOpen && activeLink === link.name}
-                      subLinks={link.subLinks}
+                      isOpen={isDropdownOpen && activeCustomLink === link.name}
+                      subCustomLinks={link.subCustomLinks}
                     />
                   </div>
                 </div>
               ) : (
-                <Link
+                <CustomLink
                   key={link.name}
                   href={link.href}
-                  className={activeLink === link.name ? 'underline' : ''}
-                  onClick={() => handleLinkClick(link.name)}
+                  className={activeCustomLink === link.name ? 'underline' : ''}
+                  onClick={() => handleCustomLinkClick(link.name)}
                 >
                   {link.name}
-                </Link>
+                </CustomLink>
               )
             )}
           </div>
@@ -143,13 +148,13 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
                 <Icon
                   name={'close'}
                   variant={'solid'}
-                  className="text-menu-dark hover:text-menu transition-all"
+                  className="text-menu-dark transition-all hover:text-menu"
                 />
               ) : (
                 <Icon
                   name={'bars3'}
                   variant={'solid'}
-                  className="text-menu-dark hover:text-menu transition-all"
+                  className="text-menu-dark transition-all hover:text-menu"
                 />
               )}
             </Button>

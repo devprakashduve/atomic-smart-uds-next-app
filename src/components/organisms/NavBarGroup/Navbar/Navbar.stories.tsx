@@ -29,7 +29,7 @@ NavBarWithDropdown.args = {
     {
       name: 'Services',
       href: '/services',
-      subLinks: [
+      subCustomLinks: [
         { name: 'Web Development', href: '/services/web-development' },
         { name: 'App Development', href: '/services/app-development' },
       ],

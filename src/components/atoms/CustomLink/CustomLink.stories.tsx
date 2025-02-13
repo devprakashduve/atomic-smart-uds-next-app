@@ -1,15 +1,15 @@
-import Link from '.';
+import CustomLink from '.';
 
 export default {
-  title: 'Components/Atoms/Link',
-  component: Link,
+  title: 'Components/Atoms/CustomLink',
+  component: CustomLink,
   tags: ['autodocs'],
 };
 
 export const Default = {
   args: {
     href: '#',
-    text: 'Link Text',
+    text: 'CustomLink Text',
     target: '_self',
   },
 };

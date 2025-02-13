@@ -28,8 +28,8 @@ DefaultBreadcrumbs.args = {
   separator: '>',
 };
 
-export const WithoutLinks = Template.bind({});
-WithoutLinks.args = {
+export const WithoutCustomLinks = Template.bind({});
+WithoutCustomLinks.args = {
   items: [{ label: 'Home' }, { label: 'Category' }, { label: 'Subcategory' }],
 };
 

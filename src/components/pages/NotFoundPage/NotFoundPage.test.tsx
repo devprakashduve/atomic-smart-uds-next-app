@@ -26,13 +26,13 @@ describe('NotFoundPage', () => {
 
   test('renders Go back home link', () => {
     render(<NotFoundPage />);
-    const homeLink = screen.getByText('Go back home');
-    expect(homeLink).toBeInTheDocument();
+    const homeCustomLink = screen.getByText('Go back home');
+    expect(homeCustomLink).toBeInTheDocument();
   });
 
   test('renders Contact support link', () => {
     render(<NotFoundPage />);
-    const supportLink = screen.getByText('Contact support');
-    expect(supportLink).toBeInTheDocument();
+    const supportCustomLink = screen.getByText('Contact support');
+    expect(supportCustomLink).toBeInTheDocument();
   });
 });

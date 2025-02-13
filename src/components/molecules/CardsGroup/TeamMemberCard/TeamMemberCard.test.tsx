@@ -17,7 +17,7 @@ describe('TeamMemberCard', () => {
     expect(getByAltText('John Smith')).toBeInTheDocument();
     expect(getByText('John Smith')).toBeInTheDocument();
     expect(getByText('Frontend Developer')).toBeInTheDocument();
-    expect(getByText('LinkedIn')).toBeInTheDocument();
+    expect(getByText('CustomLinkedIn')).toBeInTheDocument();
     expect(getByText('GitHub')).toBeInTheDocument();
   });
 });

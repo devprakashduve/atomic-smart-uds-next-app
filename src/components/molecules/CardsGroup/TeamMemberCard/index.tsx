@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from '@/Components/Atoms/Img';
 
-import Link from '@/Components/Atoms/Link';
+import CustomLink from '@/Components/Atoms/CustomLink';
 import Button from '@/Components/Atoms/Button';
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid';
 
@@ -37,7 +37,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           target="_blank"
           variant="link"
         >
-          LinkedIn
+          CustomLinkedIn
         </Button>
         <Button
           href="https://example.com"

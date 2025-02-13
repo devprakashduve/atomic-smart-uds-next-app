@@ -13,7 +13,7 @@ const Template: StoryFn<AppHeaderProps> = (args) => <AppHeader {...args} />;
 export const DefaultHeader = Template.bind({});
 DefaultHeader.args = {
   logo: 'https://via.placeholder.com/150x50?text=Logo',
-  navigationLinks: [
+  navigationCustomLinks: [
     { label: 'Home', url: '/' },
     { label: 'About', url: '/about' },
     { label: 'Contact', url: '/contact' },

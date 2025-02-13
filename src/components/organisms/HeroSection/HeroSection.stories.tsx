@@ -15,6 +15,6 @@ DefaultHero.args = {
   title: 'Welcome to Our Website!',
   subtitle: 'We offer a wide range of products to help you succeed.',
   ctaText: 'Shop Now',
-  ctaLink: '/shop',
+  ctaCustomLink: '/shop',
   backgroundImage: 'https://via.placeholder.com/1600x800?text=Background+Image',
 };

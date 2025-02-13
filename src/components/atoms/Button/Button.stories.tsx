@@ -83,8 +83,8 @@ DisabledState.args = {
   disabled: true,
 };
 
-export const AsLink = Template.bind({});
-AsLink.args = {
+export const AsCustomLink = Template.bind({});
+AsCustomLink.args = {
   children: 'View Documentation',
   href: 'https://example.com',
   target: '_blank',
@@ -104,7 +104,7 @@ export const Comparison = () => (
     <div className="space-x-2">
       <Button variant="three-d">3D Effect</Button>
       <Button variant="elevated">Elevated</Button>
-      <Button variant="link">Link Style</Button>
+      <Button variant="link">CustomLink Style</Button>
       <Button variant="icon" icon={<ArrowDownIcon />}>
         Icon Button
       </Button>
@@ -116,15 +116,16 @@ export const Comparison = () => (
       <Button disabled>Disabled</Button>
     </div>
     <div className="space-x-2">
-      <Button variant="link">Internal Link</Button>
+      <Button variant="link">Internal CustomLink</Button>
       <Button
         variant="link"
         href="https://example.com"
         target="_blank"
         icon={<ArrowUpRightIcon />}
         iconPosition="right"
+        underlineHover={true}
       >
-        External Link
+        External CustomLink
       </Button>
     </div>
   </div>

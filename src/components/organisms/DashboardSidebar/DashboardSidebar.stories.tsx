@@ -15,11 +15,11 @@ const Template: StoryFn<DashboardSideBarProps> = (args) => (
 export const DefaultSidebar = Template.bind({});
 DefaultSidebar.args = {
   logo: 'https://via.placeholder.com/150x50?text=Logo',
-  navigationLinks: [
+  navigationCustomLinks: [
     { label: 'Dashboard', icon: 'dashboard', url: '/dashboard' },
     { label: 'Analytics', icon: 'analytics', url: '/dashboard/analytics' },
     { label: 'Settings', icon: 'settings', url: '/dashboard/settings' },
     { label: 'Profile', icon: 'account_circle', url: '/dashboard/profile' },
   ],
-  onLinkClick: (url) => console.log('Navigating to:', url),
+  onCustomLinkClick: (url) => console.log('Navigating to:', url),
 };

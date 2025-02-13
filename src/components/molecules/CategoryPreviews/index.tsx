@@ -1,5 +1,5 @@
 import Img from '@/Components/Atoms/Img';
-import Link from '@/Components/Atoms/Link';
+import CustomLink from '@/Components/Atoms/CustomLink';
 
 const callouts = [
   {
@@ -43,10 +43,10 @@ export default function CategoryPreviews() {
                   className="sm:aspect-2/1 w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 lg:aspect-square"
                 />
                 <h3 className="mt-6 text-sm text-gray-500">
-                  <Link href={callout.href}>
+                  <CustomLink href={callout.href}>
                     <span className="absolute inset-0" />
                     {callout.name}
-                  </Link>
+                  </CustomLink>
                 </h3>
                 <p className="text-base font-semibold text-gray-900">
                   {callout.description}

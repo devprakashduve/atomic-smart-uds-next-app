@@ -4,7 +4,7 @@ import './AppHeader.css';
 
 const AppHeader: React.FC<AppHeaderProps> = ({
   logo,
-  navigationLinks,
+  navigationCustomLinks,
   onSearch,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -28,10 +28,10 @@ const AppHeader: React.FC<AppHeaderProps> = ({
           <img src={logo} alt="Logo" className="h-8" />
         </div>
 
-        {/* Navigation Links */}
+        {/* Navigation CustomLinks */}
         <nav className="navigation">
           <ul className="flex space-x-6">
-            {navigationLinks.map((link, index) => (
+            {navigationCustomLinks.map((link, index) => (
               <li key={index}>
                 <a href={link.url} className="text-white hover:text-blue-300">
                   {link.label}
