@@ -2,6 +2,7 @@ import React from 'react';
 import { PaginationProps } from './PaginationProps.interface';
 import './Pagination.css';
 import Button from '@/Components/Atoms/Button';
+import Icon from '@/Components/Atoms/Icon';
 
 const PaginationButton: React.FC<{
   onClick: () => void;
@@ -104,7 +105,13 @@ const Pagination: React.FC<PaginationProps> = ({
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
       >
-        Previous
+        <span className="sr-only">Previous</span>
+        <Icon
+          aria-hidden="true"
+          className="text-primary-light"
+          name={'chevronLeft'}
+          variant={'outline'}
+        />
       </PaginationButton>
       {renderPageNumbers()}
       <PaginationButton
@@ -112,7 +119,13 @@ const Pagination: React.FC<PaginationProps> = ({
         onClick={() => handleClick(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
-        Next
+        <span className="sr-only">Next</span>
+        <Icon
+          aria-hidden="true"
+          className="text-primary-light"
+          name={'chevronRight'}
+          variant={'outline'}
+        />
       </PaginationButton>
     </div>
   );

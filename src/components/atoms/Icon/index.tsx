@@ -20,6 +20,8 @@ import {
   ExclamationTriangleIcon as OutlineWarningIcon,
   Bars3Icon as OutlineBars3Icon,
   ArrowRightIcon as OutlineArrowRightIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
 } from '@heroicons/react/24/outline';
 import {
   MagnifyingGlassIcon as SolidSearchIcon,
@@ -80,6 +82,8 @@ const iconMap = {
     lightBulb: LightBulbIcon,
     bars3: OutlineBars3Icon,
     arrowRight: OutlineArrowRightIcon,
+    chevronLeft: ChevronLeftIcon,
+    chevronRight: ChevronRightIcon,
   },
   solid: {
     search: SolidSearchIcon,
