@@ -17,7 +17,8 @@ export enum InputType {
 export interface InputProps {
   value: string;
   name: string;
-  onChange: (value: string) => void;
+  onChange?: (value?: string) => void;
+  onKeyPress?: (value?: string) => void;
   placeholder?: string;
   disabled?: boolean;
   type: InputType;

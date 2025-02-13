@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { SearchBarProps } from './SearchBarProps.interface';
 import './SearchBar.css';
+import Input from '@/Components/Atoms/InputGroup/Input';
+import { InputType } from '@/Components/Atoms/InputGroup/Input/InputProps.interface';
+
+const dummyData = [
+  'Apple',
+  'Banana',
+  'Cherry',
+  'Date',
+  'Elderberry',
+  'Fig',
+  'Grape',
+  'Honeydew',
+];
 
 const SearchBar: React.FC<SearchBarProps> = ({
   value,
@@ -10,17 +23,24 @@ const SearchBar: React.FC<SearchBarProps> = ({
   className,
 }) => {
   const [inputValue, setInputValue] = useState(value);
+  const [filteredData, setFilteredData] = useState<string[]>(dummyData);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
     setInputValue(newValue);
-    onChange(newValue);
+    if (onChange) {
+      onChange(newValue);
+    }
   };
 
   const handleSearch = () => {
     if (onSearch) {
       onSearch(inputValue);
     }
+    const results = dummyData.filter((item) =>
+      item.toLowerCase().includes(inputValue.toLowerCase())
+    );
+    setFilteredData(results);
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -30,18 +50,22 @@ const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <div className={`search-bar-container ${className || ''}`}>
-      <input
-        type="text"
+    <div className={` ${className || ''}`}>
+      <Input
+        type={InputType.TEXT}
         value={inputValue}
         placeholder={placeholder}
-        onChange={handleInputChange}
-        onKeyPress={handleKeyPress}
-        className="search-bar-input"
+        onChange={(e: any) => handleInputChange(e)}
+        onKeyPress={(e: any) => handleKeyPress(e)}
+        name={'search'}
+        showIcon={true}
+        customIconName="search"
       />
-      <button onClick={handleSearch} className="search-bar-button">
-        🔍
-      </button>
+      <ul>
+        {filteredData.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 };
