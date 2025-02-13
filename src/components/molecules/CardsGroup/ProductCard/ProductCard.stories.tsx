@@ -10,6 +10,8 @@ export default {
 
 const Template: StoryFn = (args) => (
   <ProductCard
+    ratingText={'3.4'}
+    addToCartText={' Add to Cart'}
     imageUrl={''}
     productName={''}
     price={''}
@@ -22,6 +24,8 @@ const Template: StoryFn = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
+  ratingText: '3.4',
+  addToCartText: ' Add to Cart',
   imageUrl: '/images/avatar.jpg',
   productName: 'Product Name',
   price: '₹999',
