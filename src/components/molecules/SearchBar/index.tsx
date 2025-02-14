@@ -22,15 +22,17 @@ const SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
   className,
 }) => {
-  const [inputValue, setInputValue] = useState(value);
-  const [filteredData, setFilteredData] = useState<string[]>(dummyData);
+  const [inputValue, setInputValue] = useState(value || '');
+  const [filteredData, setFilteredData] = useState<string[]>();
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = event.target.value;
+  const handleInputChange = (value: string) => {
+    const newValue = value;
+
     setInputValue(newValue);
     if (onChange) {
       onChange(newValue);
     }
+    handleSearch();
   };
 
   const handleSearch = () => {
@@ -43,28 +45,21 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setFilteredData(results);
   };
 
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter' && onSearch) {
-      onSearch(inputValue);
-    }
-  };
-
   return (
     <div className={` ${className || ''}`}>
       <Input
         type={InputType.TEXT}
         value={inputValue}
         placeholder={placeholder}
-        onChange={(e: any) => handleInputChange(e)}
-        onKeyPress={(e: any) => handleKeyPress(e)}
+        onChange={(val?: string) => handleInputChange(val || '')}
         name={'search'}
         showIcon={true}
         customIconName="search"
       />
       <ul>
-        {filteredData.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
+        {inputValue.length >= 2 &&
+          filteredData &&
+          filteredData.map((item, index) => <li key={index}>{item}</li>)}
       </ul>
     </div>
   );
