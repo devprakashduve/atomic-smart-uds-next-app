@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SearchBarProps } from './SearchBarProps.interface';
 import './SearchBar.css';
 import Input from '@/Components/Atoms/InputGroup/Input';
@@ -16,33 +16,38 @@ const dummyData = [
 ];
 
 const SearchBar: React.FC<SearchBarProps> = ({
-  value,
+  value = '',
   placeholder = 'Search...',
   onChange,
   onSearch,
   className,
+  noResultText = 'No result found',
 }) => {
-  const [inputValue, setInputValue] = useState(value || '');
-  const [filteredData, setFilteredData] = useState<string[]>();
+  const [inputValue, setInputValue] = useState(value);
+  const [filteredData, setFilteredData] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (inputValue.length >= 2) {
+      const results = dummyData.filter((item) =>
+        item.toLowerCase().includes(inputValue.toLowerCase())
+      );
+      setFilteredData(results);
+    } else {
+      setFilteredData([]);
+    }
+  }, [inputValue]);
 
   const handleInputChange = (value: string) => {
-    const newValue = value;
-
-    setInputValue(newValue);
+    setInputValue(value);
     if (onChange) {
-      onChange(newValue);
+      onChange(value);
     }
-    handleSearch();
   };
 
-  const handleSearch = () => {
-    if (onSearch) {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' && onSearch) {
       onSearch(inputValue);
     }
-    const results = dummyData.filter((item) =>
-      item.toLowerCase().includes(inputValue.toLowerCase())
-    );
-    setFilteredData(results);
   };
 
   return (
@@ -52,15 +57,26 @@ const SearchBar: React.FC<SearchBarProps> = ({
         value={inputValue}
         placeholder={placeholder}
         onChange={(val?: string) => handleInputChange(val || '')}
+        onKeyPress={(val?: any) => handleKeyPress(val)}
         name={'search'}
         showIcon={true}
         customIconName="search"
       />
-      <ul>
-        {inputValue.length >= 2 &&
-          filteredData &&
-          filteredData.map((item, index) => <li key={index}>{item}</li>)}
-      </ul>
+      {inputValue.length >= 2 && (
+        <ul className="bg-menu-background">
+          {filteredData.length > 0 ? (
+            filteredData.map((item, index) => (
+              <li className="border-b border-b-menu-dark p-2" key={index}>
+                {item}
+              </li>
+            ))
+          ) : (
+            <li key={'noData'} className="p-2">
+              {noResultText}
+            </li>
+          )}
+        </ul>
+      )}
     </div>
   );
 };

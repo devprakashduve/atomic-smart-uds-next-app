@@ -35,6 +35,7 @@ Default.args = {
   value: '',
   placeholder: 'Search...',
   className: '',
+  noResultText: 'No Data...',
 };
 
 export const WithInitialValue = Template.bind({});
