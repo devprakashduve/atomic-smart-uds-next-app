@@ -3,16 +3,17 @@ import { SearchBarProps } from './SearchBarProps.interface';
 import './SearchBar.css';
 import Input from '@/Components/Atoms/InputGroup/Input';
 import { InputType } from '@/Components/Atoms/InputGroup/Input/InputProps.interface';
+import CustomLink from '@/Components/Atoms/CustomLink';
 
 const dummyData = [
-  'Apple',
-  'Banana',
-  'Cherry',
-  'Date',
-  'Elderberry',
-  'Fig',
-  'Grape',
-  'Honeydew',
+  { name: 'Apple', href: '/apple' },
+  { name: 'Banana', href: '/banana' },
+  { name: 'Cherry', href: '/cherry' },
+  { name: 'Date', href: '/date' },
+  { name: 'Elderberry', href: '/elderberry' },
+  { name: 'Fig', href: '/fig' },
+  { name: 'Grape', href: '/grape' },
+  { name: 'Honeydew', href: '/honeydew' },
 ];
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -24,12 +25,14 @@ const SearchBar: React.FC<SearchBarProps> = ({
   noResultText = 'No result found',
 }) => {
   const [inputValue, setInputValue] = useState(value);
-  const [filteredData, setFilteredData] = useState<string[]>([]);
+  const [filteredData, setFilteredData] = useState<
+    { name: string; href: string }[]
+  >([]);
 
   useEffect(() => {
     if (inputValue.length >= 2) {
       const results = dummyData.filter((item) =>
-        item.toLowerCase().includes(inputValue.toLowerCase())
+        item.name.toLowerCase().includes(inputValue.toLowerCase())
       );
       setFilteredData(results);
     } else {
@@ -63,12 +66,17 @@ const SearchBar: React.FC<SearchBarProps> = ({
         customIconName="search"
       />
       {inputValue.length >= 2 && (
-        <ul className="bg-menu-background">
+        <ul className="bg-white">
           {filteredData.length > 0 ? (
             filteredData.map((item, index) => (
-              <li className="border-b border-b-menu-dark p-2" key={index}>
-                {item}
-              </li>
+              <CustomLink href={item.href} underlineHover={false}>
+                <li
+                  className="border-b border-b-menu-dark p-2 hover:cursor-pointer hover:bg-menu-light hover:text-menu-dark"
+                  key={index}
+                >
+                  {item.name}
+                </li>
+              </CustomLink>
             ))
           ) : (
             <li key={'noData'} className="p-2">
