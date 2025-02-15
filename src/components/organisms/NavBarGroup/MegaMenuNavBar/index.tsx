@@ -1,11 +1,4 @@
 import { Fragment, useState } from 'react';
-import {
-  ArrowRightIcon,
-  Bars3Icon,
-  MagnifyingGlassIcon,
-  ShoppingBagIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline';
 import Img from '@/Components/Atoms/Img';
 import {
   MegaMenuMobileMenuProps,
@@ -14,6 +7,7 @@ import {
 } from './MegaMenuNavBar.interface';
 import CustomLink from '@/Components/Atoms/CustomLink';
 import Button from '@/Components/Atoms/Button';
+import Icon from '@/Components/Atoms/Icon';
 
 function MobileMenu({
   open,
@@ -44,7 +38,12 @@ function MobileMenu({
                 className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-menu-dark"
               >
                 <span className="sr-only">{closeMenuText}</span>
-                <XMarkIcon aria-hidden="true" className="size-6" />
+                <Icon
+                  aria-hidden="true"
+                  className="size-6"
+                  name={'close'}
+                  variant={'outline'}
+                />
               </button>
             </div>
             <div className="mt-2">
@@ -104,12 +103,14 @@ function MobileMenu({
                           </div>
                           {category.sections.map((section) => (
                             <div key={section.name}>
-                              <p
-                                id={`${category.id}-${section.id}-heading-mobile`}
-                                className="font-bold text-menu-dark"
-                              >
-                                {section.name}
-                              </p>
+                              {section.name && (
+                                <p
+                                  id={`${category.id}-${section.id}-heading-mobile`}
+                                  className="font-bold text-menu-dark"
+                                >
+                                  {section.name}
+                                </p>
+                              )}
                               <ul
                                 role="list"
                                 aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
@@ -271,12 +272,14 @@ function DesktopMenu({
                         <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10">
                           {category.sections.map((section) => (
                             <div key={section.name}>
-                              <p
-                                id={`${section.name}-heading`}
-                                className="font-bold text-menu-dark"
-                              >
-                                {section.name}
-                              </p>
+                              {section.name && (
+                                <p
+                                  id={`${section.name}-heading`}
+                                  className="font-bold text-menu-dark"
+                                >
+                                  {section.name}
+                                </p>
+                              )}
                               <ul
                                 role="list"
                                 aria-labelledby={`${section.name}-heading`}
@@ -360,7 +363,7 @@ export default function MegaMenuNavBar({
           aria-label="Top"
           className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         >
-          <div className="border-b border-menu-dark">
+          <div className="">
             <div className="flex h-20 items-center">
               <CustomLink
                 onClick={() => setOpen(true)}
@@ -369,7 +372,12 @@ export default function MegaMenuNavBar({
                 href={'#'}
               >
                 <span className="sr-only">Menu</span>
-                <Bars3Icon aria-hidden="true" className="size-6" />
+                <Icon
+                  aria-hidden="true"
+                  className="size-6"
+                  name={'bars3'}
+                  variant={'outline'}
+                />
               </CustomLink>
               <div className="ml-4 flex lg:ml-0">
                 <Button variant="icon" href="/">
@@ -396,7 +404,7 @@ export default function MegaMenuNavBar({
                       </CustomLink>
                       <span
                         aria-hidden="true"
-                        className="h-6 w-px bg-menu-light"
+                        className="h-6 w-px bg-menu-dark"
                       />
                     </>
                   )}
@@ -410,22 +418,7 @@ export default function MegaMenuNavBar({
                     </CustomLink>
                   )}
                 </div>
-                {currency && (
-                  <div className="hidden lg:ml-8 lg:flex">
-                    <a
-                      href="#"
-                      className="flex items-center text-menu-dark/80 hover:text-menu-dark/90"
-                    >
-                      <Img
-                        alt=""
-                        src="/images/avatar.jpg"
-                        className="block h-auto w-5 shrink-0"
-                      />
-                      <span className="ml-3 block">{currency}</span>
-                      <span className="sr-only">{changeCurrencyText}</span>
-                    </a>
-                  </div>
-                )}
+
                 {searchBox && (
                   <div className="flex lg:ml-6">
                     <a
@@ -433,9 +426,11 @@ export default function MegaMenuNavBar({
                       className="p-2 text-menu-dark/90 hover:text-menu-dark/50"
                     >
                       <span className="sr-only">Search</span>
-                      <MagnifyingGlassIcon
+                      <Icon
                         aria-hidden="true"
                         className="size-6"
+                        name={'search'}
+                        variant={'outline'}
                       />
                     </a>
                   </div>

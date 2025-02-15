@@ -12,7 +12,7 @@ export interface FeaturedItem {
 
 export interface Section {
   id: string;
-  name: string;
+  name?: string;
   items: NavigationItem[];
 }
 

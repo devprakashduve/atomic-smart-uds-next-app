@@ -28,6 +28,8 @@ const iconOptions = [
   'chatBubbleLeftRight',
   'bars3',
   'arrowRight',
+  'chevronLeft',
+  'chevronRight',
 ];
 
 export default {

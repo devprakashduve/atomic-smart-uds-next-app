@@ -99,8 +99,7 @@ Default.args = {
 
   signInText: 'Sign in',
   createAccountText: 'Create account',
-  changeCurrencyText: 'Change currency',
-  currency: 'CAD',
+  searchBox: true,
   logoSrc: '/images/avatar.jpg',
   logoAlt: 'Your Company',
 };

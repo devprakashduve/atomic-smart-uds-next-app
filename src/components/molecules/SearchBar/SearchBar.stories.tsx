@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import SearchBar from '.';
+import { StoryFn, Meta } from '@storybook/react';
+import SearchBar from './index';
 import { SearchBarProps } from './SearchBarProps.interface';
 
 export default {
@@ -9,20 +9,38 @@ export default {
 } as Meta;
 
 const Template: StoryFn<SearchBarProps> = (args) => {
-  const [value, setValue] = useState(args.value);
+  const [searchValue, setSearchValue] = useState(args.value);
+
+  const handleChange = (value: string) => {
+    setSearchValue(value);
+    console.log('Search value changed:', value);
+  };
+
+  const handleSearch = (value: string) => {
+    console.log('Search initiated with value:', value);
+  };
 
   return (
     <SearchBar
       {...args}
-      value={value}
-      onChange={(newValue) => setValue(newValue)}
-      onSearch={(query) => console.log('Search Query:', query)}
+      value={searchValue}
+      onChange={handleChange}
+      onSearch={handleSearch}
     />
   );
 };
 
-export const DefaultSearchBar = Template.bind({});
-DefaultSearchBar.args = {
+export const Default = Template.bind({});
+Default.args = {
   value: '',
   placeholder: 'Search...',
+  className: '',
+  noResultText: 'No Data...',
+};
+
+export const WithInitialValue = Template.bind({});
+WithInitialValue.args = {
+  value: 'Initial value',
+  placeholder: 'Search...',
+  className: '',
 };

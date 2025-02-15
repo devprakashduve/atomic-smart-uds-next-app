@@ -18,7 +18,7 @@
 }
 
 .btn-outline {
-  @apply border border-btn-dark bg-transparent hover:border-transparent;
+  @apply border border-btn-dark bg-transparent;
 }
 
 .btn-disabled {

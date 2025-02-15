@@ -3,4 +3,6 @@ export interface ProductCardProps {
   productName: string;
   price: string;
   onAddToCart: () => void;
+  addToCartText: string;
+  ratingText: string;
 }
